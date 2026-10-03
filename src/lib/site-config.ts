@@ -8,7 +8,7 @@ export const DISCORD_WIDGET_URL =
 
 export const DISCORD_INVITE_URL =
   process.env.NEXT_PUBLIC_DISCORD_INVITE_URL?.trim() ??
-  "https://discord.gg/cBnyKeAvpg";
+  "https://discord.gg/aH7cXcUUn4";
 
 export const hasDiscordWidget = DISCORD_WIDGET_URL.length > 0;
 
