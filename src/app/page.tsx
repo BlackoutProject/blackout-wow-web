@@ -21,6 +21,8 @@ export const metadata = buildPageMetadata({
   ],
 });
 
+type PhaseStatus = "Activa" | "Proxima" | "Programada";
+
 export default async function HomePage() {
   const cookieStore = await cookies();
   const rawLang = cookieStore.get("lang")?.value;
@@ -561,9 +563,10 @@ export default async function HomePage() {
   const whyBlackoutCards = tx.whyCards;
   const visionCards = tx.visionCards;
   const contentBlocks = tx.contentBlocks;
-  const phasesList = tx.phasesList;
+  const phasesList: { phase: string; name: string; status: PhaseStatus }[] =
+    tx.phasesList;
 
-  const phaseStatusLabel = (status: "Activa" | "Proxima" | "Programada") => {
+  const phaseStatusLabel = (status: PhaseStatus) => {
     if (status === "Activa") return tx.phaseStatusActive;
     if (status === "Proxima") return tx.phaseStatusNext;
     return tx.phaseStatusPlanned;
