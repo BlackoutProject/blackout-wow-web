@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "BLACKOUT WOW";
-export const SITE_TITLE = "BLACKOUT WOW - Wrath of the Lich King";
+export const SITE_TITLE = "BLACKOUT WOW - Servidor WotLK 3.3.5a Nivel 255";
 export const SITE_DESCRIPTION =
-  "Servidor privado WoW WotLK 3.3.5a con contenido custom, nivel 255, progresión Tier 1–35, raids, PvP, tienda de puntos y panel de cuenta.";
+  "Servidor privado WoW WotLK 3.3.5a nivel 255: progresión Tier 1–35, 35 raids, 45+ World Bosses, 3 clases custom, PvP balanceado y sin Pay to Win.";
 export const SITE_LOCALE = "es_CL";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
@@ -17,8 +17,12 @@ export const SITE_KEYWORDS = [
   "Wrath of the Lich King",
   "WoW 3.3.5a",
   "servidor custom",
+  "WoW nivel 255",
+  "WoW Tier 35",
+  "servidor WoW sin pay to win",
   "WoW Latinoamérica",
   "private WoW server",
+  "custom WoW server level 255",
 ] as const;
 
 const OG_IMAGE_PATH = "/logo-transparent.png";

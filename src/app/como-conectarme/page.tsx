@@ -9,12 +9,15 @@ import { defaultLng, isSupportedLanguage } from "@/i18n/settings";
 export const metadata = buildPageMetadata({
   title: "Cómo conectarme al servidor",
   description:
-    "Guía oficial BLACKOUT WOW 3.3.5a: crear cuenta, descargar cliente, configurar realmlist (logon.blackoutwow.com) e iniciar sesión en el reino WotLK custom.",
+    "Guía oficial BLACKOUT WOW: crea tu cuenta, descarga el cliente 3.3.5a en español o inglés con Realmlist y Addon incluidos, instala Parches + WoW.exe y entra al reino.",
   pathname: "/como-conectarme",
   keywords: [
     "realmlist Blackout WoW",
     "conectar WoW 3.3.5a",
     "cliente WotLK private server",
+    "descargar cliente WoW 3.3.5a español",
+    "descargar cliente WoW 3.3.5a inglés",
+    "parches Blackout WoW",
   ],
 });
 

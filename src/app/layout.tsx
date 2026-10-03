@@ -78,7 +78,7 @@ const websiteJsonLd = {
   name: SITE_NAME,
   url: SITE_URL,
   description: SITE_DESCRIPTION,
-  inLanguage: "es",
+  inLanguage: ["es", "en", "pt"],
   publisher: {
     "@type": "Organization",
     name: SITE_NAME,

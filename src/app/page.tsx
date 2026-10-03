@@ -10,14 +10,21 @@ import { DISCORD_INVITE_URL, hasDiscordInvite } from "@/lib/site-config";
 import { defaultLng, isSupportedLanguage } from "@/i18n/settings";
 
 export const metadata = buildPageMetadata({
-  title: "Servidor WoW custom WotLK 3.3.5a",
+  title: "Servidor WoW custom WotLK 3.3.5a nivel 255",
   description:
-    "BLACKOUT WOW: servidor WotLK 3.3.5a nivel 255 con progresión Tier 1–35, 35 raids, 45+ World Bosses, PvP balanceado, clases custom y sin Pay to Win. Comienza tu aventura.",
+    "BLACKOUT WOW: servidor WotLK 3.3.5a nivel 255 con progresión Tier 1–35, 35 raids, 45+ World Bosses, 3 clases custom, Armas Legendarias V1–V10, Battle Pass y sin Pay to Win.",
   pathname: "/",
   keywords: [
     "servidor WoW Latinoamérica",
     "Blackout WoW WotLK",
     "WoW custom 3.3.5",
+    "WoW 35 raids",
+    "WoW World Bosses custom",
+    "WoW clases custom",
+    "WoW armas legendarias",
+    "WoW Battle Pass",
+    "WoW transmog 100000",
+    "servidor WoW internacional",
   ],
 });
 
