@@ -10,6 +10,9 @@ export type DownloadGroup = {
   id: string;
   title: string;
   desc: string;
+  details?: string[];
+  checklistTitle?: string;
+  checklist?: string[];
   mirrors: DownloadMirror[];
 };
 
@@ -76,9 +79,25 @@ export function DownloadsSection({ copy }: { copy: DownloadsCopy }) {
                 {group.title}
               </h3>
             </div>
-            <p className="flex-1 text-sm leading-relaxed text-zinc-300">
-              {group.desc}
-            </p>
+            <div className="flex-1 space-y-3 text-sm leading-relaxed text-zinc-300">
+              <p>{group.desc}</p>
+              {group.details?.map((detail) => <p key={detail}>{detail}</p>)}
+              {group.checklist?.length ? (
+                <div>
+                  {group.checklistTitle ? (
+                    <p className="font-semibold text-zinc-200">{group.checklistTitle}</p>
+                  ) : null}
+                  <ul className="mt-2 space-y-1.5">
+                    {group.checklist.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400/80" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
             <div className="mt-5 flex flex-wrap gap-2">
               {group.mirrors.map((mirror) => {
                 const meta = PROVIDER_META[mirror.provider];

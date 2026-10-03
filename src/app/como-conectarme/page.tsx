@@ -91,18 +91,20 @@ export default async function ComoConectarmePage() {
           },
           {
             id: "cliente",
-            title: "Cliente completo + parches",
-            desc: "Si prefieres descargar directamente el cliente completo, elige la version en tu idioma.",
+            title: "Cliente completo",
+            desc: "Descarga el cliente en Español o Inglés. El Realmlist y el Addon ya vienen incluidos.",
+            checklistTitle: "Solo necesitas descargar aparte:",
+            checklist: ["Parches + WoW.exe"],
             mirrors: [
               {
                 provider: "gdrive",
                 label: "esES - Español",
-                href: "https://drive.google.com/file/d/1_0FWKqbGP2YarJ5WlQp2YpR5ubJGIdtQ/view?usp=sharing",
+                href: "https://drive.google.com/file/d/15eqo-VXNtD-8JelsrHfoPnogeNKddJKE/view?usp=sharing",
               },
               {
                 provider: "gdrive",
                 label: "enUS - English",
-                href: "https://drive.google.com/file/d/1qIDOR1xMNYmCoyUxOmhngnJ-32E1rgsM/view?usp=sharing",
+                href: "https://drive.google.com/file/d/1_3-KSxI1XKdsgpOJwkeKi6gboDQ1M1Mg/view?usp=sharing",
               },
             ],
           },
@@ -177,18 +179,20 @@ export default async function ComoConectarmePage() {
           },
           {
             id: "cliente",
-            title: "Full client + patches",
-            desc: "Prefer to download the full client directly? Choose your language version.",
+            title: "Full client",
+            desc: "Download the client in Spanish or English. The Realmlist and the Addon are already included.",
+            checklistTitle: "You only need to download separately:",
+            checklist: ["Patches + WoW.exe"],
             mirrors: [
               {
                 provider: "gdrive",
                 label: "esES - Spanish",
-                href: "https://drive.google.com/file/d/1_0FWKqbGP2YarJ5WlQp2YpR5ubJGIdtQ/view?usp=sharing",
+                href: "https://drive.google.com/file/d/15eqo-VXNtD-8JelsrHfoPnogeNKddJKE/view?usp=sharing",
               },
               {
                 provider: "gdrive",
                 label: "enUS - English",
-                href: "https://drive.google.com/file/d/1qIDOR1xMNYmCoyUxOmhngnJ-32E1rgsM/view?usp=sharing",
+                href: "https://drive.google.com/file/d/1_3-KSxI1XKdsgpOJwkeKi6gboDQ1M1Mg/view?usp=sharing",
               },
             ],
           },
@@ -263,18 +267,20 @@ export default async function ComoConectarmePage() {
           },
           {
             id: "cliente",
-            title: "Cliente completo + patches",
-            desc: "Se preferir baixar o cliente completo diretamente, escolha a versao no seu idioma.",
+            title: "Cliente completo",
+            desc: "Baixe o cliente em Espanhol ou Inglês. O Realmlist e o Addon já vêm incluídos.",
+            checklistTitle: "Você só precisa baixar separadamente:",
+            checklist: ["Patches + WoW.exe"],
             mirrors: [
               {
                 provider: "gdrive",
                 label: "esES - Espanhol",
-                href: "https://drive.google.com/file/d/1_0FWKqbGP2YarJ5WlQp2YpR5ubJGIdtQ/view?usp=sharing",
+                href: "https://drive.google.com/file/d/15eqo-VXNtD-8JelsrHfoPnogeNKddJKE/view?usp=sharing",
               },
               {
                 provider: "gdrive",
-                label: "enUS - Ingles",
-                href: "https://drive.google.com/file/d/1qIDOR1xMNYmCoyUxOmhngnJ-32E1rgsM/view?usp=sharing",
+                label: "enUS - Inglês",
+                href: "https://drive.google.com/file/d/1_3-KSxI1XKdsgpOJwkeKi6gboDQ1M1Mg/view?usp=sharing",
               },
             ],
           },

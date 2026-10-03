@@ -12,7 +12,7 @@ import { defaultLng, isSupportedLanguage } from "@/i18n/settings";
 export const metadata = buildPageMetadata({
   title: "Servidor WoW custom WotLK 3.3.5a",
   description:
-    "BLACKOUT WOW: servidor WotLK con progresión 1-100, raids y PvP custom, fases de contenido, tienda de puntos y comunidad activa. Entra y comienza tu aventura.",
+    "BLACKOUT WOW: servidor WotLK 3.3.5a nivel 255 con progresión Tier 1–35, 35 raids, 45+ World Bosses, PvP balanceado, clases custom y sin Pay to Win. Comienza tu aventura.",
   pathname: "/",
   keywords: [
     "servidor WoW Latinoamérica",
@@ -30,9 +30,10 @@ export default async function HomePage() {
       heroTagline: "Wrath of the Lich King · 3.3.5a",
       heroTaglineSub: "Servidor custom PvE / PvP",
       heroIntro:
-        "Servidor custom con nivel 100, progresión única, contenido exclusivo, sistemas propios y una comunidad activa.",
+        "Servidor personalizado de nivel 255 con progresión de Tier 1 a Tier 35, contenido exclusivo, sistemas propios y una comunidad internacional activa.",
       heroIntroLong:
-        "Vive una experiencia renovada en Wrath of the Lich King 3.3.5a con progresión custom, PvP balanceado, transmog masivo, monturas, razas custom, World Bosses, eventos y actualizaciones constantes.",
+        "Vive una experiencia completamente renovada en Wrath of the Lich King 3.3.5a con 35 raids, más de 45 Jefes Mundiales, 3 clases personalizadas, Armas Legendarias V1–V10, PvP balanceado, sistema de pasivas, Pase de Batalla, nuevos Campos de Batalla, más de 100.000 transfiguraciones, 500+ monturas, mascotas y morphs, 16 razas jugables, nuevas zonas, un nuevo Mall y actualizaciones constantes.",
+      heroPillars: "PvE + PvP • Progresión justa • Sin Pay to Win",
       create: "Crear cuenta",
       connect: "Como conectarme",
       seeRules: "Consulta las reglas del servidor en",
@@ -40,16 +41,16 @@ export default async function HomePage() {
       features: "Características principales del servidor",
       featuresSubtitle: "Una experiencia custom completa",
       featuresBody:
-        "Blackout WoW está diseñado para ofrecer una experiencia fresca, estable y divertida, donde siempre tendrás una nueva meta por cumplir.",
+        "Blackout-WoW está diseñado para ofrecer una experiencia fresca, estable y completamente personalizada, donde siempre tendrás una nueva meta por alcanzar.",
       serverInfo: "Información general del servidor",
       serverInfoIntro:
-        "Blackout WoW es un servidor custom basado en Wrath of the Lich King 3.3.5a, con nivel máximo 100, progresión por tiers, contenido PvE y PvP, sistemas exclusivos y modelo no pay to win.",
+        "Blackout-WoW es un servidor custom basado en Wrath of the Lich King 3.3.5a, con nivel máximo 255, progresión de Tier 1 a Tier 35, contenido PvE y PvP, sistemas exclusivos y modelo No Pay to Win.",
       phases: "Fases y actualizaciones",
       phasesIntro:
-        "Blackout WoW avanzará por fases, agregando nuevas raids, mapas, sistemas, recompensas, World Bosses y mejoras para mantener el servidor activo.",
+        "Blackout-WoW avanzará por fases, agregando nuevas raids, mapas, sistemas, recompensas, World Bosses y mejoras para mantener el servidor activo y en constante evolución.",
       phasesList: [
         { phase: "Fase 1", name: "Lanzamiento", status: "Activa" as const },
-        { phase: "Fase 2", name: "Expansión de contenido", status: "Proxima" as const },
+        { phase: "Fase 2", name: "Expansión de contenido", status: "Activa" as const },
         { phase: "Fase 3", name: "Nuevos retos", status: "Programada" as const },
         { phase: "Fase 4", name: "Actualización mayor", status: "Programada" as const },
       ],
@@ -76,105 +77,127 @@ export default async function HomePage() {
         "Instala Blackout WoW 3.3.5a en pocos minutos. Descarga el cliente completo, crea tu cuenta y entra al reino con la configuración recomendada para una experiencia estable desde el primer login.",
       downloadNote:
         "Si la descarga no inicia, revisa el bloqueador del navegador o intenta usar otro mirror disponible.",
-      downloadCta: "Descargar cliente",
+      downloadCta: "Cómo conectarme",
       quickHighlights: [
-        { label: "Nivel máximo", value: "100", note: "Progresión custom" },
-        { label: "Progresión", value: "Por tiers", note: "Raids custom" },
+        { label: "Nivel máximo", value: "255", note: "Progresión custom" },
+        { label: "Progresión", value: "Tier 1 – Tier 35", note: "35 Raids" },
         { label: "Contenido", value: "PvE / PvP", note: "Sistemas custom" },
-        { label: "Modelo", value: "No pay to win", note: "Progreso real jugando" },
-        { label: "Actualizaciones", value: "Por fases", note: "Contenido en evolución" },
+        { label: "Modelo", value: "No Pay to Win", note: "Progresión justa jugando" },
+        { label: "Actualizaciones", value: "Por fases", note: "Contenido en constante evolución" },
         { label: "Comunidad", value: "Discord activo", note: "Soporte del Staff" },
       ],
       contentBlocks: [
         {
           title: "PvE Custom",
           points: [
-            "Raids custom, World Bosses y progresión por tiers.",
-            "Misiones especiales, armas legendarias y llaves de contenido.",
-            "Tiers del 1 al 16 en modo solo y del 17 al 25 para grupos.",
-            "Daily Quests, Custom Quests y nuevas raids con mapas adaptados.",
+            "35 Raids y más de 45 World Bosses.",
+            "Progresión desde Tier 1 hasta Tier 35.",
+            "Armas Legendarias desde V1 hasta V10.",
+            "Misiones especiales, Custom Quests, llaves de contenido y sistemas de Tokens.",
+            "Nuevas zonas, nuevos mapas y contenido adaptado al Level 255.",
+            "Progresión PvE ampliada y diseñada para ofrecer objetivos constantes.",
           ],
         },
         {
           title: "PvP Activo",
           points: [
-            "Arenas 1v1, 2v2, 3v3 y 5v5 con Battlegrounds activos.",
-            "Duel Zone personalizada y recompensas PvP especiales.",
-            "Balance para evitar clases rotas y crossfaction en PvP.",
-            "Sistema competitivo, justo y con actividad diaria.",
+            "Arenas 1v1, 2v2, 3v3 y 5v5.",
+            "Battlegrounds, eventos PvP y zonas de duelo.",
+            "PvP Leaderboards y Rankings.",
+            "Nuevos y actualizados mapas de Battlegrounds.",
+            "Balance completo de clases adaptado al Level 255.",
+            "Crossfaction PvP y progresión competitiva.",
           ],
         },
         {
           title: "Contenido Custom",
           points: [
-            "Transmog masivo con más de 100.000 ítems.",
-            "Más de 500 monturas, pets, morphs, visuales, alas y auras custom.",
-            "Más de 16 razas custom con todas las clases disponibles.",
-            "Sets custom y nuevos displays para anillos, collares y trinkets.",
+            "3 Clases Custom.",
+            "Hasta 15 Custom Spells por clase.",
+            "Nuevas builds, Dual Wield y Titan’s Grip.",
+            "Sistema de Pasivas.",
+            "Más de 100.000 transfiguraciones.",
+            "Más de 500 monturas, mascotas y Morphs.",
+            "16 razas jugables mediante Morphs.",
+            "Sets, visuales, alas, auras y contenido personalizado.",
           ],
         },
         {
           title: "Sistemas Exclusivos",
           points: [
-            "Pasivas custom, teleporter y Custom Mall integrado.",
-            "Profesiones instantáneas, buffs custom y comandos útiles.",
-            "Nueva interfaz, login custom y pantallas de carga propias.",
-            "Modelo no pay to win con progresión balanceada.",
+            "Battle Pass.",
+            "Sistema de Pasivas.",
+            "PvP Leaderboards.",
+            "Teletransportador y nuevo Custom Mall.",
+            "Custom Quests, vendedores y sistemas de Tokens.",
+            "Profesiones instantáneas, buffs personalizados y comandos útiles.",
+            "Interfaz personalizada, login propio y pantallas de carga.",
+            "Nuevas zonas y sistemas de progresión.",
+            "Modelo No Pay to Win con progresión justa y balanceada.",
           ],
         },
       ],
       serverInfoColumns: [
         [
-          "Nivel máximo 100.",
+          "Nivel máximo 255.",
           "Cliente Wrath of the Lich King 3.3.5a.",
-          "Progresión custom por tiers.",
+          "Progresión de Tier 1 a Tier 35.",
+          "Armas Legendarias V1–V10.",
+          "35 Raids.",
+          "Más de 45 World Bosses.",
+          "3 Clases Custom.",
+        ],
+        [
+          "Hasta 15 Custom Spells por clase.",
+          "Sistema de Pasivas.",
+          "Battle Pass.",
+          "PvP Leaderboards y Rankings.",
+          "Nuevos y actualizados mapas de Battlegrounds.",
           "Contenido PvE y PvP activo.",
+          "16 razas jugables mediante Morphs.",
         ],
         [
+          "Más de 100.000 transfiguraciones.",
+          "Más de 500 monturas, mascotas y Morphs.",
+          "Nuevas zonas y nuevo Mall.",
           "Sistemas exclusivos del servidor.",
-          "Modelo no pay to win.",
+          "Modelo No Pay to Win.",
           "Actualizaciones por fases.",
-          "Más de 30 World Bosses custom.",
-        ],
-        [
-          "Transmog masivo y personalización visual.",
-          "Monturas, morphs, razas y sets custom.",
-          "Tienda organizada por categorías.",
-          "Comunidad activa con Discord y soporte del Staff.",
+          "Comunidad internacional activa con Discord y soporte del Staff.",
         ],
       ],
       whyCards: [
         {
           title: "Comunidad activa",
-          body: "Discord oficial con anuncios, soporte del Staff, eventos y jugadores para PvE, PvP y hermandades.",
+          body: "Discord oficial con anuncios, soporte del Staff, eventos y una comunidad internacional activa en PvE y PvP.",
         },
         {
           title: "Progresión constante",
-          body: "Raids custom por tiers, World Bosses, fases de contenido y actualizaciones regulares.",
+          body: "Tier 1–Tier 35, 35 Raids, más de 45 World Bosses, Armas Legendarias V1–V10, nuevas zonas, sistemas y actualizaciones por fases.",
         },
         {
           title: "Experiencia custom completa",
-          body: "PvE, PvP balanceado, transmog masivo, monturas, razas custom y sistemas exclusivos.",
+          body: "3 Clases Custom, hasta 15 Custom Spells por clase, sistema de Pasivas, Battle Pass, nuevas builds, Dual Wield, Titan’s Grip y contenido adaptado al Level 255.",
         },
         {
-          title: "No pay to win",
-          body: "Progresa jugando con un modelo balanceado. La tienda ofrece contenido especial sin romper el servidor.",
+          title: "No Pay to Win",
+          body: "Progresa jugando y alcanza el mejor contenido del servidor. El equipo Donor puede igualar el mejor equipo disponible mediante progresión, pero nunca superarlo.",
         },
       ],
       visionCards: [
         {
           title: "PvE por tiers",
-          body: "Progresión clara desde contenido inicial hasta desafíos avanzados con raids, llaves y armas legendarias.",
+          body: "Progresión desde Tier 1 hasta Tier 35, con 35 Raids, más de 45 World Bosses, llaves de contenido y Armas Legendarias V1–V10.",
           tag: "PvE",
         },
         {
           title: "PvP balanceado",
-          body: "Arenas, Battlegrounds, Duel Zone y recompensas competitivas con sistemas de balance activos.",
+          body: "Arenas, Battlegrounds, Duel Zone, eventos PvP, Rankings y PvP Leaderboards con balance adaptado al Level 255.",
           tag: "PvP",
         },
         {
           title: "Personalización total",
-          body: "Transmog masivo, monturas, morphs, visuales, alas, auras y razas custom para tu identidad única.",
+          body: "Más de 100.000 transfiguraciones, 500+ monturas, mascotas y Morphs, además de 16 razas jugables y contenido visual personalizado.",
           tag: "Identidad",
         },
       ],
@@ -183,9 +206,10 @@ export default async function HomePage() {
       heroTagline: "Wrath of the Lich King · 3.3.5a",
       heroTaglineSub: "Custom PvE / PvP realm",
       heroIntro:
-        "Custom realm with level 100, unique progression, exclusive content, proprietary systems and an active community.",
+        "Custom level 255 realm with Tier 1 to Tier 35 progression, exclusive content, proprietary systems and an active international community.",
       heroIntroLong:
-        "Experience a refreshed Wrath of the Lich King 3.3.5a with custom progression, balanced PvP, massive transmog, mounts, custom races, world bosses, events and constant updates.",
+        "Experience a completely renewed Wrath of the Lich King 3.3.5a with 35 raids, 45+ World Bosses, 3 custom classes, Legendary Weapons V1–V10, balanced PvP, passive system, Battle Pass, new Battlegrounds, 100,000+ transmogs, 500+ mounts, pets and morphs, 16 playable races, new zones, a new Mall and constant updates.",
+      heroPillars: "PvE + PvP • Fair progression • No Pay to Win",
       create: "Create account",
       connect: "How to connect",
       seeRules: "Check the server rules at",
@@ -193,16 +217,16 @@ export default async function HomePage() {
       features: "Main server features",
       featuresSubtitle: "A complete custom experience",
       featuresBody:
-        "Blackout WoW is designed to deliver a fresh, stable and fun experience where you will always have a new goal to achieve.",
+        "Blackout-WoW is designed to deliver a fresh, stable and fully customized experience where you will always have a new goal to reach.",
       serverInfo: "General server information",
       serverInfoIntro:
-        "Blackout WoW is a custom Wrath of the Lich King 3.3.5a realm with max level 100, tier progression, PvE and PvP content, exclusive systems and a no pay-to-win model.",
+        "Blackout-WoW is a custom Wrath of the Lich King 3.3.5a realm with max level 255, Tier 1 to Tier 35 progression, PvE and PvP content, exclusive systems and a No Pay to Win model.",
       phases: "Phases and updates",
       phasesIntro:
-        "Blackout WoW will grow in phases, adding new raids, maps, systems, rewards, world bosses and improvements to keep the realm active.",
+        "Blackout-WoW will grow in phases, adding new raids, maps, systems, rewards, World Bosses and improvements to keep the realm active and constantly evolving.",
       phasesList: [
         { phase: "Phase 1", name: "Launch", status: "Activa" as const },
-        { phase: "Phase 2", name: "Content expansion", status: "Proxima" as const },
+        { phase: "Phase 2", name: "Content expansion", status: "Activa" as const },
         { phase: "Phase 3", name: "New challenges", status: "Programada" as const },
         { phase: "Phase 4", name: "Major update", status: "Programada" as const },
       ],
@@ -229,78 +253,127 @@ export default async function HomePage() {
         "Install Blackout WoW 3.3.5a in minutes. Download the full client, create your account and enter the realm with the recommended setup for a stable experience from your first login.",
       downloadNote:
         "If the download does not start, check your browser blocker or try another available mirror.",
-      downloadCta: "Download client",
+      downloadCta: "How to connect",
       quickHighlights: [
-        { label: "Max level", value: "100", note: "Custom progression" },
-        { label: "Progression", value: "By tiers", note: "Custom raids" },
+        { label: "Max level", value: "255", note: "Custom progression" },
+        { label: "Progression", value: "Tier 1 – Tier 35", note: "35 Raids" },
         { label: "Content", value: "PvE / PvP", note: "Custom systems" },
-        { label: "Model", value: "No pay to win", note: "Real progress by playing" },
-        { label: "Updates", value: "By phases", note: "Evolving content" },
+        { label: "Model", value: "No Pay to Win", note: "Fair progression by playing" },
+        { label: "Updates", value: "By phases", note: "Constantly evolving content" },
         { label: "Community", value: "Active Discord", note: "Staff support" },
       ],
       contentBlocks: [
         {
           title: "Custom PvE",
           points: [
-            "Custom raids, world bosses and tier progression.",
-            "Special quests, legendary weapons and content keys.",
-            "Tiers 1–16 solo and 17–25 for groups of five.",
-            "Daily quests, custom quests and new raids with adapted maps.",
+            "35 Raids and 45+ World Bosses.",
+            "Progression from Tier 1 to Tier 35.",
+            "Legendary Weapons from V1 to V10.",
+            "Special quests, Custom Quests, content keys and Token systems.",
+            "New zones, new maps and content adapted to Level 255.",
+            "Expanded PvE progression designed to offer constant goals.",
           ],
         },
         {
           title: "Active PvP",
           points: [
-            "1v1, 2v2, 3v3 and 5v5 arenas with active battlegrounds.",
-            "Custom duel zone and special PvP rewards.",
-            "Balance to avoid broken classes and crossfaction PvP.",
-            "Fair, competitive gameplay with daily activity.",
+            "1v1, 2v2, 3v3 and 5v5 arenas.",
+            "Battlegrounds, PvP events and duel zones.",
+            "PvP Leaderboards and Rankings.",
+            "New and updated Battleground maps.",
+            "Full class balance adapted to Level 255.",
+            "Crossfaction PvP and competitive progression.",
           ],
         },
         {
           title: "Custom content",
           points: [
-            "Massive transmog with 100,000+ items.",
-            "500+ custom mounts, pets, morphs, visuals, wings and auras.",
-            "16+ custom races with all classes available.",
-            "Custom sets and new displays for rings, necks and trinkets.",
+            "3 Custom Classes.",
+            "Up to 15 Custom Spells per class.",
+            "New builds, Dual Wield and Titan’s Grip.",
+            "Passive system.",
+            "100,000+ transmogs.",
+            "500+ mounts, pets and Morphs.",
+            "16 playable races through Morphs.",
+            "Sets, visuals, wings, auras and custom content.",
           ],
         },
         {
           title: "Exclusive systems",
           points: [
-            "Custom passives, teleporter and integrated Custom Mall.",
+            "Battle Pass.",
+            "Passive system.",
+            "PvP Leaderboards.",
+            "Teleporter and new Custom Mall.",
+            "Custom Quests, vendors and Token systems.",
             "Instant professions, custom buffs and useful commands.",
-            "New UI, custom login and loading screens.",
-            "No pay-to-win model with balanced progression.",
+            "Custom interface, own login and loading screens.",
+            "New zones and progression systems.",
+            "No Pay to Win model with fair and balanced progression.",
           ],
         },
       ],
       serverInfoColumns: [
-        ["Max level 100.", "Wrath of the Lich King 3.3.5a client.", "Custom tier progression.", "Active PvE and PvP content."],
-        ["Exclusive server systems.", "No pay-to-win model.", "Phase-based updates.", "30+ custom world bosses."],
-        ["Massive transmog and visual customization.", "Custom mounts, morphs, races and sets.", "Store organized by categories.", "Active community with Discord and staff support."],
+        [
+          "Max level 255.",
+          "Wrath of the Lich King 3.3.5a client.",
+          "Tier 1 to Tier 35 progression.",
+          "Legendary Weapons V1–V10.",
+          "35 Raids.",
+          "45+ World Bosses.",
+          "3 Custom Classes.",
+        ],
+        [
+          "Up to 15 Custom Spells per class.",
+          "Passive system.",
+          "Battle Pass.",
+          "PvP Leaderboards and Rankings.",
+          "New and updated Battleground maps.",
+          "Active PvE and PvP content.",
+          "16 playable races through Morphs.",
+        ],
+        [
+          "100,000+ transmogs.",
+          "500+ mounts, pets and Morphs.",
+          "New zones and new Mall.",
+          "Exclusive server systems.",
+          "No Pay to Win model.",
+          "Phase-based updates.",
+          "Active international community with Discord and Staff support.",
+        ],
       ],
       whyCards: [
-        { title: "Active community", body: "A server with committed players to help you, compete and progress." },
-        { title: "Constant progression", body: "New phases, systems and content to challenge you year-round." },
-        { title: "Full custom experience", body: "Content designed to deliver a unique experience." },
-        { title: "Stable server", body: "Optimized infrastructure for the best gameplay experience." },
+        {
+          title: "Active community",
+          body: "Official Discord with announcements, Staff support, events and an active international PvE and PvP community.",
+        },
+        {
+          title: "Constant progression",
+          body: "Tier 1–Tier 35, 35 Raids, 45+ World Bosses, Legendary Weapons V1–V10, new zones, systems and phase-based updates.",
+        },
+        {
+          title: "Full custom experience",
+          body: "3 Custom Classes, up to 15 Custom Spells per class, Passive system, Battle Pass, new builds, Dual Wield, Titan’s Grip and content adapted to Level 255.",
+        },
+        {
+          title: "No Pay to Win",
+          body: "Progress by playing and reach the best content on the server. Donor gear can match the best gear available through progression, but never surpass it.",
+        },
       ],
       visionCards: [
         {
-          title: "Active community",
-          body: "We want a stable and fun environment where everyone can progress, compete and cooperate.",
-          tag: "Community",
+          title: "Tier-based PvE",
+          body: "Progression from Tier 1 to Tier 35, with 35 Raids, 45+ World Bosses, content keys and Legendary Weapons V1–V10.",
+          tag: "PvE",
         },
         {
-          title: "Real progression",
-          body: "The no pay-to-win approach lets you advance by playing, learning and participating.",
-          tag: "Progress",
+          title: "Balanced PvP",
+          body: "Arenas, Battlegrounds, Duel Zone, PvP events, Rankings and PvP Leaderboards with balance adapted to Level 255.",
+          tag: "PvP",
         },
         {
           title: "Total customization",
-          body: "Massive transmogs, mounts, pets and morphs so you can create your own style.",
+          body: "100,000+ transmogs, 500+ mounts, pets and Morphs, plus 16 playable races and custom visual content.",
           tag: "Identity",
         },
       ],
@@ -309,9 +382,10 @@ export default async function HomePage() {
       heroTagline: "Wrath of the Lich King · 3.3.5a",
       heroTaglineSub: "Servidor custom PvE / PvP",
       heroIntro:
-        "Servidor custom com nível 100, progressão única, conteúdo exclusivo, sistemas próprios e comunidade ativa.",
+        "Servidor personalizado de nível 255 com progressão do Tier 1 ao Tier 35, conteúdo exclusivo, sistemas próprios e uma comunidade internacional ativa.",
       heroIntroLong:
-        "Viva uma experiência renovada em Wrath of the Lich King 3.3.5a com progressão custom, PvP balanceado, transmog em massa, montarias, raças custom, World Bosses, eventos e atualizações constantes.",
+        "Viva uma experiência completamente renovada em Wrath of the Lich King 3.3.5a com 35 raids, mais de 45 Chefes Mundiais, 3 classes personalizadas, Armas Lendárias V1–V10, PvP balanceado, sistema de passivas, Passe de Batalha, novos Campos de Batalha, mais de 100.000 transmogs, 500+ montarias, mascotes e morphs, 16 raças jogáveis, novas zonas, um novo Mall e atualizações constantes.",
+      heroPillars: "PvE + PvP • Progressão justa • Sem Pay to Win",
       create: "Criar conta",
       connect: "Como conectar",
       seeRules: "Consulte as regras do servidor em",
@@ -319,16 +393,16 @@ export default async function HomePage() {
       features: "Principais características do servidor",
       featuresSubtitle: "Uma experiência custom completa",
       featuresBody:
-        "Blackout WoW foi criado para oferecer uma experiência nova, estável e divertida, com sempre uma nova meta para cumprir.",
+        "Blackout-WoW foi criado para oferecer uma experiência nova, estável e totalmente personalizada, onde você sempre terá uma nova meta para alcançar.",
       serverInfo: "Informações gerais do servidor",
       serverInfoIntro:
-        "Blackout WoW é um servidor custom baseado em Wrath of the Lich King 3.3.5a, com nível máximo 100, progressão por tiers, conteúdo PvE e PvP, sistemas exclusivos e modelo sem pay to win.",
+        "Blackout-WoW é um servidor custom baseado em Wrath of the Lich King 3.3.5a, com nível máximo 255, progressão do Tier 1 ao Tier 35, conteúdo PvE e PvP, sistemas exclusivos e modelo Sem Pay to Win.",
       phases: "Fases e atualizações",
       phasesIntro:
-        "Blackout WoW avançará por fases, adicionando novas raids, mapas, sistemas, recompensas, World Bosses e melhorias para manter o servidor ativo.",
+        "Blackout-WoW avançará por fases, adicionando novas raids, mapas, sistemas, recompensas, World Bosses e melhorias para manter o servidor ativo e em constante evolução.",
       phasesList: [
         { phase: "Fase 1", name: "Lançamento", status: "Activa" as const },
-        { phase: "Fase 2", name: "Expansão de conteúdo", status: "Proxima" as const },
+        { phase: "Fase 2", name: "Expansão de conteúdo", status: "Activa" as const },
         { phase: "Fase 3", name: "Novos desafios", status: "Programada" as const },
         { phase: "Fase 4", name: "Atualização maior", status: "Programada" as const },
       ],
@@ -355,78 +429,127 @@ export default async function HomePage() {
         "Instale o Blackout WoW 3.3.5a em poucos minutos. Baixe o cliente completo, crie sua conta e entre no reino com a configuração recomendada para uma experiência estável desde o primeiro login.",
       downloadNote:
         "Se o download não iniciar, verifique o bloqueador do navegador ou tente outro mirror disponível.",
-      downloadCta: "Baixar cliente",
+      downloadCta: "Como conectar",
       quickHighlights: [
-        { label: "Nível máximo", value: "100", note: "Progressão custom" },
-        { label: "Progressão", value: "Por tiers", note: "Raids custom" },
+        { label: "Nível máximo", value: "255", note: "Progressão custom" },
+        { label: "Progressão", value: "Tier 1 – Tier 35", note: "35 Raids" },
         { label: "Conteúdo", value: "PvE / PvP", note: "Sistemas custom" },
-        { label: "Modelo", value: "Sem pay to win", note: "Progresso real jogando" },
-        { label: "Atualizações", value: "Por fases", note: "Conteúdo em evolução" },
+        { label: "Modelo", value: "Sem Pay to Win", note: "Progressão justa jogando" },
+        { label: "Atualizações", value: "Por fases", note: "Conteúdo em constante evolução" },
         { label: "Comunidade", value: "Discord ativo", note: "Suporte da equipe" },
       ],
       contentBlocks: [
         {
           title: "PvE Custom",
           points: [
-            "Raids custom, World Bosses e progressão por tiers.",
-            "Missões especiais, armas lendárias e chaves de conteúdo.",
-            "Tiers 1 a 16 no modo solo e 17 a 25 para grupos.",
-            "Daily Quests, Custom Quests e novas raids com mapas adaptados.",
+            "35 Raids e mais de 45 World Bosses.",
+            "Progressão do Tier 1 ao Tier 35.",
+            "Armas Lendárias da V1 à V10.",
+            "Missões especiais, Custom Quests, chaves de conteúdo e sistemas de Tokens.",
+            "Novas zonas, novos mapas e conteúdo adaptado ao Level 255.",
+            "Progressão PvE ampliada e pensada para oferecer objetivos constantes.",
           ],
         },
         {
           title: "PvP Ativo",
           points: [
-            "Arenas 1v1, 2v2, 3v3 e 5v5 com battlegrounds ativos.",
-            "Duel Zone personalizada e recompensas PvP especiais.",
-            "Balanceamento para evitar classes quebradas e crossfaction no PvP.",
-            "Jogo competitivo, justo e com atividade diária.",
+            "Arenas 1v1, 2v2, 3v3 e 5v5.",
+            "Battlegrounds, eventos PvP e zonas de duelo.",
+            "PvP Leaderboards e Rankings.",
+            "Mapas de Battlegrounds novos e atualizados.",
+            "Balanceamento completo de classes adaptado ao Level 255.",
+            "Crossfaction PvP e progressão competitiva.",
           ],
         },
         {
           title: "Conteúdo Custom",
           points: [
-            "Transmog em massa com mais de 100.000 itens.",
-            "Mais de 500 montarias, pets, morphs, visuais, asas e auras custom.",
-            "Mais de 16 raças custom com todas as classes disponíveis.",
-            "Sets custom e novos displays para anéis, colares e trinkets.",
+            "3 Classes Custom.",
+            "Até 15 Custom Spells por classe.",
+            "Novas builds, Dual Wield e Titan’s Grip.",
+            "Sistema de Passivas.",
+            "Mais de 100.000 transmogs.",
+            "Mais de 500 montarias, mascotes e Morphs.",
+            "16 raças jogáveis através de Morphs.",
+            "Sets, visuais, asas, auras e conteúdo personalizado.",
           ],
         },
         {
           title: "Sistemas Exclusivos",
           points: [
-            "Passivas custom, teleporter e Custom Mall integrado.",
-            "Profissões instantâneas, buffs custom e comandos úteis.",
-            "Nova interface, login custom e telas de carregamento próprias.",
-            "Modelo sem pay to win com progressão equilibrada.",
+            "Battle Pass.",
+            "Sistema de Passivas.",
+            "PvP Leaderboards.",
+            "Teletransportador e novo Custom Mall.",
+            "Custom Quests, vendedores e sistemas de Tokens.",
+            "Profissões instantâneas, buffs personalizados e comandos úteis.",
+            "Interface personalizada, login próprio e telas de carregamento.",
+            "Novas zonas e sistemas de progressão.",
+            "Modelo Sem Pay to Win com progressão justa e equilibrada.",
           ],
         },
       ],
       serverInfoColumns: [
-        ["Nível máximo 100.", "Cliente Wrath of the Lich King 3.3.5a.", "Progressão custom por tiers.", "Conteúdo PvE e PvP ativo."],
-        ["Sistemas exclusivos do servidor.", "Modelo sem pay to win.", "Atualizações por fases.", "Mais de 30 World Bosses custom."],
-        ["Transmog em massa e personalização visual.", "Montarias, morphs, raças e sets custom.", "Loja organizada por categorias.", "Comunidade ativa com Discord e suporte da equipe."],
+        [
+          "Nível máximo 255.",
+          "Cliente Wrath of the Lich King 3.3.5a.",
+          "Progressão do Tier 1 ao Tier 35.",
+          "Armas Lendárias V1–V10.",
+          "35 Raids.",
+          "Mais de 45 World Bosses.",
+          "3 Classes Custom.",
+        ],
+        [
+          "Até 15 Custom Spells por classe.",
+          "Sistema de Passivas.",
+          "Battle Pass.",
+          "PvP Leaderboards e Rankings.",
+          "Mapas de Battlegrounds novos e atualizados.",
+          "Conteúdo PvE e PvP ativo.",
+          "16 raças jogáveis através de Morphs.",
+        ],
+        [
+          "Mais de 100.000 transmogs.",
+          "Mais de 500 montarias, mascotes e Morphs.",
+          "Novas zonas e novo Mall.",
+          "Sistemas exclusivos do servidor.",
+          "Modelo Sem Pay to Win.",
+          "Atualizações por fases.",
+          "Comunidade internacional ativa com Discord e suporte da equipe.",
+        ],
       ],
       whyCards: [
-        { title: "Comunidade ativa", body: "Servidor com jogadores comprometidos para ajudar, competir e evoluir." },
-        { title: "Progressão constante", body: "Novas fases, sistemas e conteúdo para te desafiar o ano todo." },
-        { title: "Experiência custom completa", body: "Conteúdo desenhado para entregar uma experiência diferente." },
-        { title: "Servidor estável", body: "Infraestrutura otimizada para a melhor experiência possível." },
+        {
+          title: "Comunidade ativa",
+          body: "Discord oficial com anúncios, suporte da equipe, eventos e uma comunidade internacional ativa em PvE e PvP.",
+        },
+        {
+          title: "Progressão constante",
+          body: "Tier 1–Tier 35, 35 Raids, mais de 45 World Bosses, Armas Lendárias V1–V10, novas zonas, sistemas e atualizações por fases.",
+        },
+        {
+          title: "Experiência custom completa",
+          body: "3 Classes Custom, até 15 Custom Spells por classe, sistema de Passivas, Battle Pass, novas builds, Dual Wield, Titan’s Grip e conteúdo adaptado ao Level 255.",
+        },
+        {
+          title: "Sem Pay to Win",
+          body: "Progrida jogando e alcance o melhor conteúdo do servidor. O equipamento Donor pode igualar o melhor equipamento disponível por progressão, mas nunca superá-lo.",
+        },
       ],
       visionCards: [
         {
-          title: "Comunidade ativa",
-          body: "Queremos um ambiente estável e divertido onde todos possam evoluir, competir e cooperar.",
-          tag: "Comunidade",
+          title: "PvE por tiers",
+          body: "Progressão do Tier 1 ao Tier 35, com 35 Raids, mais de 45 World Bosses, chaves de conteúdo e Armas Lendárias V1–V10.",
+          tag: "PvE",
         },
         {
-          title: "Progresso real",
-          body: "A abordagem sem pay to win permite evoluir jogando, aprendendo e participando.",
-          tag: "Progresso",
+          title: "PvP balanceado",
+          body: "Arenas, Battlegrounds, Duel Zone, eventos PvP, Rankings e PvP Leaderboards com balanceamento adaptado ao Level 255.",
+          tag: "PvP",
         },
         {
           title: "Personalização total",
-          body: "Transmog em massa, montarias, pets e morphs para criar seu próprio estilo.",
+          body: "Mais de 100.000 transmogs, 500+ montarias, mascotes e Morphs, além de 16 raças jogáveis e conteúdo visual personalizado.",
           tag: "Identidade",
         },
       ],
@@ -503,6 +626,9 @@ export default async function HomePage() {
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
               {tx.heroIntroLong}
+            </p>
+            <p className="font-display mt-4 text-xs font-semibold uppercase tracking-[0.22em] text-amber-300/90 sm:text-sm">
+              {tx.heroPillars}
             </p>
 
             <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-7 sm:gap-4 md:mt-8">
@@ -732,7 +858,7 @@ export default async function HomePage() {
               <p className="mt-2 text-xs text-zinc-400/90">{tx.downloadNote}</p>
               <div className="mt-6">
                 <Link
-                  href="/downloads/blackout-wow-3.3.5a-client.zip"
+                  href="/como-conectarme"
                   className="inline-flex rounded-md bg-linear-to-r from-amber-600 to-orange-500 px-5 py-2.5 text-sm font-semibold text-black hover:from-amber-500 hover:to-orange-400"
                 >
                   {tx.downloadCta}
@@ -823,7 +949,7 @@ export default async function HomePage() {
                   {n.title}
                 </h3>
                 <p className="mt-3 text-sm text-zinc-400">{n.body}</p>
-                <p className="mt-4 text-xs text-zinc-500">Blackout-WoW 3.3.5</p>
+                <p className="mt-4 text-xs text-zinc-500">Blackout-WoW 255</p>
               </article>
             ))}
           </div>

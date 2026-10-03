@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const SITE_NAME = "BLACKOUT WOW";
 export const SITE_TITLE = "BLACKOUT WOW - Wrath of the Lich King";
 export const SITE_DESCRIPTION =
-  "Servidor privado WoW WotLK 3.3.5a con contenido custom, progresión 1-100, raids, PvP, tienda de puntos y panel de cuenta.";
+  "Servidor privado WoW WotLK 3.3.5a con contenido custom, nivel 255, progresión Tier 1–35, raids, PvP, tienda de puntos y panel de cuenta.";
 export const SITE_LOCALE = "es_CL";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
