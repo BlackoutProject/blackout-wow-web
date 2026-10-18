@@ -13,7 +13,7 @@ export const warcraftCopy = {
     "fair": "PvE + PvP · Progresión justa · No Pay to Win",
     "statLabels": [
       "NIVEL MÁXIMO",
-      "RAIDS CUSTOM",
+      "RAIDS EN TOTAL",
       "WORLD BOSSES",
       "PROGRESIÓN DE EQUIPO"
     ],
@@ -21,7 +21,7 @@ export const warcraftCopy = {
     "worldTitle": "Un mundo. Mil batallas.",
     "worldIntro": "Raids, campos de batalla y desafíos que van más allá del clásico. Encuentra tu próximo objetivo en Blackout.",
     "pve": "Conquista lo imposible.",
-    "pveText": "35 raids custom y 45+ World Bosses. Reúne a tu hermandad y prepárate para una nueva escala de desafíos.",
+    "pveText": "35 raids, con 19 totalmente custom. Más de 30 mapas custom y 45+ World Bosses. Reúne a tu hermandad y conquista nuevos desafíos.",
     "pvp": "Haz que teman tu nombre.",
     "pvpText": "Nuevos y renovados Battlegrounds, rankings PvP y clases rebalanceadas para el nivel 255.",
     "details": "DESCUBRIR MÁS",
@@ -81,7 +81,7 @@ export const warcraftCopy = {
     "fair": "PvE + PvP · Fair Progression · No Pay to Win",
     "statLabels": [
       "MAXIMUM LEVEL",
-      "CUSTOM RAIDS",
+      "TOTAL RAIDS",
       "WORLD BOSSES",
       "GEAR PROGRESSION"
     ],
@@ -89,7 +89,7 @@ export const warcraftCopy = {
     "worldTitle": "One world. Endless battles.",
     "worldIntro": "Raids, battlegrounds and challenges beyond the classic experience. Find your next goal in Blackout.",
     "pve": "Conquer the impossible.",
-    "pveText": "35 custom raids and 45+ World Bosses. Gather your guild and prepare for a new scale of challenges.",
+    "pveText": "35 raids, including 19 fully custom raids. Over 30 custom maps and 45+ World Bosses. Gather your guild and conquer new challenges.",
     "pvp": "Make your name feared.",
     "pvpText": "New and reworked Battlegrounds, PvP rankings and classes rebalanced for level 255.",
     "details": "DISCOVER MORE",
@@ -149,7 +149,7 @@ export const warcraftCopy = {
     "fair": "PvE + PvP · Progressão justa · No Pay to Win",
     "statLabels": [
       "NÍVEL MÁXIMO",
-      "RAIDS CUSTOM",
+      "RAIDS NO TOTAL",
       "WORLD BOSSES",
       "PROGRESSÃO DE EQUIPAMENTO"
     ],
@@ -157,7 +157,7 @@ export const warcraftCopy = {
     "worldTitle": "Um mundo. Mil batalhas.",
     "worldIntro": "Raids, campos de batalha e desafios que vão além do clássico. Encontre seu próximo objetivo em Blackout.",
     "pve": "Conquiste o impossível.",
-    "pveText": "35 raids custom e 45+ World Bosses. Reúna sua guilda e prepare-se para uma nova escala de desafios.",
+    "pveText": "35 raids, sendo 19 totalmente custom. Mais de 30 mapas custom e 45+ World Bosses. Reúna sua guilda e conquiste novos desafios.",
     "pvp": "Faça seu nome ser temido.",
     "pvpText": "Battlegrounds novos e renovados, rankings PvP e classes rebalanceadas para o nível 255.",
     "details": "DESCOBRIR MAIS",

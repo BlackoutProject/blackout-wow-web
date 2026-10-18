@@ -14,6 +14,28 @@ for(let start=0;start<routes.length;start+=4){
   for(const result of results)if(result.status==='rejected')throw result.reason;
 }
 console.log('PASS: 13 page routes render');
+const internalLinks=new Set();
+const externalLinks=new Set();
+for(const [path,html] of pages)for(const match of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)){
+  const url=new URL(match[1].replaceAll('&amp;','&'),base+path);
+  if(url.origin===new URL(base).origin)internalLinks.add(url.pathname+url.search+url.hash);
+  else if(url.protocol==='https:')externalLinks.add(url.href);
+}
+for(const link of internalLinks){
+  const url=new URL(link,base);
+  const path=url.pathname+url.search;
+  if(!pages.has(path)){
+    const response=await fetch(base+path,{signal:AbortSignal.timeout(30000)});
+    assert.equal(response.status,200,'Broken internal link: '+link);
+    pages.set(path,await response.text());
+  }
+  if(url.hash){
+    const id=decodeURIComponent(url.hash.slice(1));
+    assert.ok(pages.get(path).includes('id="'+id+'"'),'Missing anchor: '+link);
+  }
+}
+console.log('PASS: '+internalLinks.size+' internal links and section anchors resolve');
+console.log('External destinations: '+[...externalLinks].join(', '));
 const home=pages.get('/');
 for(const fact of ['255','35','45+','T1','T35','V1–V10','100K+','500+','Evoker','Demon Hunter','Monk','10 hechizos custom por clase','NUEVA ERA','No Pay to Win'])assert.ok(home.includes(fact),'Missing home fact: '+fact);
 assert.ok(!/players online|jugadores conectados|playersOnline/i.test(home),'Unexpected activity counter');

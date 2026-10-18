@@ -7,6 +7,11 @@ body{background:#0b0e13;color:#eae4d8}
 .site-header:after,.site-footer:before{content:"";position:absolute;left:0;right:0;bottom:-5px;height:10px;background:url('/warcraft/native/metal-top-trim.png') repeat-x;pointer-events:none;opacity:.9}
 .site-header-inner{max-width:1520px;padding:0 3%;gap:28px}
 .site-brand img{width:88px;height:66px;mix-blend-mode:normal;filter:drop-shadow(0 2px 8px #000)}
+.site-header .site-brand img{transition:filter .25s ease}
+.site-header .site-brand:is(:hover,:focus-visible) img{filter:brightness(1.05) drop-shadow(0 2px 8px #000) drop-shadow(0 0 4px #e2a04a66)}
+.site-header .site-brand>span{transition:color .25s ease,text-shadow .25s ease}
+.site-header .site-brand:is(:hover,:focus-visible)>span{color:#f5dcb0;text-shadow:0 0 8px #e29a4033}
+@media(prefers-reduced-motion:reduce){.site-header .site-brand img,.site-header .site-brand>span{transition:none}}
 .site-brand>span{font-size:19px;letter-spacing:2px;color:#f0dfbc}
 .site-brand small{font-size:6px;letter-spacing:1.4px}
 .site-nav{gap:26px}.site-nav a{font-family:var(--font-cinzel),Georgia,serif;font-size:11px;font-weight:600;color:#d4ccbc;letter-spacing:.35px;text-transform:uppercase;padding:28px 0}

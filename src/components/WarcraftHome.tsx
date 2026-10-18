@@ -51,7 +51,7 @@ export default function WarcraftHome() {
           <p className="wc-kicker wc-soon"><span/> BLACKOUT 255 · {c.soon} <span/></p>
           <h1 id="hero-title">{c.title}<br/><em>{c.accent}</em></h1>
           <p className="wc-hero-intro">{c.intro}</p>
-          <div className="wc-actions"><Link href="/registro" className="wc-button">{c.create}<span aria-hidden="true">›</span></Link><Link href="/como-conectarme" className="wc-button wc-button-ghost">{c.play}<span aria-hidden="true">↓</span></Link></div>
+          <div className="wc-actions"><Link href="/registro" className="wc-button">{c.create}<span aria-hidden="true">›</span></Link><Link href="/como-conectarme" className="wc-button wc-button-ghost">{c.play}<span aria-hidden="true">↓</span></Link><a className="wc-button wc-button-ghost" href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.discord}<span aria-hidden="true">↗</span></a></div>
           <p className="wc-fair-line">{c.fair}</p>
         </div>
       </div>
@@ -61,8 +61,8 @@ export default function WarcraftHome() {
     <section className="wc-world wc-section" id="reino" aria-labelledby="world-title">
       <div className="wc-wrap"><header className="wc-section-heading"><p className="wc-kicker">{c.chapter}</p><h2 id="world-title">{c.worldTitle}</h2><Ornament/><p>{c.worldIntro}</p></header>
         <div className="wc-paths">
-          <Link href="/servidor#pve" className="wc-path wc-path-pve"><div className="wc-path-art"><img src="/warcraft/ragnaros.webp" alt="Ragnaros" width="1200" height="1548" loading="lazy"/></div><Corners/><div className="wc-path-content"><span className="wc-path-tag">PVE <b>01</b></span><h3>{c.pve}</h3><p>{c.pveText}</p><span className="wc-text-link">{c.details} <b>→</b></span></div><span className="wc-path-rune" aria-hidden="true">✦</span></Link>
-          <Link href="/servidor#pvp" className="wc-path wc-path-pvp"><div className="wc-path-art"><img src="/warcraft/paladin.webp" alt="Paladin" width="800" height="627" loading="lazy"/></div><Corners/><div className="wc-path-content"><span className="wc-path-tag">PVP <b>02</b></span><h3>{c.pvp}</h3><p>{c.pvpText}</p><span className="wc-text-link">{c.details} <b>→</b></span></div><span className="wc-path-rune" aria-hidden="true">✦</span></Link>
+          <Link href="/servidor#pve" className="wc-path wc-path-pve"><div className="wc-path-art"><img src="/warcraft/ragnaros.webp" alt="Ragnaros" width="1200" height="1548" loading="lazy"/></div><Corners/><div className="wc-path-content"><span className="wc-path-tag">PVE</span><h3>{c.pve}</h3><p>{c.pveText}</p><span className="wc-text-link">{c.details} <b>→</b></span></div><span className="wc-path-rune" aria-hidden="true">✦</span></Link>
+          <Link href="/servidor#pvp" className="wc-path wc-path-pvp"><div className="wc-path-art"><img src="/warcraft/paladin.webp" alt="Paladin" width="800" height="627" loading="lazy"/></div><Corners/><div className="wc-path-content"><span className="wc-path-tag">PVP</span><h3>{c.pvp}</h3><p>{c.pvpText}</p><span className="wc-text-link">{c.details} <b>→</b></span></div><span className="wc-path-rune" aria-hidden="true">✦</span></Link>
         </div>
       </div>
     </section>
