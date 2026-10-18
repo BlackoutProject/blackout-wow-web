@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "BLACKOUT WOW";
-export const SITE_TITLE = "BLACKOUT WOW - Servidor WotLK 3.3.5a Nivel 255";
+export const SITE_TITLE = "BLACKOUT WOW — Reino custom de nivel 255";
 export const SITE_DESCRIPTION =
-  "Servidor privado WoW WotLK 3.3.5a nivel 255: progresión Tier 1–35, 35 raids, 45+ World Bosses, 3 clases custom, PvP balanceado y sin Pay to Win.";
+  "Blackout-WoW 255: progresión Tier 1–35, 35 raids, 45+ World Bosses, 3 clases custom, PvP balanceado y sin Pay to Win.";
 export const SITE_LOCALE = "es_CL";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "http://localhost:3000";
+  "https://blackout-wow.com";
 
 /** Keywords base reutilizables en páginas indexables. */
 export const SITE_KEYWORDS = [

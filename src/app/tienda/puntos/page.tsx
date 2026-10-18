@@ -205,6 +205,7 @@ export default function RewardShopPage() {
             </p>
             <div className="mt-2">
               <select
+                aria-label={t("store.redeem.charLabel")}
                 value={selectedCharacterId ?? ""}
                 onChange={(e) => setSelectedCharacterId(e.target.value ? Number(e.target.value) : null)}
                 className="w-full rounded border border-white/15 bg-black/50 px-3 py-2 text-zinc-100 outline-none focus:border-amber-500/60"
@@ -228,15 +229,17 @@ export default function RewardShopPage() {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-3 rounded-xl border border-white/10 bg-zinc-950/60 p-4 md:grid-cols-[2fr,1fr]">
+        <div className="mt-6 grid gap-3 rounded-xl border border-white/10 bg-zinc-950/60 p-4 md:grid-cols-[2fr_1fr]">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={t("store.redeem.searchPlaceholder")}
+            aria-label={t("store.redeem.searchPlaceholder")}
             className="w-full rounded border border-white/15 bg-black/50 px-3 py-2 text-zinc-100 outline-none focus:border-amber-500/60"
           />
           <select
+            aria-label={t("store.redeem.allCategories")}
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="w-full rounded border border-white/15 bg-black/50 px-3 py-2 text-zinc-100 outline-none focus:border-amber-500/60"
@@ -265,7 +268,7 @@ export default function RewardShopPage() {
           </p>
         )}
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {pageItems.map((p) => {
             const canRedeem = pointsBalance >= p.costPoints;
             return (

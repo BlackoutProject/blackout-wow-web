@@ -11,7 +11,7 @@ export const resources = {
         rules: "Reglas",
         store: "Tienda",
         redeem: "Canjear puntos",
-        dashboard: "Dashboard",
+        dashboard: "Administración",
         account: "Mi cuenta",
         logout: "Salir",
         register: "Registro",
@@ -20,7 +20,7 @@ export const resources = {
       },
       footer: {
         terms: "Términos y condiciones",
-        copyright: "Copyright © 2010-2026 Blackout WoW. All rights reserved.",
+        copyright: "© 2010–2026 Blackout WoW. Todos los derechos reservados.",
       },
       lang: {
         label: "Idioma",
@@ -48,7 +48,7 @@ export const resources = {
           loading: "Entrando…",
           submit: "Entrar",
           forgotPassword: "¿Olvidaste tu contraseña?",
-          loadingPage: "Cargando login...",
+          loadingPage: "Cargando acceso…",
         },
         register: {
           title: "Registro",
@@ -68,7 +68,7 @@ export const resources = {
           hidePassword: "Ocultar contraseña",
           showPassword: "Mostrar contraseña",
           recaptchaHint:
-            "Configura `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` para activar el checkbox de seguridad.",
+            "Completa la verificación de seguridad para crear tu cuenta.",
           submit: "Crear cuenta en el reino",
           submitting: "Creando cuenta…",
           already: "¿Ya tienes cuenta?",
@@ -94,7 +94,7 @@ export const resources = {
         reset: {
           title: "Nueva contraseña",
           subtitle:
-            "Introduce el código recibido por correo. Se actualizará la clave del juego (SOAP) y la del portal.",
+            "Introduce el código recibido por correo. Se actualizará la contraseña del juego y la del portal.",
           email: "Correo",
           otp: "Código OTP",
           password: "Nueva contraseña",
@@ -201,7 +201,7 @@ export const resources = {
           charLabel: "Personaje destino del canje",
           charNone: "Sin personajes disponibles",
           charHint:
-            "El item o servicio se enviará al personaje seleccionado.",
+            "El objeto o servicio se enviará al personaje seleccionado.",
           searchPlaceholder: "Buscar por nombre, SKU o descripción",
           showingLine:
             "Mostrando {{count}} recompensas (categoría: {{category}}).",
@@ -252,7 +252,7 @@ export const resources = {
         rules: "Rules",
         store: "Store",
         redeem: "Redeem points",
-        dashboard: "Dashboard",
+        dashboard: "Admin",
         account: "My account",
         logout: "Log out",
         register: "Sign up",
@@ -261,7 +261,7 @@ export const resources = {
       },
       footer: {
         terms: "Terms and conditions",
-        copyright: "Copyright © 2010-2026 Blackout WoW. All rights reserved.",
+        copyright: "© 2010–2026 Blackout WoW. All rights reserved.",
       },
       lang: {
         label: "Language",
@@ -309,7 +309,7 @@ export const resources = {
           hidePassword: "Hide password",
           showPassword: "Show password",
           recaptchaHint:
-            "Set `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` to enable the security checkbox.",
+            "Complete the security verification to create your account.",
           submit: "Create account in realm",
           submitting: "Creating account…",
           already: "Already have an account?",
@@ -335,7 +335,7 @@ export const resources = {
         reset: {
           title: "New password",
           subtitle:
-            "Enter the code sent by email. This will update both game (SOAP) and portal passwords.",
+            "Enter the code sent by email. Your game and portal passwords will be updated.",
           email: "Email",
           otp: "OTP code",
           password: "New password",
@@ -491,7 +491,7 @@ export const resources = {
         rules: "Regras",
         store: "Loja",
         redeem: "Resgatar pontos",
-        dashboard: "Dashboard",
+        dashboard: "Administração",
         account: "Minha conta",
         logout: "Sair",
         register: "Registrar",
@@ -500,7 +500,7 @@ export const resources = {
       },
       footer: {
         terms: "Termos e condições",
-        copyright: "Copyright © 2010-2026 Blackout WoW. All rights reserved.",
+        copyright: "© 2010–2026 Blackout WoW. Todos os direitos reservados.",
       },
       lang: {
         label: "Idioma",
@@ -548,7 +548,7 @@ export const resources = {
           hidePassword: "Ocultar senha",
           showPassword: "Mostrar senha",
           recaptchaHint:
-            "Configure `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` para ativar a verificação de segurança.",
+            "Conclua a verificação de segurança para criar sua conta.",
           submit: "Criar conta no reino",
           submitting: "Criando conta…",
           already: "Já tem conta?",
@@ -574,7 +574,7 @@ export const resources = {
         reset: {
           title: "Nova senha",
           subtitle:
-            "Digite o código recebido por e-mail. Isso atualizará a senha do jogo (SOAP) e do portal.",
+            "Digite o código recebido por e-mail. Isso atualizará a senha do jogo e a do portal.",
           email: "E-mail",
           otp: "Código OTP",
           password: "Nova senha",
