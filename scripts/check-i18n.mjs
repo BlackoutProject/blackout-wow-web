@@ -16,10 +16,11 @@ const {warcraftCopy}=await load('src/lib/warcraft-copy.ts');
 const {interfaceCopy}=await load('src/lib/interface-copy.ts');
 const {rulesCopy}=await load('src/lib/rules-copy.ts');
 const {connectionCopy}=await load('src/lib/connection-copy.ts');
+const {storeShowcaseCopy}=await load('src/lib/store-showcase-copy.ts');
 function leaves(value,prefix=''){
  return Object.fromEntries(Object.entries(value).flatMap(([key,item])=>item!==null&&typeof item==='object'?Object.entries(leaves(item,prefix+key+'.')):[[prefix+key,item]]));
 }
-for(const [name,copy] of Object.entries({rules:rulesCopy,connection:connectionCopy})){
+for(const [name,copy] of Object.entries({rules:rulesCopy,connection:connectionCopy,store:storeShowcaseCopy})){
  const expected=Object.keys(leaves(copy.es)).sort();
  for(const lang of ['es','en','pt']){
   const entries=leaves(copy[lang]);
@@ -27,7 +28,7 @@ for(const [name,copy] of Object.entries({rules:rulesCopy,connection:connectionCo
   for(const [key,value] of Object.entries(entries))assert.ok(typeof value==='string'&&value.trim(),'Empty '+name+' translation: '+lang+'.'+key);
  }
 }
-console.log('PASS: all rules and connection-guide fields translated in ES/EN/PT');
+console.log('PASS: all rules, connection-guide and store-showcase fields translated in ES/EN/PT');
 const base=flatten(resources.es.translation);
 for(const lang of ['es','en','pt']){
  const entries=flatten(resources[lang].translation);

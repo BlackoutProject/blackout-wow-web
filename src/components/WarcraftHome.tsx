@@ -7,6 +7,7 @@ import { SiteShell } from "./SiteShell";
 import { AmbientVideo } from "./WarcraftMotion";
 import { warcraftCopy } from "@/lib/warcraft-copy";
 import { DISCORD_INVITE_URL } from "@/lib/site-config";
+import { StoreShowcase } from "./StoreShowcase";
 
 function Corners() { return <span className="wc-corners" aria-hidden="true"><i/><i/><i/><i/></span>; }
 function Ornament() { return <div className="wc-ornament" aria-hidden="true"><span/><img src="/warcraft/native/gold-header-trim.png" alt="" width="139" height="40"/><span/></div>; }
@@ -32,14 +33,6 @@ export default function WarcraftHome() {
   const c = warcraftCopy[i18n.language as keyof typeof warcraftCopy] ?? warcraftCopy.es;
   const [selectedClass, setSelectedClass] = useState(1);
   const classNames = ["Evoker", "Demon Hunter", "Monk"];
-  const [copyState, setCopyState] = useState<"idle" | "done" | "error">("idle");
-  const resetCopy = useRef<ReturnType<typeof setTimeout> | null>(null);
-  useEffect(() => () => { if (resetCopy.current) clearTimeout(resetCopy.current); }, []);
-  const copy = async () => {
-    try { await navigator.clipboard.writeText("set realmlist logon.blackout-wow.com"); setCopyState("done"); } catch { setCopyState("error"); }
-    if (resetCopy.current) clearTimeout(resetCopy.current);
-    resetCopy.current = setTimeout(() => setCopyState("idle"), 3500);
-  };
   return <SiteShell>
     <section className="wc-hero" aria-labelledby="hero-title">
       <AmbientVideo className="wc-hero-video" src="/warcraft/blackout-orc.mp4" poster="/warcraft/blackout-orc-poster.webp"/>
@@ -88,9 +81,6 @@ export default function WarcraftHome() {
         <div className="wc-relic"><Corners/><p className="wc-kicker">BLACKOUT · 255</p><strong className="wc-relic-tier">T1<span>—</span>T35</strong><p className="wc-relic-label">{c.statLabels[3]}</p><div className="wc-relic-stats">{["V1–V10", "100K+", "500+"].map((s,i)=><div key={s}><strong>{s}</strong><span>{c.progressionLabels[i]}</span></div>)}</div><img src="/warcraft/native/gold-dragon.png" alt="" width="128" height="128" className="wc-dragon" loading="lazy"/></div>
       </div>
     </section>
-    <section className="wc-join wc-section" aria-labelledby="join-title">
-      <AmbientVideo className="wc-join-film" src="/cinematic/scene-03-shadow-kling.mp4" poster="/cinematic/sylvanas.jpg"/>
-      <div className="wc-wrap"><div className="wc-join-copy"><p className="wc-kicker">{c.joinTag}</p><h2 id="join-title">{c.joinTitle}<br/><em>{c.joinAccent}</em></h2><p className="wc-section-intro">{c.joinText}</p><div className="wc-actions"><Link className="wc-button" href="/registro">{c.create}<span aria-hidden="true">›</span></Link><a className="wc-button wc-button-ghost" href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.discord}<span aria-hidden="true">↗</span></a></div><div className="wc-realmlist"><code>set realmlist logon.blackout-wow.com</code><button onClick={copy}>{copyState === "done" ? c.copied : c.copy}</button></div><span className="wc-copy-status" role="status">{copyState === "error" ? c.copyError : copyState === "done" ? c.copied : ""}</span><Link className="wc-text-link" href="/como-conectarme#descargas">{c.download}<b>↓</b></Link><p className="wc-announcement">{c.announcement}</p></div></div>
-    </section>
+    <StoreShowcase />
   </SiteShell>;
 }

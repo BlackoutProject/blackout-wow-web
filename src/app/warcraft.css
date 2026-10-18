@@ -23,7 +23,7 @@ body{background:#0b0e13;color:#eae4d8}
 .site-footer:before{top:-4px;bottom:auto}.site-footer-top .site-brand img{width:110px;height:75px}
 .site-footer-top>p{text-align:center}
 .site-footer-top .site-brand>span{text-align:center}
-.site-footer-top .site-brand small{margin-top:7px;font-size:8px;line-height:1.65;letter-spacing:1.6px;font-weight:600;color:#c9ad7c}
+.site-footer-top .site-brand small{text-align:left;margin-top:7px;font-size:8px;line-height:1.65;letter-spacing:1.6px;font-weight:600;color:#c9ad7c}
 .site-footer-links{font-size:11px;line-height:1.6}.site-footer-bottom{color:#9b9c9f;font-size:10px;padding-bottom:15px}
 .site-footer-legal{flex:1;line-height:1.7}.site-footer-legal p+p{margin-top:4px}.site-footer-copyright{color:#d4c7ad;font-weight:500;letter-spacing:.2px}
 .wc-wrap{width:min(1240px,88%);margin-inline:auto;position:relative}
@@ -146,4 +146,39 @@ body{background:#0b0e13;color:#eae4d8}
 /* Realm identity: shared highlight on the home and server pages. */
 .wc-realm-profile,.lore-hero>p.wc-realm-profile{display:table;border-block:1px solid #a77b3d55;padding:9px 0;margin:20px 0 25px;color:#dfbd83;font-size:11px;font-weight:600;line-height:1.8;letter-spacing:1.4px;text-transform:uppercase;text-wrap:balance}
 .wc-hero .wc-realm-profile{margin-inline:auto}
+
+/* Account-wide benefits, without duplicating the homepage registration CTA. */
+.wc-store-showcase .wc-join-film{height:760px;bottom:auto;mask-image:linear-gradient(0deg,transparent,black 28%),linear-gradient(90deg,transparent,black 35%);mask-composite:intersect}
+.wc-store-showcase .wc-join-copy{width:58%;max-width:650px}
+.wc-store-showcase .wc-section-intro{max-width:520px}
+.wc-store-showcase .wc-actions{gap:16px}
+.wc-store-showcase .wc-button{font-size:10px;gap:18px}
+.wc-store-plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px;position:relative}
+.wc-store-plan{padding:32px;border:1px solid #78859766;background:linear-gradient(135deg,#111a25f5,#0d1219f5),url('/warcraft/native/stone.png');box-shadow:inset 0 0 0 4px #080b104d}
+.wc-store-plan-plus{border-color:#ba8d4b99;background:linear-gradient(135deg,#231e16f5,#10131af5),url('/warcraft/native/stone.png')}
+.wc-store-plan>header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:18px;border-bottom:1px solid #a48a5e33}
+.wc-store-plan h3{font-family:var(--font-cinzel),Georgia,serif;font-size:30px;line-height:1.3;color:#e3dcca}
+.wc-store-plan h3 em{font-style:normal;color:#d9b778}
+.wc-store-plan>header>span{font-size:9px;font-weight:600;letter-spacing:1.3px;line-height:1.7;text-align:right;color:#bea781}
+.wc-store-plan-intro{font-size:12px;line-height:1.8;color:#b0b7c1;margin:18px 0 22px}
+.wc-store-plan ul{list-style:none;padding:0;margin:0;display:grid;gap:20px}
+.wc-store-plan li strong{font-size:13px;font-weight:500;color:#e2ded3;line-height:1.7}
+.wc-store-plan li p{font-size:12px;line-height:1.85;color:#aeb6c0;margin:5px 0 0;max-width:440px}
+.wc-store-commands{display:flex;gap:22px;flex-wrap:wrap;font-size:12px;color:#c8c4b9}
+.wc-store-commands>span{display:inline-flex;align-items:center;gap:10px}
+.wc-store-commands code{padding:5px 9px;border:1px solid #6c77874d;background:#080c11aa;color:#d8bc88;font-size:11px}
+.wc-store-equivalence{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.wc-store-equivalence>span{color:#e4bd78;font-size:12px;font-weight:600;text-align:right;white-space:nowrap}
+.wc-store-individual{display:flex;align-items:center;gap:32px;padding:27px 0;border-bottom:1px solid #a48a5e33}
+.wc-store-individual h3,.wc-store-fair h3{font-size:10px;letter-spacing:1.5px;line-height:1.8;color:#d4b682;font-weight:600}
+.wc-store-individual h3{flex-shrink:0}
+.wc-store-individual ul{display:flex;flex-wrap:wrap;gap:12px 28px;list-style:none;margin:0;padding:0;color:#b8bec7;font-size:12px;line-height:1.7}
+.wc-store-individual li{display:flex;align-items:center;gap:10px}
+.wc-store-individual li:before{content:'◆';color:#a48250;font-size:6px}
+.wc-store-fair{display:flex;align-items:center;justify-content:space-between;gap:36px;padding-top:28px}
+.wc-store-fair>div{max-width:690px}
+.wc-store-fair p{font-size:12px;line-height:1.85;color:#aeb6c0;margin-top:8px}
+.wc-store-fair .wc-text-link{font-size:9px;line-height:1.8;max-width:245px;flex-shrink:0;gap:15px}
+@media(max-width:900px){.wc-store-showcase .wc-join-copy{width:80%}.wc-store-plans{gap:18px}.wc-store-plan{padding:25px}.wc-store-plan>header{align-items:flex-start}.wc-store-plan h3{font-size:25px}.wc-store-plan>header>span{font-size:8px}.wc-store-equivalence{align-items:flex-start;flex-direction:column;gap:3px}.wc-store-individual{display:block}.wc-store-individual ul{margin-top:15px}.wc-store-fair{display:block}.wc-store-fair .wc-text-link{max-width:none;margin-top:24px}}
+@media(max-width:600px){.wc-store-showcase .wc-join-copy{width:100%}.wc-store-showcase .wc-join-film{height:600px}.wc-store-showcase .wc-actions{flex-direction:column;align-items:stretch;max-width:330px;gap:15px}.wc-store-plans{grid-template-columns:1fr;margin-top:38px;gap:20px}.wc-store-plan{padding:24px}.wc-store-plan h3{font-size:28px}.wc-store-plan>header>span{font-size:8px}.wc-store-equivalence{flex-direction:row;gap:15px}.wc-store-equivalence>span{font-size:11px}.wc-store-individual ul{display:grid;grid-template-columns:1fr;gap:12px}.wc-store-fair .wc-text-link{font-size:8px}}
 @media(max-width:600px){.wc-realm-profile,.lore-hero>p.wc-realm-profile{font-size:10px;letter-spacing:1px}}

@@ -57,15 +57,7 @@ export const warcraftCopy = {
       "Colores de las formas de druida"
     ],
     "more": "EXPLORAR TODOS LOS SISTEMAS",
-    "joinTag": "TU PRÓXIMA AVENTURA",
-    "joinTitle": "Tu lugar está",
-    "joinAccent": "en Azeroth.",
-    "joinText": "Prepara tu cuenta y tu cliente. Sigue las novedades de Blackout y encuentra a tu próxima hermandad.",
     "discord": "UNIRME A DISCORD",
-    "download": "DESCARGAR CLIENTE",
-    "copy": "COPIAR",
-    "copied": "COPIADO",
-    "copyError": "Selecciona y copia el texto",
     "announcement": "Blackout evoluciona por fases. Sigue las novedades y los anuncios oficiales en Discord."
   },
   "en": {
@@ -126,15 +118,7 @@ export const warcraftCopy = {
       "Druid form colors"
     ],
     "more": "EXPLORE ALL SYSTEMS",
-    "joinTag": "YOUR NEXT ADVENTURE",
-    "joinTitle": "Your place is",
-    "joinAccent": "in Azeroth.",
-    "joinText": "Prepare your account and client. Follow Blackout’s latest announcements and find your next guild.",
     "discord": "JOIN DISCORD",
-    "download": "DOWNLOAD CLIENT",
-    "copy": "COPY",
-    "copied": "COPIED",
-    "copyError": "Select and copy the text",
     "announcement": "Blackout evolves in phases. Follow the latest updates and official announcements on Discord."
   },
   "pt": {
@@ -195,15 +179,7 @@ export const warcraftCopy = {
       "Cores das formas de druida"
     ],
     "more": "EXPLORAR TODOS OS SISTEMAS",
-    "joinTag": "SUA PRÓXIMA AVENTURA",
-    "joinTitle": "Seu lugar é",
-    "joinAccent": "em Azeroth.",
-    "joinText": "Prepare sua conta e seu cliente. Acompanhe as novidades de Blackout e encontre sua próxima guilda.",
     "discord": "ENTRAR NO DISCORD",
-    "download": "BAIXAR CLIENTE",
-    "copy": "COPIAR",
-    "copied": "COPIADO",
-    "copyError": "Selecione e copie o texto",
     "announcement": "Blackout evolui por fases. Acompanhe as novidades e os anúncios oficiais no Discord."
   }
 };
