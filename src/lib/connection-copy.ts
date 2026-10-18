@@ -9,18 +9,21 @@ export const connectionCopy = {
       {
         "title": "Ya tengo un cliente 3.3.5a",
         "steps": [
-          "Usa tu instalación de World of Warcraft 3.3.5a.",
-          "Descarga e instala los parches y WoW.exe de Blackout.",
-          "Descarga AIO y Druid C Fix. Descomprímelos en Interface/AddOns y activa ambos addons.",
-          "Configura el realmlist con la dirección de Blackout que aparece abajo."
+          "Prepara el cliente: usa una instalación de World of Warcraft 3.3.5a y cierra el juego antes de modificar sus archivos.",
+          "Descarga y descomprime: los parches, WoW.exe, AIO y Druid C Fix se entregan comprimidos. Extrae su contenido antes de instalarlo.",
+          "Instala los parches: copia los archivos de parche descomprimidos en la carpeta Data de tu instalación de World of Warcraft.",
+          "Instala WoW.exe: coloca el ejecutable de Blackout en la carpeta principal del juego, al mismo nivel que las carpetas Data e Interface.",
+          "Instala los addons: copia las carpetas descomprimidas de AIO y Druid C Fix en Interface/AddOns. Activa ambos addons en la pantalla de selección de personaje.",
+          "Configura el realmlist con la dirección de Blackout que aparece abajo. Después, abre el juego con el WoW.exe de Blackout e inicia sesión."
         ]
       },
       {
         "title": "Necesito descargar el cliente",
         "steps": [
-          "Elige nuestro cliente enUS (inglés) o esES (español).",
+          "Elige nuestro cliente enUS (inglés) o esES (español), descárgalo y descomprime su contenido en una carpeta de tu equipo.",
           "Ambos ya incluyen el realmlist de Blackout y los dos addons: AIO y Druid C Fix.",
-          "Descarga e instala también los parches y WoW.exe de Blackout. Son obligatorios y se distribuyen aparte.",
+          "Descarga también los parches y WoW.exe de Blackout. Son obligatorios, se distribuyen aparte y debes descomprimirlos antes de instalarlos.",
+          "Copia los archivos de parche en Data y coloca WoW.exe en la carpeta principal del juego, al mismo nivel que Data e Interface.",
           "Con todos los archivos instalados, abre WoW.exe e inicia sesión con tu cuenta."
         ]
       }
@@ -32,11 +35,11 @@ export const connectionCopy = {
     "patch": "Parches + WoW.exe — obligatorios",
     "patchHelp": "SEGUIR NOVEDADES EN DISCORD",
     "patchPending": "Enlace pendiente de publicación. Sigue los anuncios en Discord.",
-    "patchDesc": "Necesarios con cualquier cliente 3.3.5a, incluido el nuestro. Instala ambos para acceder a Blackout.",
+    "patchDesc": "Obligatorios con cualquier cliente 3.3.5a, incluido el nuestro. Descomprime la descarga: los archivos de parche van en Data y WoW.exe en la carpeta principal del juego.",
     "addon": "AIO — obligatorio",
     "fix": "Druid C Fix — obligatorio",
-    "fixDesc": "Ya incluido en nuestros clientes enUS/esES. Si usas tu propio cliente, descomprime en Interface/AddOns y activa el addon.",
-    "addonDesc": "Ya incluido en nuestros clientes enUS/esES. Si usas tu propio cliente, descomprime en Interface/AddOns y activa el addon.",
+    "fixDesc": "Ya incluido en nuestros clientes enUS/esES. Con un cliente propio, descomprime la descarga, copia las carpetas del addon en Interface/AddOns y actívalo en la selección de personaje.",
+    "addonDesc": "Ya incluido en nuestros clientes enUS/esES. Con un cliente propio, descomprime la descarga, copia las carpetas del addon en Interface/AddOns y actívalo en la selección de personaje.",
     "client": "Cliente 3.3.5a · enUS / esES",
     "clientDesc": "Ambas opciones incluyen realmlist, AIO y Druid C Fix. Solo debes añadir los parches y WoW.exe de Blackout, distribuidos por separado.",
     "button": "VER DESCARGAS",
@@ -57,18 +60,21 @@ export const connectionCopy = {
       {
         "title": "I already have a 3.3.5a client",
         "steps": [
-          "Use your World of Warcraft 3.3.5a installation.",
-          "Download and install the Blackout patches and WoW.exe.",
-          "Download AIO and Druid C Fix. Extract them into Interface/AddOns and enable both addons.",
-          "Set your realmlist to the Blackout address shown below."
+          "Prepare the client: use a World of Warcraft 3.3.5a installation and close the game before changing its files.",
+          "Download and extract: the patches, WoW.exe, AIO and Druid C Fix come in compressed archives. Extract their contents before installing them.",
+          "Install the patches: copy the extracted patch files into the Data folder of your World of Warcraft installation.",
+          "Install WoW.exe: place the Blackout executable in the main game folder, alongside the Data and Interface folders.",
+          "Install the addons: copy the extracted AIO and Druid C Fix folders into Interface/AddOns. Enable both addons on the character selection screen.",
+          "Set your realmlist to the Blackout address shown below. Then launch the game using Blackout's WoW.exe and sign in."
         ]
       },
       {
         "title": "I need to download the client",
         "steps": [
-          "Choose our enUS (English) or esES (Spanish) client.",
+          "Choose our enUS (English) or esES (Spanish) client, download it and extract its contents into a folder on your computer.",
           "Both already include the Blackout realmlist and both addons: AIO and Druid C Fix.",
-          "Also download and install the Blackout patches and WoW.exe. These are required and distributed separately.",
+          "Also download the Blackout patches and WoW.exe. These are required, distributed separately and must be extracted before installation.",
+          "Copy the patch files into Data and place WoW.exe in the main game folder, alongside Data and Interface.",
           "With all files installed, open WoW.exe and sign in with your account."
         ]
       }
@@ -80,11 +86,11 @@ export const connectionCopy = {
     "patch": "Patches + WoW.exe — required",
     "patchHelp": "FOLLOW UPDATES ON DISCORD",
     "patchPending": "Download link awaiting publication. Follow the announcements on Discord.",
-    "patchDesc": "Required with any 3.3.5a client, including ours. Install both to access Blackout.",
+    "patchDesc": "Required with any 3.3.5a client, including ours. Extract the download: patch files go into Data and WoW.exe goes into the main game folder.",
     "addon": "AIO — required",
     "fix": "Druid C Fix — required",
-    "fixDesc": "Already included in our enUS/esES clients. If you use your own client, extract into Interface/AddOns and enable the addon.",
-    "addonDesc": "Already included in our enUS/esES clients. If you use your own client, extract into Interface/AddOns and enable the addon.",
+    "fixDesc": "Already included in our enUS/esES clients. With your own client, extract the download, copy the addon folders into Interface/AddOns and enable it on the character selection screen.",
+    "addonDesc": "Already included in our enUS/esES clients. With your own client, extract the download, copy the addon folders into Interface/AddOns and enable it on the character selection screen.",
     "client": "3.3.5a client · enUS / esES",
     "clientDesc": "Both options include the realmlist, AIO and Druid C Fix. You only need to add the Blackout patches and WoW.exe, distributed separately.",
     "button": "VIEW DOWNLOADS",
@@ -105,18 +111,21 @@ export const connectionCopy = {
       {
         "title": "Já tenho um cliente 3.3.5a",
         "steps": [
-          "Use sua instalação de World of Warcraft 3.3.5a.",
-          "Baixe e instale os patches e o WoW.exe do Blackout.",
-          "Baixe AIO e Druid C Fix. Extraia-os em Interface/AddOns e ative os dois addons.",
-          "Configure o realmlist com o endereço do Blackout mostrado abaixo."
+          "Prepare o cliente: use uma instalação de World of Warcraft 3.3.5a e feche o jogo antes de modificar seus arquivos.",
+          "Baixe e descompacte: os patches, o WoW.exe, o AIO e o Druid C Fix são distribuídos em arquivos compactados. Extraia o conteúdo antes da instalação.",
+          "Instale os patches: copie os arquivos de patch extraídos para a pasta Data da sua instalação de World of Warcraft.",
+          "Instale o WoW.exe: coloque o executável do Blackout na pasta principal do jogo, no mesmo nível das pastas Data e Interface.",
+          "Instale os addons: copie as pastas extraídas de AIO e Druid C Fix para Interface/AddOns. Ative os dois addons na tela de seleção de personagem.",
+          "Configure o realmlist com o endereço do Blackout mostrado abaixo. Depois, abra o jogo pelo WoW.exe do Blackout e entre com sua conta."
         ]
       },
       {
         "title": "Preciso baixar o cliente",
         "steps": [
-          "Escolha nosso cliente enUS (inglês) ou esES (espanhol).",
+          "Escolha nosso cliente enUS (inglês) ou esES (espanhol), faça o download e extraia o conteúdo para uma pasta no seu computador.",
           "Ambos já incluem o realmlist do Blackout e os dois addons: AIO e Druid C Fix.",
-          "Baixe e instale também os patches e o WoW.exe do Blackout. São obrigatórios e distribuídos separadamente.",
+          "Baixe também os patches e o WoW.exe do Blackout. São obrigatórios, distribuídos separadamente e devem ser descompactados antes da instalação.",
+          "Copie os arquivos de patch para Data e coloque WoW.exe na pasta principal do jogo, no mesmo nível de Data e Interface.",
           "Com todos os arquivos instalados, abra WoW.exe e entre com sua conta."
         ]
       }
@@ -128,11 +137,11 @@ export const connectionCopy = {
     "patch": "Patches + WoW.exe — obrigatórios",
     "patchHelp": "ACOMPANHAR NOVIDADES NO DISCORD",
     "patchPending": "Link aguardando publicação. Acompanhe os anúncios no Discord.",
-    "patchDesc": "Necessários com qualquer cliente 3.3.5a, incluindo o nosso. Instale ambos para acessar o Blackout.",
+    "patchDesc": "Obrigatórios com qualquer cliente 3.3.5a, incluindo o nosso. Descompacte o download: os arquivos de patch vão em Data e WoW.exe na pasta principal do jogo.",
     "addon": "AIO — obrigatório",
     "fix": "Druid C Fix — obrigatório",
-    "fixDesc": "Já incluído em nossos clientes enUS/esES. Se usar seu próprio cliente, extraia em Interface/AddOns e ative o addon.",
-    "addonDesc": "Já incluído em nossos clientes enUS/esES. Se usar seu próprio cliente, extraia em Interface/AddOns e ative o addon.",
+    "fixDesc": "Já incluído em nossos clientes enUS/esES. Com um cliente próprio, descompacte o download, copie as pastas do addon para Interface/AddOns e ative-o na seleção de personagem.",
+    "addonDesc": "Já incluído em nossos clientes enUS/esES. Com um cliente próprio, descompacte o download, copie as pastas do addon para Interface/AddOns e ative-o na seleção de personagem.",
     "client": "Cliente 3.3.5a · enUS / esES",
     "clientDesc": "Ambas as opções incluem realmlist, AIO e Druid C Fix. Basta adicionar os patches e o WoW.exe do Blackout, distribuídos separadamente.",
     "button": "VER DOWNLOADS",
