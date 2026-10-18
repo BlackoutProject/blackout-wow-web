@@ -45,7 +45,7 @@ for(const file of await walk('src')){
  for(const match of text.matchAll(/\bui\((['"])(.*?)\1\)/g)){
   calls++;assert.ok(interfaceCopy[match[2]],'Missing EN/PT interface translation in '+file+': '+match[2]);
  }
- for(const match of text.matchAll(/\bt\((['"])(.*?)\1\)/g))assert.ok(base[match[2]],'Missing translation key: '+match[2]);
+ for(const match of text.matchAll(/\bt\((['"])([^'"]+)\1\s*[,)]/g))assert.ok(base[match[2]],'Missing translation key: '+match[2]);
 }
 console.log('PASS: '+Object.keys(base).length+' resource keys in ES/EN/PT, interpolation variables and '+calls+' interface labels');
 console.log('PASS: all '+Object.keys(warcraftCopy.es).length+' homepage copy fields exist in each language');

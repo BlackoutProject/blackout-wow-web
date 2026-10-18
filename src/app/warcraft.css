@@ -22,6 +22,7 @@ body{background:#0b0e13;color:#eae4d8}
 .site-footer{background:linear-gradient(#0c1017f4,#070a10ed),url('/warcraft/native/stone.png');padding-top:48px;border-color:#5b5244}
 .site-footer:before{top:-4px;bottom:auto}.site-footer-top .site-brand img{width:110px;height:75px}
 .site-footer-links{font-size:11px;line-height:1.6}.site-footer-bottom{color:#9b9c9f;font-size:10px;padding-bottom:15px}
+.site-footer-legal{flex:1;max-width:1040px;line-height:1.85}.site-footer-legal p+p{margin-top:7px}.site-footer-copyright{color:#d4c7ad;font-weight:500}.site-footer-legal a{font-size:inherit;text-decoration:underline;text-underline-offset:3px}.site-footer-legal a:hover{color:#ffe0a8}
 .wc-wrap{width:min(1240px,88%);margin-inline:auto;position:relative}
 .wc-section{position:relative;padding:104px 0;isolation:isolate}
 .wc-section h2{font-family:var(--font-cinzel),Georgia,serif;font-weight:600;font-size:clamp(32px,3.6vw,52px);line-height:1.2;letter-spacing:-1.4px;color:#eee8da;text-shadow:0 3px 12px #0009}

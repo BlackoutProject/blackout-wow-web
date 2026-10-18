@@ -20,7 +20,11 @@ export const resources = {
       },
       footer: {
         terms: "Términos y condiciones",
-        copyright: "© 2010–2026 Blackout WoW. Todos los derechos reservados.",
+        copyright: "© {{year}} Blackout-WoW. Todos los derechos reservados.",
+        independence: "Blackout-WoW es un proyecto independiente. No está afiliado, patrocinado ni respaldado por Blizzard Entertainment.",
+        trademarks: "World of Warcraft, Warcraft y Blizzard Entertainment son marcas comerciales o marcas registradas de Blizzard Entertainment, Inc.",
+        thirdParty: "Las marcas, ilustraciones y demás recursos de terceros pertenecen a sus respectivos titulares. Blackout-WoW no reclama la titularidad de esos contenidos.",
+        legalTitle: "Propiedad intelectual y marcas",
       },
       lang: {
         label: "Idioma",
@@ -261,7 +265,11 @@ export const resources = {
       },
       footer: {
         terms: "Terms and conditions",
-        copyright: "© 2010–2026 Blackout WoW. All rights reserved.",
+        copyright: "© {{year}} Blackout-WoW. All rights reserved.",
+        independence: "Blackout-WoW is an independent project. It is not affiliated with, sponsored by or endorsed by Blizzard Entertainment.",
+        trademarks: "World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc.",
+        thirdParty: "Third-party trademarks, illustrations and other assets belong to their respective owners. Blackout-WoW does not claim ownership of that content.",
+        legalTitle: "Intellectual property and trademarks",
       },
       lang: {
         label: "Language",
@@ -500,7 +508,11 @@ export const resources = {
       },
       footer: {
         terms: "Termos e condições",
-        copyright: "© 2010–2026 Blackout WoW. Todos os direitos reservados.",
+        copyright: "© {{year}} Blackout-WoW. Todos os direitos reservados.",
+        independence: "Blackout-WoW é um projeto independente. Não é afiliado, patrocinado nem endossado pela Blizzard Entertainment.",
+        trademarks: "World of Warcraft, Warcraft e Blizzard Entertainment são marcas comerciais ou marcas registradas da Blizzard Entertainment, Inc.",
+        thirdParty: "Marcas, ilustrações e outros recursos de terceiros pertencem aos seus respectivos titulares. Blackout-WoW não reivindica a propriedade desses conteúdos.",
+        legalTitle: "Propriedade intelectual e marcas",
       },
       lang: {
         label: "Idioma",

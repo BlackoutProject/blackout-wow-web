@@ -8,7 +8,7 @@ import { rulesCopy } from "@/lib/rules-copy";
 
 
 export default function TermsContent() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const lang = isSupportedLanguage(i18n.language) ? i18n.language : defaultLng;
   const tx = rulesCopy[lang];
 
@@ -115,6 +115,17 @@ export default function TermsContent() {
           <p className="relative mt-4 text-sm leading-relaxed text-zinc-200 md:text-base">
             {tx.end}
           </p>
+        </div>
+      </section>
+      <section id="propiedad-intelectual" className="mx-auto max-w-6xl scroll-mt-28 px-4 pb-16 md:pb-20" aria-labelledby="legal-title">
+        <div className="border-t border-amber-200/20 pt-8">
+          <h2 id="legal-title" className="font-display text-xl font-semibold text-amber-200">{t('footer.legalTitle')}</h2>
+          <div className="mt-5 max-w-4xl space-y-3 text-sm leading-relaxed text-zinc-300">
+            <p>{t('footer.copyright',{year:new Date().getUTCFullYear()})}</p>
+            <p>{t('footer.independence')}</p>
+            <p>{t('footer.trademarks')}</p>
+            <p>{t('footer.thirdParty')}</p>
+          </div>
         </div>
       </section>
     </SiteShell>
