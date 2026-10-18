@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SiteShell } from "@/components/SiteShell";
+import { LogoutButton } from "@/components/LogoutButton";
+import { StoreShowcase } from "@/components/StoreShowcase";
 import { useAuth } from "@/context/AuthContext";
 import { apiJson } from "@/lib/api";
 
@@ -261,6 +263,7 @@ export default function AccountPage() {
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
+        {accessToken && <div className="account-toolbar"><a className="account-donor-link" href="#donor">VIP &amp; DONOR<span aria-hidden="true">↓</span></a><LogoutButton /></div>}
         {/* Sin `home-card`: su regla "> * { z-index:1 }" anulaba z-20 y `absolute`, tapando texto y vídeo */}
         <div className="metal-border relative isolate flex h-36 flex-col overflow-hidden rounded-xl border border-white/10 bg-zinc-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_12px_28px_rgba(2,6,23,0.4)] sm:h-40 md:h-44 md:rounded-2xl">
 
@@ -286,7 +289,7 @@ export default function AccountPage() {
           <p className="mt-8 text-zinc-400">{t("account.redirecting")}</p>
         )}
         {error && <p className="mt-8 text-red-400">{error}</p>}
-        {data && (
+        {accessToken && data && (
           <>
             <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-8">
               <aside className="metal-border order-2 h-fit w-full shrink-0 rounded-2xl border border-white/10 bg-zinc-950/70 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_12px_28px_rgba(2,6,23,0.38)] lg:sticky lg:order-1 lg:top-24 lg:w-56 lg:self-start lg:p-5">
@@ -649,6 +652,7 @@ export default function AccountPage() {
           </div>
         )}
       </div>
+      <StoreShowcase />
     </SiteShell>
   );
 }

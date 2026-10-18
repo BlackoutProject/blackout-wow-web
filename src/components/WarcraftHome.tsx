@@ -7,7 +7,8 @@ import { SiteShell } from "./SiteShell";
 import { AmbientVideo } from "./WarcraftMotion";
 import { warcraftCopy } from "@/lib/warcraft-copy";
 import { DISCORD_INVITE_URL } from "@/lib/site-config";
-import { StoreShowcase } from "./StoreShowcase";
+import { SupportShowcase } from "./SupportShowcase";
+import { DiscordCommunity } from "./DiscordCommunity";
 
 function Corners() { return <span className="wc-corners" aria-hidden="true"><i/><i/><i/><i/></span>; }
 function Ornament() { return <div className="wc-ornament" aria-hidden="true"><span/><img src="/warcraft/native/gold-header-trim.png" alt="" width="139" height="40"/><span/></div>; }
@@ -81,6 +82,7 @@ export default function WarcraftHome() {
         <div className="wc-relic"><Corners/><p className="wc-kicker">BLACKOUT · 255</p><strong className="wc-relic-tier">T1<span>—</span>T35</strong><p className="wc-relic-label">{c.statLabels[3]}</p><div className="wc-relic-stats">{["V1–V10", "100K+", "500+"].map((s,i)=><div key={s}><strong>{s}</strong><span>{c.progressionLabels[i]}</span></div>)}</div><img src="/warcraft/native/gold-dragon.png" alt="" width="128" height="128" className="wc-dragon" loading="lazy"/></div>
       </div>
     </section>
-    <StoreShowcase />
+    <DiscordCommunity />
+    <SupportShowcase />
   </SiteShell>;
 }

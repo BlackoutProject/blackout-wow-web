@@ -37,6 +37,11 @@ for(const link of internalLinks){
 console.log('PASS: '+internalLinks.size+' internal links and section anchors resolve');
 console.log('External destinations: '+[...externalLinks].join(', '));
 const home=pages.get('/');
+assert.ok(home.includes('id="comunidad"') && home.includes('https://discord.com/widget?id=1026731303925710948&amp;theme=dark'), 'Official Discord community block missing');
+assert.ok(home.includes('/login?next=%2Fcuenta%23donor'), 'Contributions must link to account login');
+assert.ok(!/VIP Instance|VIP Mall|50 USD|200 USD/.test(home), 'Donor details must not appear on Home');
+assert.ok(!pages.get('/cuenta').includes('id="donor"'), 'Signed-out account must not render Donor details');
+console.log('PASS: official Discord widget and contribution login link; no Donor details in signed-out views');
 for(const fact of ['255','35','45+','T1','T35','V1–V10','100K+','500+','Evoker','Demon Hunter','Monk','10 hechizos custom por clase','NUEVA ERA','No Pay to Win'])assert.ok(home.includes(fact),'Missing home fact: '+fact);
 assert.ok(!/players online|jugadores conectados|playersOnline/i.test(home),'Unexpected activity counter');
 const server=pages.get('/servidor');

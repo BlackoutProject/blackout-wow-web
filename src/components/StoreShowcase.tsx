@@ -4,14 +4,17 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { DISCORD_INVITE_URL } from "@/lib/site-config";
 import { storeShowcaseCopy } from "@/lib/store-showcase-copy";
+import { useAuth } from "@/context/AuthContext";
 import { AmbientVideo } from "./WarcraftMotion";
 
 export function StoreShowcase() {
   const { i18n } = useTranslation();
+  const { accessToken } = useAuth();
   const c = storeShowcaseCopy[i18n.language as keyof typeof storeShowcaseCopy] ?? storeShowcaseCopy.es;
+  if (!accessToken) return null;
 
   return (
-    <section className="wc-join wc-section wc-store-showcase" id="tienda" aria-labelledby="store-title">
+    <section className="wc-join wc-section wc-store-showcase" id="donor" aria-labelledby="store-title">
       <AmbientVideo className="wc-join-film" src="/cinematic/scene-03-shadow-kling.mp4" poster="/cinematic/sylvanas.jpg" />
       <div className="wc-wrap">
         <header className="wc-join-copy">
@@ -26,7 +29,7 @@ export function StoreShowcase() {
 
         <div className="wc-store-plans">
           <article className="wc-store-plan" aria-labelledby="vip-title">
-            <header><h3 id="vip-title">VIP</h3><span>{c.account}</span></header>
+            <header><div><h3 id="vip-title">VIP</h3><p className="wc-store-price">50 <small>USD</small></p></div><span>{c.account}</span></header>
             <p className="wc-store-plan-intro">{c.vipIntro}</p>
             <ul>
               <li><strong>{c.instance}</strong><p>{c.instanceText}</p></li>
@@ -35,25 +38,26 @@ export function StoreShowcase() {
             </ul>
           </article>
           <article className="wc-store-plan wc-store-plan-plus" aria-labelledby="vip-plus-title">
-            <header><h3 id="vip-plus-title">VIP <em>PLUS</em></h3><span>{c.account}</span></header>
+            <header><div><h3 id="vip-plus-title">VIP <em>PLUS</em></h3><p className="wc-store-price">200 <small>USD</small></p></div><span>{c.account}</span></header>
             <p className="wc-store-plan-intro">{c.plusIntro}</p>
             <ul>
               <li><strong>{c.mall}</strong><p>{c.mallText}</p></li>
-              <li className="wc-store-equivalence"><strong>{c.gear}</strong><span>T35</span></li>
-              <li className="wc-store-equivalence"><strong>{c.weapons}</strong><span>Legendary V10</span></li>
-              <li className="wc-store-equivalence"><strong>{c.keys}</strong><span>T1–T35</span></li>
+              <li className="wc-store-equivalence"><strong>{c.gear}</strong>{" "}<span>T35</span></li>
+              <li className="wc-store-equivalence"><strong>{c.weapons}</strong>{" "}<span>Legendary V10</span></li>
+              <li className="wc-store-equivalence"><strong>{c.keys}</strong>{" "}<span>T1–T35</span></li>
             </ul>
           </article>
         </div>
 
         <div className="wc-store-individual">
           <h3>{c.individual}</h3>
-          <ul>{c.individualItems.map(item => <li key={item}>{item}</li>)}</ul>
+          <ul>{c.individualItems.map(item => <li key={item.name}><strong>{item.name}</strong><span>{item.price}</span></li>)}</ul>
         </div>
         <div className="wc-store-fair">
           <div><h3>{c.fairTitle}</h3><p>{c.fairText}</p></div>
           <Link className="wc-text-link" href="/tienda/puntos">{c.redeem}<b aria-hidden="true">→</b></Link>
         </div>
+        <p className="wc-store-help">{c.helpText}{" "}<a href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.helpLink}<span aria-hidden="true"> ↗</span></a></p>
       </div>
     </section>
   );
