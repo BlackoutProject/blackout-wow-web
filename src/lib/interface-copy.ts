@@ -43,7 +43,7 @@ export const interfaceCopy: Record<string, [string, string]> = {
   'Órdenes y estado de entrega': ['Orders and delivery status', 'Pedidos e status de entrega'], 'Canjes y débito de puntos': ['Redemptions and points debits', 'Resgates e débitos de pontos'], 'Analítica y KPIs': ['Analytics and KPIs', 'Análise e indicadores'],
   'Sin username': ['No username', 'Sem nome de usuário'], 'Sin revisar': ['Not checked', 'Não verificado'], 'Sin intento': ['No attempt', 'Sem tentativa'],
   'Guardando...': ['Saving...', 'Salvando...'], 'Actualizar': ['Update', 'Atualizar'], 'Crear': ['Create', 'Criar'], 'Desactivar': ['Disable', 'Desativar'], 'Activar': ['Enable', 'Ativar'],
-  'Ir al contenido': ['Skip to content', 'Ir para o conteúdo'], 'UN CLÁSICO. SIN LÍMITES.': ['A CLASSIC. WITHOUT LIMITS.', 'UM CLÁSSICO. SEM LIMITES.'],
+  'Ir al contenido': ['Skip to content', 'Ir para o conteúdo'], 'ÚNICO.': ['UNIQUE.', 'ÚNICO.'], 'SIN LÍMITES.': ['LIMITLESS.', 'SEM LIMITES.'],
   'Nivel 255 · PvE & PvP · Custom': ['Level 255 · PvE & PvP · Custom', 'Nível 255 · PvE & PvP · Custom'], 'Servidor privado · No afiliado a Blizzard Entertainment': ['Private server · Not affiliated with Blizzard Entertainment', 'Servidor privado · Não afiliado à Blizzard Entertainment'],
   'Volver arriba': ['Back to top', 'Voltar ao topo'], 'Principal': ['Main navigation', 'Navegação principal'], 'Navegación móvil': ['Mobile navigation', 'Navegação móvel'],
   'Secciones': ['Sections', 'Seções'], '01 Inicio': ['01 Home', '01 Início'], '02 El reino': ['02 The realm', '02 O reino'], '03 La experiencia': ['03 The experience', '03 A experiência'], '04 Progresión': ['04 Progression', '04 Progressão'], '05 Cómo jugar': ['05 How to play', '05 Como jogar'],

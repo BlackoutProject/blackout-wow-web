@@ -51,6 +51,7 @@ export default function WarcraftHome() {
           <p className="wc-kicker wc-soon"><span/> BLACKOUT 255 · {c.soon} <span/></p>
           <h1 id="hero-title">{c.title}<br/><em>{c.accent}</em></h1>
           <p className="wc-hero-intro">{c.intro}</p>
+          <p className="wc-realm-profile">{c.realmProfile}</p>
           <div className="wc-actions"><Link href="/registro" className="wc-button">{c.create}<span aria-hidden="true">›</span></Link><Link href="/como-conectarme" className="wc-button wc-button-ghost">{c.play}<span aria-hidden="true">↓</span></Link><a className="wc-button wc-button-ghost" href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.discord}<span aria-hidden="true">↗</span></a></div>
           <p className="wc-fair-line">{c.fair}</p>
         </div>

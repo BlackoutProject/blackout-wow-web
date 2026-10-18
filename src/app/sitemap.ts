@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: withBaseUrl("/servidor"),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: withBaseUrl("/registro"),
       lastModified: now,
       changeFrequency: "weekly",

@@ -40,12 +40,19 @@ restablecimiento, cuenta, tienda, puntos, retorno de pago y administración.
 Español, inglés y portugués. Diseño adaptable a móvil y escritorio.
 Pausa de animaciones y respeto de la preferencia de movimiento reducido.
 La información parte de la web actual e incorpora las ampliaciones del propietario.
-35 raids confirmadas. Parches + WoW.exe son obligatorios; su enlace está pendiente.
+High Rate y estadísticas elevadas, sin multiplicadores numéricos no confirmados.
+35 raids en total, de las cuales 19 son totalmente custom, y más de 30 mapas custom.
+Parches + WoW.exe son obligatorios; su enlace está pendiente.
 Las razas base son las de WotLK, con personalización y diseños custom.
 Las apariencias de otras razas se describen como morphs, con ejemplos.
 No se han añadido contadores de jugadores conectados ni actividad inventada.
 
 RECURSOS
+El favicon cuadrado y la imagen para compartir usan el logo original de Blackout.
+Para regenerarlos: node scripts/generate-brand-assets.mjs
+Los archivos resultantes están incluidos; no hace falta generarlos al desplegar.
+Tras publicar, solicita el rastreo de la portada en Google Search Console.
+Google decide la presentación final y puede tardar días o semanas en actualizarla.
 Los vídeos, imágenes, texturas y fuentes usados están incluidos en public/.
 design/media-manifest.json y design/warcraft-asset-sources.json documentan
 el origen de los recursos. Las texturas de interfaz proceden del cliente WoW;

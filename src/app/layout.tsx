@@ -10,6 +10,8 @@ import { AuthProvider } from "@/context/AuthContext";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { languageCookieName, resolveAppLanguage } from "@/i18n/settings";
 import {
+  BRAND_LOGO_PATH,
+  OG_IMAGE_PATH,
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
   SITE_LOCALE,
@@ -30,6 +32,10 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
+  icons: {
+    icon: [{ url: "/brand/blackout-192.png", type: "image/png", sizes: "192x192" }],
+    apple: [{ url: "/brand/blackout-180.png", type: "image/png", sizes: "180x180" }],
+  },
   alternates: {
     canonical: "/",
   },
@@ -43,7 +49,7 @@ export const metadata: Metadata = {
     url: withBaseUrl("/"),
     images: [
       {
-        url: withBaseUrl("/logo-transparent.png"),
+        url: withBaseUrl(OG_IMAGE_PATH),
         width: 1200,
         height: 630,
         alt: SITE_TITLE,
@@ -54,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [withBaseUrl("/logo-transparent.png")],
+    images: [withBaseUrl(OG_IMAGE_PATH)],
   },
   robots: {
     index: true,
@@ -65,14 +71,23 @@ export const metadata: Metadata = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
   name: SITE_NAME,
+  alternateName: ["Blackout WoW", "Blackout-WoW 255"],
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   inLanguage: ["es", "en", "pt"],
   publisher: {
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: withBaseUrl(BRAND_LOGO_PATH),
+      width: 512,
+      height: 512,
+    },
   },
 } as const;
 
