@@ -43,6 +43,7 @@ type BuildPageMetadataOptions = {
   keywords?: string[];
   /** Login, cuenta, dashboard, etc. */
   noIndex?: boolean;
+  locale?: string;
 };
 
 /**
@@ -56,6 +57,7 @@ export function buildPageMetadata({
   pathname,
   keywords,
   noIndex = false,
+  locale = SITE_LOCALE,
 }: BuildPageMetadataOptions): Metadata {
   const path = pathname.startsWith("/") ? pathname : `/${pathname}`;
   const ogTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`;
@@ -72,7 +74,7 @@ export function buildPageMetadata({
     },
     openGraph: {
       type: "website",
-      locale: SITE_LOCALE,
+      locale,
       siteName: SITE_NAME,
       title: ogTitle,
       description,

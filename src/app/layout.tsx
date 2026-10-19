@@ -9,6 +9,7 @@ import "./blackout.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { languageCookieName, resolveAppLanguage } from "@/i18n/settings";
+import { metadataTranslations } from "@/lib/metadata-copy";
 import {
   BRAND_LOGO_PATH,
   OG_IMAGE_PATH,
@@ -107,7 +108,7 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteJsonLd),
+            __html: JSON.stringify({ ...websiteJsonLd, description: lang === "es" ? SITE_DESCRIPTION : metadataTranslations["/"][lang].description }),
           }}
         />
         <LanguageProvider initialLanguage={lang}>

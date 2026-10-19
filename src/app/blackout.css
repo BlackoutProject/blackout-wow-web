@@ -67,7 +67,7 @@
 .wc-store-price small{font-family:var(--font-geist-sans),Arial,sans-serif;font-size:10px;letter-spacing:1px;color:#c2b69e}
 .wc-store-individual{display:block}
 .wc-store-individual ul{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
-.wc-store-individual li{display:block;padding-top:16px;border-top:1px solid #a48a5e33}
+.wc-store-individual li{display:block;padding-top:16px;border-top:1px solid #a48a5e33;text-align:center}
 .wc-store-individual li:before{content:none}
 .wc-store-individual li strong{display:block;font-weight:500;color:#e2ded3;font-size:12px}
 .wc-store-individual li>span{display:block;margin-top:8px;color:#d9b778;font-size:11px;line-height:1.8}
@@ -96,3 +96,52 @@
 @media(max-width:700px){.wc-community-frame{grid-template-columns:1fr}.wc-community-copy{padding:34px 25px}.wc-community-panel{border-left:0;border-top:1px solid #c2a17622;padding:22px}.wc-community-panel iframe{height:370px}.wc-community h2{font-size:31px}.wc-community-intro{font-size:12px}.wc-community-badges{margin-bottom:24px}.wc-discord-button{width:100%}}
 @media(prefers-reduced-motion:reduce){.wc-discord-button{transition:none}.wc-discord-button:hover{transform:none}}
 @media(max-width:360px){.site-header .site-brand>span{display:none}}
+
+/* Account actions stay together in every language. */
+.site-header-actions{gap:10px;flex-shrink:0}
+.site-header .site-account{white-space:nowrap;height:44px;min-height:44px;line-height:1.2;display:inline-flex;align-items:center;justify-content:center}
+.site-header .site-account span{line-height:1}
+.site-header .site-register{border-color:#c17b50;background:linear-gradient(135deg,#86351f,#4b201a);color:#ffe3be;box-shadow:inset 0 0 0 2px #25110e,0 4px 18px #a638191a}
+.site-header .site-register:hover{background:linear-gradient(135deg,#a24328,#63271d);border-color:#e6ae79;box-shadow:inset 0 0 0 2px #25110e,0 4px 22px #a6381933}
+.site-header .site-brand small{white-space:nowrap;letter-spacing:1.2px}
+@media(min-width:901px) and (max-width:1180px){
+ .site-header-inner{gap:16px;padding-inline:3%}
+ .site-header .site-nav{display:none}
+ .site-header .site-menu-button{display:flex}
+ .site-header .site-brand>span{display:block}
+}
+@media(max-width:700px){
+ .site-header,.site-shell-home .site-header{height:116px}
+ .site-header-inner{position:relative;display:grid;grid-template-columns:1fr;grid-template-rows:60px 48px;height:100%;padding:0 5% 8px;gap:0}
+ .site-header .site-brand{justify-self:start;gap:10px}
+ .site-header .site-brand>span{display:block;font-size:14px}
+ .site-header .site-brand small{font-size:8px;letter-spacing:1px}
+ .site-header-actions{width:100%;gap:8px;justify-content:flex-start}
+ .site-header .site-account{font-size:9px;padding:10px 13px;flex:1}
+ .site-header .language-picker{margin-left:auto}
+ .site-header .language-trigger{min-height:42px;padding-inline:8px}
+ .site-header .site-menu-button{position:absolute;right:5%;top:14px;width:36px;height:36px}
+ .site-header .site-mobile-menu{top:116px}
+ [id],#donor{scroll-margin-top:130px}
+}
+
+/* Slow ember and light movement; paused off screen and with reduced motion. */
+.wc-community-frame{position:relative;isolation:isolate}
+.wc-community-copy,.wc-community-panel{position:relative;z-index:1}
+.wc-community-ambience{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.wc-community-ambience:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 10% 100%,#cf5e202e,transparent 62%),radial-gradient(ellipse at 65% 0%,#5865f21a,transparent 60%);animation:wc-community-glow 8s ease-in-out infinite;animation-play-state:paused}
+.wc-community-ambience i{position:absolute;bottom:-10px;left:8%;width:2px;height:3px;border-radius:50%;background:#e3ab63;box-shadow:0 0 7px #d66d32;opacity:0;animation:wc-community-ember 12s linear infinite;animation-play-state:paused}
+.wc-community-ambience i:nth-child(2){left:18%;animation-delay:-5s;animation-duration:15s}
+.wc-community-ambience i:nth-child(3){left:30%;animation-delay:-8s;animation-duration:17s}
+.wc-community-ambience i:nth-child(4){left:43%;animation-delay:-2s;animation-duration:14s}
+.wc-community-ambience i:nth-child(5){left:52%;animation-delay:-11s;animation-duration:19s}
+.wc-community-ambience i:nth-child(6){left:64%;animation-delay:-7s;animation-duration:16s}
+.wc-community-ambience i:nth-child(7){left:80%;animation-delay:-3s;animation-duration:18s}
+.wc-community-ambience i:nth-child(8){left:94%;animation-delay:-13s;animation-duration:20s}
+.wc-community .wc-discord-button{position:relative;overflow:hidden;isolation:isolate}
+.wc-community .wc-discord-button:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,#ffffff24 50%,transparent 70%);transform:translateX(-130%);animation:wc-community-sheen 9s ease-in-out infinite;animation-play-state:paused}
+.wc-community[data-active=true] .wc-community-ambience:before,.wc-community[data-active=true] .wc-community-ambience i,.wc-community[data-active=true] .wc-discord-button:before{animation-play-state:running}
+@keyframes wc-community-glow{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes wc-community-ember{0%{opacity:0;transform:translate3d(0,0,0)}15%,65%{opacity:.55}100%{opacity:0;transform:translate3d(36px,-520px,0)}}
+@keyframes wc-community-sheen{0%,65%{transform:translateX(-130%)}90%,100%{transform:translateX(130%)}}
+@media(prefers-reduced-motion:reduce){.wc-community-ambience:before,.wc-community-ambience i,.wc-community .wc-discord-button:before{animation:none}.wc-community-ambience i{display:none}.wc-community-ambience:before{opacity:.4}}

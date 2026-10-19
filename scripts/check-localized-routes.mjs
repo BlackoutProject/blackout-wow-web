@@ -1,0 +1,60 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import vm from 'node:vm';
+import ts from 'typescript';
+const base = process.argv[2] || 'http://127.0.0.1:4177';
+const context = { exports: {} };
+vm.runInNewContext(ts.transpileModule(await readFile('src/lib/metadata-copy.ts','utf8'), { compilerOptions: {module: ts.ModuleKind.CommonJS} }).outputText, context);
+const copy = context.exports.metadataTranslations;
+const pages = new Map();
+const languages = ['es','en','pt'];
+const labels = {es:['Crear cuenta','Entrar','Cambiar idioma'],en:['Create account','Log in','Change language'],pt:['Criar conta','Entrar','Alterar idioma']};
+const escapeHtml = value => value.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll("'",'&#x27;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+for (const lang of languages) {
+  const paths = Object.keys(copy);
+  for (let i=0; i<paths.length; i+=4) {
+    const results = await Promise.allSettled(paths.slice(i,i+4).map(async path => {
+      const response = await fetch(base+path,{headers:{cookie:'lang='+lang},signal:AbortSignal.timeout(60000)});
+      assert.equal(response.status,200,lang+' '+path);
+      const html=await response.text(); pages.set(lang+path,html);
+      if(path==='/registro') assert.ok(new RegExp('<h[12][^>]*>'+labels[lang][0]+'</h[12]>').test(html), 'Registration heading language: '+lang);
+      assert.ok(html.includes('<html lang="'+lang+'"'), 'Incorrect language: '+lang+path);
+      assert.ok(/<title>[^<]+<\/title>/.test(html), 'Missing title: '+lang+path);
+      if(lang!=='es') {
+        assert.ok(html.includes(escapeHtml(copy[path][lang].title)), 'Untranslated title: '+lang+path);
+        assert.ok(html.includes('name="description" content="'+escapeHtml(copy[path][lang].description)+'"'), 'Untranslated description: '+lang+path);
+      }
+      const header=html.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[1];
+      assert.ok(header,'Header missing: '+lang+path);
+      assert.ok(header.includes('CUSTOM · 255 · 3.3.5a'),'Client version missing');
+      const controls=header.slice(header.indexOf('site-header-actions'));
+      const register=controls.indexOf(labels[lang][0]);
+      const login=controls.indexOf(labels[lang][1]);
+      const language=controls.indexOf(labels[lang][2]);
+      assert.ok(register>=0 && login>register && language>login,'Header action order: '+lang+path);
+      assert.ok(!/\b(?:nav|auth|footer)\.[a-zA-Z]+\b/.test(html.replace(/<script[\s\S]*?<\/script>/g,'')),'Unresolved translation key: '+lang+path);
+    }));
+    for (const result of results) if(result.status==='rejected') throw result.reason;
+  }
+}
+let anchors=0;
+const seen=new Set();
+for(const [key,html] of pages) {
+  const lang=key.slice(0,2),path=key.slice(2);
+  for(const match of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
+    const url=new URL(match[1].replaceAll('&amp;','&'),base+path);
+    if(url.origin!==new URL(base).origin) continue;
+    assert.ok(url.pathname!=='/' || url.hash || match[1]!=='#','Empty destination: '+key);
+    const identity=lang+url.pathname+url.search+url.hash;
+    if(seen.has(identity))continue;seen.add(identity);
+    let destination=pages.get(lang+url.pathname);
+    if(!destination){
+      const response=await fetch(url,{headers:{cookie:'lang='+lang},signal:AbortSignal.timeout(30000)});
+      assert.equal(response.status,200,'Broken navigation: '+identity);
+      destination=await response.text();
+    }
+    if(url.hash){anchors++;assert.ok(destination.includes('id="'+decodeURIComponent(url.hash.slice(1))+'"'),'Broken anchor: '+identity);}
+  }
+}
+console.log('PASS: '+pages.size+' localized route responses; titles, descriptions, version, register/login/language order.');
+console.log('PASS: '+seen.size+' internal destinations across ES/EN/PT, including '+anchors+' section anchors.');

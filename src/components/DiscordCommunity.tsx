@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { DISCORD_INVITE_URL } from "@/lib/site-config";
+import { useEffect, useRef, useState } from "react";
+import { DISCORD_INVITE_URL, DISCORD_WIDGET_URL } from "@/lib/site-config";
 import { communityCopy } from "@/lib/community-copy";
 
 function DiscordMark() {
@@ -10,11 +11,30 @@ function DiscordMark() {
 
 export function DiscordCommunity() {
   const { i18n } = useTranslation();
+  const root = useRef<HTMLElement>(null);
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    const element = root.current;
+    if (!element) return;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    let visible = false;
+    const sync = () => setActive(visible && !document.hidden && !reduced.matches);
+    const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; sync(); }, { threshold: 0.05 });
+    observer.observe(element);
+    reduced.addEventListener("change", sync);
+    document.addEventListener("visibilitychange", sync);
+    return () => {
+      observer.disconnect();
+      reduced.removeEventListener("change", sync);
+      document.removeEventListener("visibilitychange", sync);
+    };
+  }, []);
   const c = communityCopy[i18n.language as keyof typeof communityCopy] ?? communityCopy.es;
 
   return (
-    <section className="wc-section wc-community" id="comunidad" aria-labelledby="community-title">
+    <section ref={root} className="wc-section wc-community" id="comunidad" aria-labelledby="community-title" data-active={active}>
       <div className="wc-wrap wc-community-frame">
+        <div className="wc-community-ambience" aria-hidden="true"><i/><i/><i/><i/><i/><i/><i/><i/></div>
         <div className="wc-community-copy">
           <p className="wc-kicker">{c.eyebrow}</p>
           <h2 id="community-title">{c.title}<br /><em>{c.accent}</em></h2>
@@ -25,7 +45,7 @@ export function DiscordCommunity() {
         </div>
         <div className="wc-community-panel">
           <iframe
-            src="https://discord.com/widget?id=1026731303925710948&theme=dark"
+            src={DISCORD_WIDGET_URL}
             title={c.widget}
             width="500"
             height="460"

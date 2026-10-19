@@ -1,6 +1,7 @@
 "use client";
 import {useEffect, useRef, useState} from "react";
 import {useTranslation} from "react-i18next";
+import {useRouter} from "next/navigation";
 import {type AppLanguage, languageCookieName, isSupportedLanguage} from "@/i18n/settings";
 
 const languages = [{code:"es",name:"Español"},{code:"en",name:"English"},{code:"pt",name:"Português"}] as const;
@@ -13,6 +14,7 @@ function Flag({language}:{language:AppLanguage}) {
   </svg>;
 }
 export function LanguageSwitcher() {
+  const router=useRouter();
   const {i18n}=useTranslation();
   const language=isSupportedLanguage(i18n.language)?i18n.language:"es";
   const [open,setOpen]=useState(false);
@@ -28,6 +30,7 @@ export function LanguageSwitcher() {
   const choose=(code:AppLanguage)=>{
     document.cookie=`${languageCookieName}=${code}; path=/; max-age=31536000; samesite=lax`;
     void i18n.changeLanguage(code);
+    router.refresh();
     setOpen(false);trigger.current?.focus();
   };
   const focusItem=(index:number)=>root.current?.querySelectorAll<HTMLButtonElement>('[role="menuitemradio"]')[index]?.focus();

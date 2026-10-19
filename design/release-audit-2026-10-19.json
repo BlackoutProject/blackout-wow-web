@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-19",
+  "languages": [
+    "es",
+    "en",
+    "pt"
+  ],
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed",
+    "lint": {
+      "errors": 0,
+      "existingImageWarnings": 9
+    },
+    "translationKeys": 196,
+    "interfaceLabels": 200,
+    "homeCopyFields": 39,
+    "routeResponses": 39,
+    "internalDestinationsAcrossLanguages": 90,
+    "sectionAnchorsAcrossLanguages": 57,
+    "localAssets": 55,
+    "backgroundVideos": 3,
+    "concurrentLanguageIsolation": "passed",
+    "logoutAndDonorVisibility": "passed with synthetic session",
+    "responsiveWidths": [
+      320,
+      601,
+      700,
+      701,
+      1024,
+      1181,
+      1280,
+      1440
+    ],
+    "responsiveHeader": "No horizontal overflow; registration and login buttons both 44px tall",
+    "browserNavigation": "Header register/login links and ES/EN/PT selector checked; metadata follows language",
+    "discordMotion": "Animations run when visible and pause off screen; CSS and observer honor reduced motion",
+    "individualPurchases": "Product names and prices centered in each column"
+  },
+  "externalLinks": {
+    "englishClient": "200; Blackout-WoW_EN-US_Base_Client_NoPatch_NoExe.zip.zip",
+    "spanishClient": "200; Blackout-WoW_ES-ES_Base_Client_NoPatch_NoExe.zip.zip",
+    "aio": "200; AIO_Client.rar",
+    "druidFix": "200; DruidFix.rar",
+    "discord": "Invite resolves to Blackout-WoW; no expiry"
+  },
+  "limitations": [
+    "Patches + WoW.exe URL has not been supplied; requirement remains visible with pending availability.",
+    "Real account creation, CAPTCHA, payments and in-game reward delivery were not executed.",
+    "Vercel preview requires authorization from the upstream repository team; local preview is available."
+  ]
+}
