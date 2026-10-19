@@ -38,7 +38,7 @@ export const warcraftCopy = {
       "ESPÍRITU Y DISCIPLINA"
     ],
     "spells": "10 hechizos custom por clase",
-    "spellsText": "Para las 10 clases de WotLK. Habilidades seleccionadas por afinidad, funcionamiento y equilibrio.",
+    "spellsText": "Nuevas habilidades para las diez clases de WotLK, adaptadas a su identidad y equilibradas para Blackout.",
     "spellsLink": "EXPLORAR HECHIZOS Y EXPANSIONES",
     "progressionTag": "MUCHO MÁS QUE SUBIR DE NIVEL",
     "progressionTitle": "El siguiente nivel",
@@ -100,7 +100,7 @@ export const warcraftCopy = {
       "SPIRIT AND DISCIPLINE"
     ],
     "spells": "10 custom spells per class",
-    "spellsText": "For the 10 WotLK classes. Abilities selected for their fit, functionality and balance.",
+    "spellsText": "New abilities for the ten WotLK classes, tailored to each class and balanced for Blackout.",
     "spellsLink": "EXPLORE SPELLS AND EXPANSIONS",
     "progressionTag": "MORE THAN A HIGHER LEVEL",
     "progressionTitle": "The next level",
@@ -162,7 +162,7 @@ export const warcraftCopy = {
       "ESPÍRITO E DISCIPLINA"
     ],
     "spells": "10 feitiços custom por classe",
-    "spellsText": "Para as 10 classes de WotLK. Habilidades selecionadas por afinidade, funcionamento e equilíbrio.",
+    "spellsText": "Novas habilidades para as dez classes de WotLK, adaptadas à identidade de cada classe e equilibradas para Blackout.",
     "spellsLink": "EXPLORAR FEITIÇOS E EXPANSÕES",
     "progressionTag": "MUITO MAIS QUE SUBIR DE NÍVEL",
     "progressionTitle": "O próximo nível",

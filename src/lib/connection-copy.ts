@@ -5,6 +5,7 @@ export const connectionCopy = {
     "intro": "Crea tu cuenta y elige cómo preparar tu instalación. La versión 3.3.5a, los parches, WoW.exe, AIO y Druid C Fix son obligatorios para jugar.",
     "create": "CREAR CUENTA",
     "login": "YA TENGO CUENTA",
+    "optionLabel": "Opción",
     "paths": [
       {
         "title": "Ya tengo un cliente 3.3.5a",
@@ -56,6 +57,7 @@ export const connectionCopy = {
     "intro": "Create your account and choose how to prepare your installation. Version 3.3.5a, the patches, WoW.exe, AIO and Druid C Fix are required to play.",
     "create": "CREATE ACCOUNT",
     "login": "I HAVE AN ACCOUNT",
+    "optionLabel": "Option",
     "paths": [
       {
         "title": "I already have a 3.3.5a client",
@@ -107,6 +109,7 @@ export const connectionCopy = {
     "intro": "Crie sua conta e escolha como preparar sua instalação. A versão 3.3.5a, os patches, o WoW.exe, o AIO e o Druid C Fix são obrigatórios para jogar.",
     "create": "CRIAR CONTA",
     "login": "JÁ TENHO CONTA",
+    "optionLabel": "Opção",
     "paths": [
       {
         "title": "Já tenho um cliente 3.3.5a",

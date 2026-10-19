@@ -45,7 +45,7 @@ console.log('PASS: official Discord widget and contribution login link; no Donor
 for(const fact of ['255','35','45+','T1','T35','V1–V10','100K+','500+','Evocador','Cazador de demonios','Monje','10 hechizos custom por clase','NUEVA ERA','No Pay to Win'])assert.ok(home.includes(fact),'Missing home fact: '+fact);
 assert.ok(!/players online|jugadores conectados|playersOnline/i.test(home),'Unexpected activity counter');
 const server=pages.get('/servidor');
-for(const fact of ['Paladin','Warrior','DK','Mage','Rogue','Priest','Shaman','Druid','Hunter','Warlock','Cataclysm','MoP','WoD','Legion','BfA','Shadowlands','Dragonflight','The War Within'])assert.ok(server.includes(fact),'Missing spell detail: '+fact);
+for(const fact of ['Paladín','Guerrero','Caballero de la Muerte','Mago','Pícaro','Sacerdote','Chamán','Druida','Cazador','Brujo','Cataclysm','MoP','WoD','Legion','BfA','Shadowlands','Dragonflight','The War Within'])assert.ok(server.includes(fact),'Missing spell detail: '+fact);
 for(const fact of ['Void Elf','Mechagnome','Dracthyr','Kul Tiran','Pandaren','Dark Iron Dwarf','Lightforged Draenei','Nightborne','Vulpera','Zandalari Troll','Mag’har Orc','Highmountain Tauren','Razas de WotLK','16 apariencias raciales'])assert.ok(server.includes(fact),'Missing race/morph detail: '+fact);
 assert.ok(!server.includes('16 razas jugables'),'Morphs must not be presented as playable races');
 for(const id of ['pve','pvp','hechizos-custom','razas-y-morphs'])assert.ok(server.includes('id="'+id+'"'),'Broken section anchor '+id);

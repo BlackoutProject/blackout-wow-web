@@ -32,14 +32,17 @@
       1280,
       1440
     ],
-    "responsiveHeader": "No horizontal overflow; registration and login buttons both 44px tall",
+    "responsiveHeader": "Desktop uses equal side columns: navigation centered within 0.01 px; logo, navigation and controls share a vertical center. Registration, login and language controls are 44 px high. ES/EN/PT checked, no horizontal overflow.",
     "browserNavigation": "Header register/login links and ES/EN/PT selector checked; metadata follows language",
     "discordMotion": "Visible golden border trace and ambient particles; running stroke offset changed from -85.0394px to -21.1099px; pauses off screen and honors reduced motion.",
     "individualPurchases": "Product names and prices centered in each column",
     "contentCleanup": "Removed decorative numbering and repeated descriptions in ES/EN/PT. Server overview distinguishes 35 total raids, 19 included custom raids, and 30+ custom maps. Donor heading focuses on supporting the server.",
     "classLocalization": "ES: Evocador, Cazador de demonios, Monje. EN: Evoker, Demon Hunter, Monk. PT-BR: Conjurante, Caçador de Demônios, Monge. Home tabs and server descriptions checked in all three languages; 10 custom spells for the 10 WotLK classes retained.",
     "cleanupVisualReview": "Home classes and Discord checked at 375 and 1440 px; no horizontal overflow or browser console errors.",
-    "unifiedClassPresentation": "All three class tabs use unchanged official transparent PNG illustrations with automatic layered CSS motion. Removed the Illidan proper-name caption; every caption uses the selected localized class name. Demon Hunter verified at 375 and 1440 px, running transform changes, no horizontal overflow or console errors."
+    "unifiedClassPresentation": "All three class tabs use unchanged official transparent PNG illustrations with automatic layered CSS motion. Removed the Illidan proper-name caption; every caption uses the selected localized class name. Demon Hunter verified at 375 and 1440 px, running transform changes, no horizontal overflow or console errors.",
+    "spellCopyReview": "Removed the arsenal slogan and mechanical description in ES/EN/PT. Localized all ten WotLK class names. Explicit two-line heading checked at 320, 375, 701, 1181 and 1440 px, including responsive single-column layout.",
+    "connectionOptions": "Option headings now read Opción 1/2, Option 1/2 and Opção 1/2 in ES/EN/PT.",
+    "footerSocialLinks": "Discord, YouTube and TikTok displayed together with matching icons. User-supplied channel/profile destinations verified in rendered anchors; open in new tabs with noopener noreferrer. Desktop and 320 px mobile layout checked without overflow."
   },
   "externalLinks": {
     "englishClient": "200; Blackout-WoW_EN-US_Base_Client_NoPatch_NoExe.zip.zip",

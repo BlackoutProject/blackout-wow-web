@@ -20,10 +20,11 @@ const {storeShowcaseCopy}=await load('src/lib/store-showcase-copy.ts');
 const {supportCopy}=await load('src/lib/support-copy.ts');
 const {communityCopy}=await load('src/lib/community-copy.ts');
 const {serverCopy}=await load('src/lib/server-copy.ts');
+const {classSpellsCopy}=await load('src/lib/class-spells-copy.ts');
 function leaves(value,prefix=''){
  return Object.fromEntries(Object.entries(value).flatMap(([key,item])=>item!==null&&typeof item==='object'?Object.entries(leaves(item,prefix+key+'.')):[[prefix+key,item]]));
 }
-for(const [name,copy] of Object.entries({rules:rulesCopy,connection:connectionCopy,store:storeShowcaseCopy,support:supportCopy,community:communityCopy,server:serverCopy})){
+for(const [name,copy] of Object.entries({rules:rulesCopy,connection:connectionCopy,store:storeShowcaseCopy,support:supportCopy,community:communityCopy,server:serverCopy,spells:classSpellsCopy})){
  const expected=Object.keys(leaves(copy.es)).sort();
  for(const lang of ['es','en','pt']){
   const entries=leaves(copy[lang]);

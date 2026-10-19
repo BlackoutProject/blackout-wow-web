@@ -33,7 +33,7 @@ export default function ConnectContent() {
     </section>
     <section className="lore-container">
       <div className="connect-steps connection-paths">{c.paths.map((path,i)=><article key={path.title}>
-        <span className="lore-phase-number" aria-hidden="true">0{i+1}</span><h2>{path.title}</h2>
+        <span className="lore-kicker connection-option">{c.optionLabel} {i+1}</span><h2>{path.title}</h2>
         <ol>{path.steps.map(step=><li key={step}>{step}</li>)}</ol>
         <a href="#descargas">{c.button} ↓</a>
       </article>)}</div>
