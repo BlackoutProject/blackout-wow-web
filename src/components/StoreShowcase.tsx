@@ -34,7 +34,7 @@ export function StoreShowcase() {
             <ul>
               <li><strong>{c.instance}</strong><p>{c.instanceText}</p></li>
               <li className="wc-store-commands"><span><code>.vip</code>{c.vipMenu}</span><span><code>.vbuff</code>{c.vipBuff}</span></li>
-              <li><div className="wc-store-equivalence"><strong>{c.vipItems}</strong><span>T35</span></div><p>{c.vipItemsText}</p></li>
+              <li><strong>{c.vipItems}</strong><p>{c.vipItemsText}</p></li>
               <li><strong>{c.bags}</strong><p>{c.bagsText}</p></li>
             </ul>
           </article>
@@ -43,11 +43,11 @@ export function StoreShowcase() {
             <p className="wc-store-plan-intro">{c.plusIntro}</p>
             <ul>
               <li><strong>{c.mall}</strong><p>{c.mallText}</p></li>
-              <li className="wc-store-equivalence"><strong>{c.gear}</strong>{" "}<span>T35</span></li>
-              <li className="wc-store-equivalence"><strong>{c.vipItems}</strong>{" "}<span>T35</span></li>
+              <li><strong>{c.gear}</strong></li>
+              <li><strong>{c.vipItems}</strong></li>
               <li><strong>{c.bags}</strong></li>
-              <li className="wc-store-equivalence"><strong>{c.weapons}</strong>{" "}<span>Legendary V10</span></li>
-              <li className="wc-store-equivalence"><strong>{c.keys}</strong>{" "}<span>T1–T35</span></li>
+              <li><strong>{c.weapons}</strong></li>
+              <li><strong>{c.keys}</strong></li>
             </ul>
           </article>
         </div>

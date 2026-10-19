@@ -96,7 +96,8 @@ for (language of ['es', 'en', 'pt']) {
   const account = renderToStaticMarkup(React.createElement(StoreShowcase));
   const text = account.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ');
   for (const price of ['50 USD', '200 USD', '15 USD', '5 USD', '10 USD', '20 USD']) assert.ok(text.includes(price), 'Missing price: ' + price);
-  assert.ok(text.includes('VIP Instance') && text.includes('VIP Mall') && text.includes('T1–T35'));
+  assert.ok(text.includes('VIP Instance') && text.includes('VIP Mall') && text.includes(storeShowcaseCopy[language].keys));
+  assert.ok(!/T35|Tier 35|V10/.test(text), 'Donor descriptions must not contain tier or legendary-version labels');
   assert.ok(text.includes('Blackout-WoW') && text.includes('ticket'));
   assert.ok(!/arsenal/i.test(text));
   assert.ok(renderToStaticMarkup(React.createElement(SupportShowcase)).includes('/cuenta#donor'));
