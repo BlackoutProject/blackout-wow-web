@@ -37,12 +37,12 @@ export const resources = {
         login: {
           title: "Entrar",
           subtitle: "Usa las mismas credenciales que en el cliente 3.3.5a.",
-          panelKicker: "Cuenta del reino",
+          panelKicker: "Cuenta del servidor",
           panelHeading: "Accede a tu aventura",
           panelDescription:
             "Accede al portal oficial con las mismas credenciales que usas en el juego.",
           bulletGame: "Usuario y contraseña idénticos al juego",
-          bulletAccount: "Gestión segura de tu cuenta y acceso al reino",
+          bulletAccount: "Gestión segura de tu cuenta y acceso al servidor",
           registeredBanner: "Cuenta creada. Ya puedes iniciar sesión con tus datos.",
           noAccount: "¿Sin cuenta?",
           signup: "Regístrate",
@@ -57,7 +57,7 @@ export const resources = {
         },
         register: {
           title: "Crear cuenta",
-          panelKicker: "Únete al reino",
+          panelKicker: "Únete al servidor",
           panelHeading: "Crea tu cuenta de aventurero",
           panelDescription:
             "Registro rápido: mismas credenciales para el portal y el cliente 3.3.5a.",
@@ -74,7 +74,7 @@ export const resources = {
           showPassword: "Mostrar contraseña",
           recaptchaHint:
             "Completa la verificación de seguridad para crear tu cuenta.",
-          submit: "Crear cuenta en el reino",
+          submit: "Crear cuenta en el servidor",
           submitting: "Creando cuenta…",
           already: "¿Ya tienes cuenta?",
           login: "Entrar",
@@ -283,12 +283,12 @@ export const resources = {
         login: {
           title: "Log in",
           subtitle: "Use the same credentials as your 3.3.5a game client.",
-          panelKicker: "Realm account",
+          panelKicker: "Server account",
           panelHeading: "Continue your journey",
           panelDescription:
             "Sign in to the official portal with the same credentials you use in-game.",
           bulletGame: "Same username and password as the game",
-          bulletAccount: "Secure account management and realm access",
+          bulletAccount: "Secure account management and server access",
           registeredBanner: "Account created. You can now sign in with your credentials.",
           noAccount: "No account?",
           signup: "Sign up",
@@ -303,7 +303,7 @@ export const resources = {
         },
         register: {
           title: "Create account",
-          panelKicker: "Join the realm",
+          panelKicker: "Join the server",
           panelHeading: "Create your adventurer account",
           panelDescription:
             "Quick sign-up: one set of credentials for the portal and the 3.3.5a client.",
@@ -527,12 +527,12 @@ export const resources = {
         login: {
           title: "Entrar",
           subtitle: "Use as mesmas credenciais do cliente 3.3.5a.",
-          panelKicker: "Conta do reino",
+          panelKicker: "Conta do servidor",
           panelHeading: "Entre na sua aventura",
           panelDescription:
             "Acesse o portal oficial com as mesmas credenciais que você usa no jogo.",
           bulletGame: "Mesmo usuário e senha do jogo",
-          bulletAccount: "Gestão segura da sua conta e acesso ao reino",
+          bulletAccount: "Gestão segura da sua conta e acesso ao servidor",
           registeredBanner: "Conta criada. Você já pode entrar com seus dados.",
           noAccount: "Sem conta?",
           signup: "Criar conta",
@@ -547,7 +547,7 @@ export const resources = {
         },
         register: {
           title: "Criar conta",
-          panelKicker: "Entre no reino",
+          panelKicker: "Entre no servidor",
           panelHeading: "Crie sua conta de aventureiro",
           panelDescription:
             "Cadastro rápido: as mesmas credenciais para o portal e o cliente 3.3.5a.",
@@ -564,7 +564,7 @@ export const resources = {
           showPassword: "Mostrar senha",
           recaptchaHint:
             "Conclua a verificação de segurança para criar sua conta.",
-          submit: "Criar conta no reino",
+          submit: "Criar conta no servidor",
           submitting: "Criando conta…",
           already: "Já tem conta?",
           login: "Entrar",
