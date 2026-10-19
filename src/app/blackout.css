@@ -74,7 +74,10 @@
 .wc-store-individual li:before{content:none}
 .wc-store-individual li strong{display:block;font-weight:500;color:#e2ded3;font-size:12px}
 .wc-store-individual li>span{display:block;margin-top:8px;color:#d9b778;font-size:11px;line-height:1.8}
-#donor{scroll-margin-top:100px}
+.wc-store-individual li p{max-width:260px;margin:10px auto 0;color:#aeb6c0;font-size:11px;line-height:1.8;text-wrap:pretty}
+/* The root scroll padding already clears the sticky header. Target the Donor content, not its section padding. */
+#donor{scroll-margin-top:0}
+.wc-store-plan>ul{margin-top:22px}
 @media(max-width:900px){.wc-store-individual ul{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.wc-store-individual ul{grid-template-columns:1fr}}
 .wc-community{background:radial-gradient(ellipse at 50% 50%,#29180d44,transparent 72%),#0b0f16}
@@ -141,7 +144,8 @@
  .site-header .language-trigger{min-height:42px;padding-inline:8px}
  .site-header .site-menu-button{position:absolute;right:5%;top:14px;width:36px;height:36px}
  .site-header .site-mobile-menu{top:116px}
- [id],#donor{scroll-margin-top:130px}
+ [id]{scroll-margin-top:130px}
+ #donor{scroll-margin-top:32px}
 }
 
 /* Slow ember and light movement; paused off screen and with reduced motion. */
