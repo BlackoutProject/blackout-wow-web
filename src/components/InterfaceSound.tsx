@@ -57,11 +57,11 @@ export function InterfaceSoundToggle() {
     <button type="button" className="site-sound-toggle" onClick={toggle} data-ui-sound="off"
       aria-pressed={enabled} aria-label={ui("Sonidos de interfaz")}
       title={enabled ? ui("Silenciar sonidos") : ui("Activar sonidos")}>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
         <path d="M11 5 6 9H3v6h3l5 4V5Z" strokeLinejoin="round" />
-        {enabled ? <path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" strokeLinecap="round" /> : <path d="m16 9 6 6m0-6-6 6" strokeLinecap="round" />}
+        {enabled ? <path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" strokeLinecap="round" /> : <path className="site-sound-slash" d="m3 3 18 18" strokeLinecap="round" />}
       </svg>
-      <span>{enabled ? ui("Sonido activado") : ui("Sonido desactivado")}</span>
+      <span className="sr-only">{enabled ? ui("Sonido activado") : ui("Sonido desactivado")}</span>
     </button>
   );
 }

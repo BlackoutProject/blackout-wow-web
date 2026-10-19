@@ -53,7 +53,8 @@ for (const path of ['/tienda', '/tienda/puntos']) {
 }
 const sitemap = await (await fetch(base + '/sitemap.xml')).text();
 assert.ok(!sitemap.includes('/tienda'), 'Shop must not appear in the public sitemap');
-assert.ok(home.includes('class="site-sound-toggle"'), 'Persistent sound control missing');
+assert.ok(home.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[1].includes('class="site-sound-toggle"'), 'Sound control must be visible in the header');
+assert.ok(!home.match(/<footer class="site-footer">([\s\S]*?)<\/footer>/)?.[1].includes('class="site-sound-toggle"'), 'Sound control must not be duplicated in the footer');
 console.log('PASS: account-only shop navigation, signed-out catalog guards, private search metadata and sound control');
 for(const fact of ['255','35','45+','T1','T35','V1–V10','100K+','500+','Evocador','Cazador de demonios','Monje','10 hechizos custom por clase','NUEVA ERA','No Pay to Win'])assert.ok(home.includes(fact),'Missing home fact: '+fact);
 assert.ok(!/players online|jugadores conectados|playersOnline/i.test(home),'Unexpected activity counter');

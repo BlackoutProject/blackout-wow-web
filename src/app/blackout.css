@@ -64,9 +64,10 @@
 .account-shortcuts .account-donor-link:hover{color:#f4dfb2;border-color:#c89a55;background:#30251a}
 .account-back-link{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;min-height:44px;color:#d9b778;font-size:12px}
 .account-back-link:hover{color:#f4dfb2}
-.site-footer-controls{display:flex;align-items:center;gap:24px}
-.site-sound-toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#b7b5b0;font-size:11px;transition:color .2s}
-.site-sound-toggle:hover{color:#dfc18b}
+.site-sound-toggle{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;padding:0;border:1px solid #ad89534d;border-radius:3px;background:#141719b3;color:#e5c286;transition:color .2s,border-color .2s,background .2s}
+.site-sound-toggle:hover{color:#ffe1a8;border-color:#d3aa68;background:#2b241b}
+.site-sound-toggle[aria-pressed=false]{color:#b4ada2;border-color:#80736366}
+.site-sound-slash{stroke:#df8b70}
 .site-sound-toggle:focus-visible,.account-back-link:focus-visible,.account-shortcuts a:focus-visible{outline:2px solid #d8a456;outline-offset:4px}
 .account-donor-link{display:inline-flex;align-items:center;gap:16px;min-height:44px;color:#d9b778;font-family:var(--font-cinzel),Georgia,serif;font-size:11px;font-weight:600;letter-spacing:.7px}
 .account-logout{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 16px;border:1px solid #a8725366;background:linear-gradient(#251c18,#161315);color:#e4cfb4;font-family:var(--font-cinzel),Georgia,serif;font-size:11px;font-weight:600;letter-spacing:.5px;transition:background .2s,border-color .2s,color .2s}
@@ -155,6 +156,11 @@
  .site-header .site-mobile-menu{top:116px}
  [id]{scroll-margin-top:130px}
  #donor{scroll-margin-top:32px}
+}
+@media(max-width:400px){
+ .site-header-actions{gap:4px}
+ .site-header .site-account{font-size:8px;padding-inline:8px;letter-spacing:.5px}
+ .site-header .language-trigger{padding-inline:5px}
 }
 
 /* Slow ember and light movement; paused off screen and with reduced motion. */
