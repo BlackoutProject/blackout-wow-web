@@ -18,7 +18,7 @@
     "routeResponses": 39,
     "internalDestinationsAcrossLanguages": 90,
     "sectionAnchorsAcrossLanguages": 57,
-    "localAssets": 55,
+    "localAssets": 56,
     "backgroundVideos": 3,
     "concurrentLanguageIsolation": "passed",
     "logoutAndDonorVisibility": "passed with synthetic session",
@@ -38,7 +38,8 @@
     "individualPurchases": "Product names and prices centered in each column",
     "contentCleanup": "Removed decorative numbering and repeated descriptions in ES/EN/PT. Server overview distinguishes 35 total raids, 19 included custom raids, and 30+ custom maps. Donor heading focuses on supporting the server.",
     "classLocalization": "ES: Evocador, Cazador de demonios, Monje. EN: Evoker, Demon Hunter, Monk. PT-BR: Conjurante, Caçador de Demônios, Monge. Home tabs and server descriptions checked in all three languages; 10 custom spells for the 10 WotLK classes retained.",
-    "cleanupVisualReview": "Home classes and Discord checked at 375 and 1440 px; no horizontal overflow or browser console errors."
+    "cleanupVisualReview": "Home classes and Discord checked at 375 and 1440 px; no horizontal overflow or browser console errors.",
+    "unifiedClassPresentation": "All three class tabs use unchanged official transparent PNG illustrations with automatic layered CSS motion. Removed the Illidan proper-name caption; every caption uses the selected localized class name. Demon Hunter verified at 375 and 1440 px, running transform changes, no horizontal overflow or console errors."
   },
   "externalLinks": {
     "englishClient": "200; Blackout-WoW_EN-US_Base_Client_NoPatch_NoExe.zip.zip",

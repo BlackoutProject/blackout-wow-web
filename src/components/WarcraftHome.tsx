@@ -13,7 +13,13 @@ import { DiscordCommunity } from "./DiscordCommunity";
 function Corners() { return <span className="wc-corners" aria-hidden="true"><i/><i/><i/><i/></span>; }
 function Ornament() { return <div className="wc-ornament" aria-hidden="true"><span/><img src="/warcraft/native/gold-header-trim.png" alt="" width="139" height="40"/><span/></div>; }
 
-function AnimatedClassArtwork({ kind }: { kind: "evoker" | "monk" }) {
+const classArtwork = {
+  evoker: { width: 3095, height: 3277 },
+  "demon-hunter": { width: 1052, height: 984 },
+  monk: { width: 1328, height: 1144 },
+} as const;
+
+function AnimatedClassArtwork({ kind }: { kind: keyof typeof classArtwork }) {
   const root = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
   useEffect(() => {
@@ -26,7 +32,7 @@ function AnimatedClassArtwork({ kind }: { kind: "evoker" | "monk" }) {
     document.addEventListener("visibilitychange", sync);
     return () => { observer.disconnect(); document.removeEventListener("visibilitychange", sync); };
   }, []);
-  return <div ref={root} className={`wc-official-character wc-official-${kind}`} data-active={active} aria-hidden="true"><div className="wc-character-motion"><Image sizes="(max-width: 600px) 610px, 800px" src={`/warcraft/classes/${kind}.png`} alt="" width={kind === "evoker" ? 3095 : 1328} height={kind === "evoker" ? 3277 : 1144}/></div><i className="wc-character-motes"/></div>;
+  return <div ref={root} className={`wc-official-character wc-official-${kind}`} data-active={active} aria-hidden="true"><div className="wc-character-motion"><Image sizes="(max-width: 600px) 610px, 800px" src={`/warcraft/classes/${kind}.png`} alt="" {...classArtwork[kind]}/></div><i className="wc-character-motes"/></div>;
 }
 
 export default function WarcraftHome() {
@@ -64,9 +70,9 @@ export default function WarcraftHome() {
     <section className={`wc-classes wc-section wc-selected-class-${selectedClass}`} id="clases" aria-labelledby="classes-title">
       <div className="wc-class-landscape" aria-hidden="true"/>
       <div className="wc-wrap wc-class-layout">
-        <div className="wc-illidan wc-class-preview" id="class-preview" role="tabpanel" aria-labelledby={`class-tab-${selectedClass}`} tabIndex={0}>
-          {selectedClass === 1 ? <AmbientVideo src="/warcraft/illidan.mp4" poster="/warcraft/illidan-poster.webp"/> : <AnimatedClassArtwork key={selectedClass} kind={selectedClass === 0 ? "evoker" : "monk"}/>}
-          <span className="wc-character-caption">{selectedClass === 1 ? "ILLIDAN STORMRAGE" : classNames[selectedClass]} <i>{c.classTypes[selectedClass]}</i></span>
+        <div className="wc-class-figure wc-class-preview" id="class-preview" role="tabpanel" aria-labelledby={`class-tab-${selectedClass}`} tabIndex={0}>
+          <AnimatedClassArtwork key={selectedClass} kind={selectedClass === 0 ? "evoker" : selectedClass === 1 ? "demon-hunter" : "monk"}/>
+          <span className="wc-character-caption">{classNames[selectedClass]} <i>{c.classTypes[selectedClass]}</i></span>
         </div>
         <div className="wc-class-copy"><p className="wc-kicker">{c.classesTag}</p><h2 id="classes-title">{c.classesTitle}<br/><em>{c.classesAccent}</em></h2><p className="wc-section-intro">{c.classesText}</p>
           <p className="wc-class-choice">{c.chooseClass}</p>

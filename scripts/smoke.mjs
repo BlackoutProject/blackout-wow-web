@@ -90,7 +90,7 @@ for(const css of ['src/app/warcraft.css','src/app/portal.css','src/app/blackout.
   const text=await readFile(resolve(css),'utf8');
   for(const match of text.matchAll(/url\(['"]?(\/[^'")]+)['"]?\)/g))assets.add(match[1]);
 }
-for(const path of ['/warcraft/classes/evoker.png','/warcraft/classes/monk.png','/warcraft/blackout-orc.mp4','/warcraft/illidan.mp4','/cinematic/scene-03-shadow-kling.mp4'])assets.add(path);
+for(const path of ['/warcraft/classes/evoker.png','/warcraft/classes/demon-hunter.png','/warcraft/classes/monk.png','/warcraft/blackout-orc.mp4','/warcraft/illidan.mp4','/cinematic/scene-03-shadow-kling.mp4'])assets.add(path);
 const array=[...assets];
 for(let start=0;start<array.length;start+=8){
  const results=await Promise.allSettled(array.slice(start,start+8).map(async path=>{

@@ -15,7 +15,8 @@
     "durationSeconds": 4,
     "file": "public/warcraft/illidan.mp4",
     "origin": "Animation of the user-supplied painted Warcraft illustration. Uploaded final video supplied by the user.",
-    "prompt": "Animate the supplied hand-painted Warcraft illustration while preserving every character detail, the original brushwork, pose, proportions and composition. A restrained four-second ambient loop. Locked camera. Green background smoke drifts slowly, faint magical particles move through depth, weapon edges glow softly, hair and wing membranes move just slightly in a breeze. The character stays in the exact pose, with subtle idle breathing only. No weapon swings, no walking, no cuts, no facial changes, no talking, no new objects or writing. Maintain the authentic game illustration aesthetic. No photorealistic restyling, no armor warping. Suitable as a quiet decorative background alongside website text."
+    "prompt": "Animate the supplied hand-painted Warcraft illustration while preserving every character detail, the original brushwork, pose, proportions and composition. A restrained four-second ambient loop. Locked camera. Green background smoke drifts slowly, faint magical particles move through depth, weapon edges glow softly, hair and wing membranes move just slightly in a breeze. The character stays in the exact pose, with subtle idle breathing only. No weapon swings, no walking, no cuts, no facial changes, no talking, no new objects or writing. Maintain the authentic game illustration aesthetic. No photorealistic restyling, no armor warping. Suitable as a quiet decorative background alongside website text.",
+    "status": "Retained as a source asset; replaced in the homepage class selector by the official transparent class illustration."
   },
   "thirdVideo": {
     "file": "public/cinematic/scene-03-shadow-kling.mp4",
@@ -78,7 +79,7 @@
   "classMotion": {
     "evoker": "Continuous layered CSS idle movement, depth, light and motes on the unchanged official illustration.",
     "monk": "Continuous layered CSS weight-shift movement, depth, light and motes on the unchanged official illustration.",
-    "demonHunter": "Existing Illidan video retained.",
+    "demonHunter": "Continuous layered CSS idle movement, depth, fel light and motes on the unchanged official transparent class illustration; same presentation as Evoker and Monk.",
     "controls": "No manual playback controls. Automatic looping motion; OS reduced-motion preference retained. Offscreen and hidden-tab animation resumes when visible."
   }
 }

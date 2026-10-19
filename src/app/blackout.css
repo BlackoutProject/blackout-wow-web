@@ -2,13 +2,16 @@
 /* Continuous layered motion keeps the original class artwork intact. */
 .wc-official-character{perspective:900px;--class-glow:105,201,227}
 .wc-official-monk{--class-glow:126,217,174}
+.wc-official-demon-hunter{--class-glow:146,224,77}
 .wc-character-motion{position:absolute;inset:0;transform-origin:50% 82%;animation:wc-evoker-idle 5.5s ease-in-out infinite}
 .wc-official-monk .wc-character-motion{animation:wc-monk-idle 4.8s ease-in-out infinite}
+.wc-official-demon-hunter .wc-character-motion{animation:wc-demon-hunter-idle 5.8s ease-in-out infinite}
 .wc-official-character:before{content:"";position:absolute;inset:20% 6% 8%;background:radial-gradient(ellipse at 50% 65%,rgba(var(--class-glow),.18),transparent 65%);animation:wc-class-aura 5s ease-in-out infinite;pointer-events:none}
 .wc-character-motes{position:absolute;inset:10% 5% 5%;pointer-events:none;opacity:.55;background-image:radial-gradient(2px 2px at 24% 35%,rgba(var(--class-glow),.9),transparent),radial-gradient(2px 2px at 72% 62%,rgba(var(--class-glow),.8),transparent),radial-gradient(1.5px 1.5px at 40% 84%,rgba(var(--class-glow),.7),transparent);background-size:210px 240px;animation:wc-class-motes 9s linear infinite}
 .wc-official-character[data-active=false] *,.wc-official-character[data-active=false]:before{animation-play-state:paused}
 @keyframes wc-evoker-idle{0%,100%{transform:translate3d(0,0,0) rotateZ(-.5deg)}50%{transform:translate3d(-5px,-14px,16px) rotateY(-2deg) rotateZ(.7deg)}}
 @keyframes wc-monk-idle{0%,100%{transform:translate3d(-3px,0,0) rotateZ(-.65deg)}50%{transform:translate3d(5px,-7px,10px) rotateZ(.65deg)}}
+@keyframes wc-demon-hunter-idle{0%,100%{transform:translate3d(-2px,0,0) rotateZ(-.4deg)}50%{transform:translate3d(4px,-9px,12px) rotateY(1deg) rotateZ(.4deg)}}
 @keyframes wc-class-aura{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.08)}}
 @keyframes wc-class-motes{to{background-position:0 -240px}}
 @media(prefers-reduced-motion:reduce){.wc-character-motion,.wc-character-motes,.wc-official-character:before{animation:none}}
