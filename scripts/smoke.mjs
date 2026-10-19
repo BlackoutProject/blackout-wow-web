@@ -42,6 +42,19 @@ assert.ok(home.includes('/login?next=%2Fcuenta%23donor'), 'Contributions must li
 assert.ok(!/VIP Instance|VIP Mall|50 USD|200 USD/.test(home), 'Donor details must not appear on Home');
 assert.ok(!pages.get('/cuenta').includes('id="donor"'), 'Signed-out account must not render Donor details');
 console.log('PASS: official Discord widget and contribution login link; no Donor details in signed-out views');
+for (const [path, html] of pages) {
+  const header = html.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[1] || '';
+  const footer = html.match(/<footer class="site-footer">([\s\S]*?)<\/footer>/)?.[1] || '';
+  assert.ok(!/href="\/tienda(?:\/puntos)?"/.test(header + footer), 'Account-only navigation leaked into the global layout: ' + path);
+}
+for (const path of ['/tienda', '/tienda/puntos']) {
+  assert.ok(/name="robots" content="[^"]*noindex/.test(pages.get(path)), 'Private shop must not be indexed: ' + path);
+  assert.ok(!pages.get(path).includes('class="store-card'), 'Guest must not see the catalog');
+}
+const sitemap = await (await fetch(base + '/sitemap.xml')).text();
+assert.ok(!sitemap.includes('/tienda'), 'Shop must not appear in the public sitemap');
+assert.ok(home.includes('class="site-sound-toggle"'), 'Persistent sound control missing');
+console.log('PASS: account-only shop navigation, signed-out catalog guards, private search metadata and sound control');
 for(const fact of ['255','35','45+','T1','T35','V1–V10','100K+','500+','Evocador','Cazador de demonios','Monje','10 hechizos custom por clase','NUEVA ERA','No Pay to Win'])assert.ok(home.includes(fact),'Missing home fact: '+fact);
 assert.ok(!/players online|jugadores conectados|playersOnline/i.test(home),'Unexpected activity counter');
 const server=pages.get('/servidor');
@@ -84,7 +97,7 @@ console.log('PASS: 12 concurrent requests keep ES/EN/PT content isolated');
 const assets=new Set();
 for(const html of pages.values())for(const match of html.matchAll(/(?:src|poster|href)="([^"]+)"/g)){
   const path=match[1];
-  if(path.startsWith('/') && /\.(?:webp|png|jpe?g|mp4|css|js|woff2?|ttf)(?:\?|$)/.test(path) && !path.includes('&amp;'))assets.add(path);
+  if(path.startsWith('/') && /\.(?:webp|png|jpe?g|mp4|mp3|css|js|woff2?|ttf)(?:\?|$)/.test(path) && !path.includes('&amp;'))assets.add(path);
 }
 for(const css of ['src/app/warcraft.css','src/app/portal.css','src/app/blackout.css']){
   const text=await readFile(resolve(css),'utf8');

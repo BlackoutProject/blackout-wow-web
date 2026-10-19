@@ -131,6 +131,7 @@ export default function ShopPage() {
   return (
     <SiteShell>
       <div className="mx-auto max-w-5xl px-4 py-16">
+        <Link href="/cuenta" className="account-back-link"><span aria-hidden="true">←</span> {t("nav.account")}</Link>
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/70 p-6 md:p-8">
 
           <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/70 via-black/55 to-black/72" />

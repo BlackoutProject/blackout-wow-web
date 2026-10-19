@@ -30,12 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: withBaseUrl("/tienda"),
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
       url: withBaseUrl("/terminos-y-condiciones"),
       lastModified: now,
       changeFrequency: "monthly",

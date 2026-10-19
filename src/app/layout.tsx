@@ -7,6 +7,7 @@ import "./portal.css";
 import "./warcraft.css";
 import "./blackout.css";
 import { AuthProvider } from "@/context/AuthContext";
+import { InterfaceSoundProvider } from "@/components/InterfaceSound";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { languageCookieName, resolveAppLanguage } from "@/i18n/settings";
 import { metadataTranslations } from "@/lib/metadata-copy";
@@ -112,7 +113,7 @@ export default async function RootLayout({
           }}
         />
         <LanguageProvider initialLanguage={lang}>
-          <AuthProvider>{children}</AuthProvider>
+          <AuthProvider><InterfaceSoundProvider>{children}</InterfaceSoundProvider></AuthProvider>
         </LanguageProvider>
         <Analytics />
       </body>

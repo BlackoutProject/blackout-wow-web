@@ -59,6 +59,15 @@
 .wc-store-help a{color:#e4bd78;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#a48a5e80}
 .wc-store-help a:hover{color:#ffe3af;text-decoration-color:currentColor}
 .account-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.account-shortcuts{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.account-shortcuts .account-donor-link{padding:10px 14px;border:1px solid #a37b4245;border-radius:4px;background:#171511aa;transition:color .2s,border-color .2s,background .2s}
+.account-shortcuts .account-donor-link:hover{color:#f4dfb2;border-color:#c89a55;background:#30251a}
+.account-back-link{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;min-height:44px;color:#d9b778;font-size:12px}
+.account-back-link:hover{color:#f4dfb2}
+.site-footer-controls{display:flex;align-items:center;gap:24px}
+.site-sound-toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#b7b5b0;font-size:11px;transition:color .2s}
+.site-sound-toggle:hover{color:#dfc18b}
+.site-sound-toggle:focus-visible,.account-back-link:focus-visible,.account-shortcuts a:focus-visible{outline:2px solid #d8a456;outline-offset:4px}
 .account-donor-link{display:inline-flex;align-items:center;gap:16px;min-height:44px;color:#d9b778;font-family:var(--font-cinzel),Georgia,serif;font-size:11px;font-weight:600;letter-spacing:.7px}
 .account-logout{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 16px;border:1px solid #a8725366;background:linear-gradient(#251c18,#161315);color:#e4cfb4;font-family:var(--font-cinzel),Georgia,serif;font-size:11px;font-weight:600;letter-spacing:.5px;transition:background .2s,border-color .2s,color .2s}
 .account-logout:hover{border-color:#c78d66;color:#ffe1bd;background:#38221c}

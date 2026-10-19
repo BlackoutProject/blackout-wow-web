@@ -263,7 +263,14 @@ export default function AccountPage() {
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
-        {accessToken && <div className="account-toolbar"><a className="account-donor-link" href="#donor">VIP &amp; DONOR<span aria-hidden="true">↓</span></a><LogoutButton /></div>}
+        {accessToken && <div className="account-toolbar">
+          <nav className="account-shortcuts" aria-label={t("account.navShortcuts")}>
+            <Link href="/tienda" className="account-donor-link">{t("nav.store")}</Link>
+            <Link href="/tienda/puntos" className="account-donor-link">{t("nav.redeem")}</Link>
+            <a className="account-donor-link" href="#donor">VIP &amp; DONOR<span aria-hidden="true">↓</span></a>
+          </nav>
+          <LogoutButton />
+        </div>}
         {/* Sin `home-card`: su regla "> * { z-index:1 }" anulaba z-20 y `absolute`, tapando texto y vídeo */}
         <div className="metal-border relative isolate flex h-36 flex-col overflow-hidden rounded-xl border border-white/10 bg-zinc-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_12px_28px_rgba(2,6,23,0.4)] sm:h-40 md:h-44 md:rounded-2xl">
 
@@ -327,18 +334,6 @@ export default function AccountPage() {
                     {t("account.navShortcuts")}
                   </p>
                   <div className="flex flex-col gap-2">
-                    <Link
-                      href="/tienda"
-                      className="rounded-lg border border-sky-400/35 bg-sky-950/35 px-3 py-2 text-center text-sm font-semibold text-sky-100 transition-colors hover:bg-sky-900/45 lg:text-left"
-                    >
-                      {t("account.goStore")}
-                    </Link>
-                    <Link
-                      href="/tienda/puntos"
-                      className="rounded-lg border border-amber-400/35 bg-amber-950/30 px-3 py-2 text-center text-sm font-semibold text-amber-100 transition-colors hover:bg-amber-900/40 lg:text-left"
-                    >
-                      {t("account.redeem")}
-                    </Link>
                     <Link
                       href="/recuperar"
                       className="rounded-lg border border-white/12 px-3 py-2 text-center text-sm font-medium text-zinc-300 transition-colors hover:bg-white/5 lg:text-left"

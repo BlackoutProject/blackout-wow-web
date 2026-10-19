@@ -103,3 +103,43 @@ for (language of ['es', 'en', 'pt']) {
   assert.ok(renderToStaticMarkup(React.createElement(SupportShowcase)).includes('/cuenta#donor'));
 }
 console.log('PASS: Donor details and approved prices appear only in the signed-in view; Home routes guests to login and members to their account in ES/EN/PT.');
+
+// Account navigation must remain accessible even while the account API is loading.
+const navigationMocks = {
+  ...componentMocks,
+  '@/lib/use-interface-copy': { useInterfaceCopy: () => text => text },
+  'react-i18next': { useTranslation: () => ({ i18n: { language }, t: key => key.split('.').reduce((value, part) => value?.[part], resources[language].translation) ?? key }) },
+  'next/navigation': { usePathname: () => '/', useRouter: () => ({ replace: () => {} }) },
+  '@/context/AuthContext': { useAuth: () => ({ accessToken: signedIn ? 'test-session' : null, isAuthReady: true, canManageDashboard: false, logout: () => {} }) },
+  './LanguageSwitcher': { LanguageSwitcher: () => null },
+  './PortalBackdrop': { PortalBackdrop: () => null },
+  './WarcraftMotion': { WarcraftMotion: ({ children }) => children },
+  './FooterSocialLinks': { FooterSocialLinks: () => null },
+  './InterfaceSound': { InterfaceSoundToggle: () => null },
+};
+const { SiteHeader } = await load('src/components/SiteHeader.tsx', navigationMocks);
+const { SiteShell } = await load('src/components/SiteShell.tsx', { ...navigationMocks, './SiteHeader': { SiteHeader } });
+const { default: AccountPage } = await load('src/app/cuenta/page.tsx', {
+  ...navigationMocks,
+  '@/lib/use-dialog-focus': { useDialogFocus: () => {} },
+  '@/lib/api': { apiJson: () => { throw new Error('No API requests in navigation test'); } },
+  '@/components/SiteShell': { SiteShell },
+  '@/components/StoreShowcase': { StoreShowcase },
+  '@/components/LogoutButton': { LogoutButton: () => null },
+});
+for (language of ['es', 'en', 'pt']) {
+  for (signedIn of [false, true]) {
+    const shell = renderToStaticMarkup(React.createElement(SiteShell, null));
+    assert.ok(!/href="\/tienda(?:\/puntos)?"/.test(shell), 'Global navigation must not expose account shop links');
+    const account = renderToStaticMarkup(React.createElement(AccountPage));
+    const toolbar = account.match(/<nav class="account-shortcuts"[^>]*>([\s\S]*?)<\/nav>/)?.[1] ?? '';
+    if (signedIn) {
+      for (const destination of ['/tienda', '/tienda/puntos', '#donor']) assert.ok(toolbar.includes('href="' + destination + '"'));
+      for (const label of [resources[language].translation.nav.store, resources[language].translation.nav.redeem]) assert.ok(toolbar.includes(label));
+    } else {
+      assert.equal(toolbar, '');
+      assert.ok(!account.includes('id="donor"'));
+    }
+  }
+}
+console.log('PASS: store, redemption and VIP shortcuts live only in the authenticated account, including while account details load; global header/footer stay clean in ES/EN/PT.');

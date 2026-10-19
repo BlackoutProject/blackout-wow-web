@@ -1,4 +1,9 @@
 export const interfaceCopy: Record<string, [string, string]> = {
+  'Sonidos de interfaz': ['Interface sounds', 'Sons da interface'],
+  'Sonido activado': ['Sound on', 'Som ativado'],
+  'Sonido desactivado': ['Sound off', 'Som desativado'],
+  'Silenciar sonidos': ['Mute sounds', 'Silenciar sons'],
+  'Activar sonidos': ['Enable sounds', 'Ativar sons'],
   'Elige el tipo de catálogo que quieres administrar.': ['Choose the catalog you want to manage.', 'Escolha o catálogo que deseja gerenciar.'],
   'Tienda compra (': ['Store (', 'Loja ('], 'Tienda canje (': ['Rewards (', 'Resgates ('], 'Trazabilidad (': ['Order tracking (', 'Rastreamento ('],
   'Inactivo': ['Inactive','Inativo'],

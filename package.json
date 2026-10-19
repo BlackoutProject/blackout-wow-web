@@ -11,6 +11,7 @@
     "test:smoke": "node scripts/smoke.mjs",
     "test:i18n": "node scripts/check-i18n.mjs",
     "test:logout": "node scripts/check-logout.mjs",
+    "test:sound": "node scripts/check-interface-sound.mjs",
     "test:routes": "node scripts/check-localized-routes.mjs"
   },
   "dependencies": {

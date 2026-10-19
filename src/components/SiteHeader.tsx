@@ -10,7 +10,7 @@ export function SiteHeader(){
  const ui=useInterfaceCopy();
  const {t}=useTranslation();const path=usePathname().replace(/\/$/,'')||'/';const {accessToken,canManageDashboard,logout}=useAuth();const [open,setOpen]=useState(false);
  useEffect(()=>setOpen(false),[path]);useEffect(()=>{const close=(e:KeyboardEvent)=>{if(e.key==='Escape')setOpen(false);};window.addEventListener('keydown',close);return()=>window.removeEventListener('keydown',close);},[]);
- const links=[{href:'/servidor',label:t('nav.server')},{href:'/como-conectarme',label:t('nav.connect')},{href:'/tienda',label:t('nav.store')},{href:'/tienda/puntos',label:t('nav.redeem')},{href:'/terminos-y-condiciones',label:t('nav.rules')}];
+ const links=[{href:'/servidor',label:t('nav.server')},{href:'/como-conectarme',label:t('nav.connect')},{href:'/terminos-y-condiciones',label:t('nav.rules')}];
  if(canManageDashboard)links.push({href:'/dashboard/productos',label:t('nav.dashboard')});
  const goHome=(event:MouseEvent<HTMLAnchorElement>)=>{
   if(path!=='/'||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;

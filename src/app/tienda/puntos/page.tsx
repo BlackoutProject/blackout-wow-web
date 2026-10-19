@@ -164,6 +164,7 @@ export default function RewardShopPage() {
   return (
     <SiteShell>
       <div className="mx-auto max-w-5xl px-4 py-16">
+        <Link href="/cuenta" className="account-back-link"><span aria-hidden="true">←</span> {t("nav.account")}</Link>
         <div className="rounded-2xl border border-white/10 bg-zinc-950/70 p-6 md:p-8">
           <h1 className="font-display text-3xl font-semibold text-zinc-50">
             {t("store.redeem.title")}

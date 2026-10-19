@@ -5,6 +5,7 @@ export function generateMetadata() { return localizedPageMetadata({
   description:
     "Compra paquetes de puntos para BLACKOUT WOW con pago seguro y entrega automática en el juego. Apoya el servidor y canjea recompensas.",
   pathname: "/tienda",
+  noIndex: true,
   keywords: [
     "tienda WoW privado",
     "puntos Blackout WoW",
