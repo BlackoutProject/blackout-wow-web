@@ -30,7 +30,6 @@ export function StoreShowcase() {
         <div className="wc-store-plans">
           <article className="wc-store-plan" aria-labelledby="vip-title">
             <header><div><h3 id="vip-title">VIP</h3><p className="wc-store-price">50 <small>USD</small></p></div><span>{c.account}</span></header>
-            <p className="wc-store-plan-intro">{c.vipIntro}</p>
             <ul>
               <li><strong>{c.instance}</strong><p>{c.instanceText}</p></li>
               <li className="wc-store-commands"><span><code>.vip</code>{c.vipMenu}</span><span><code>.vbuff</code>{c.vipBuff}</span></li>
@@ -41,7 +40,7 @@ export function StoreShowcase() {
             <header><div><h3 id="vip-plus-title">VIP <em>PLUS</em></h3><p className="wc-store-price">200 <small>USD</small></p></div><span>{c.account}</span></header>
             <p className="wc-store-plan-intro">{c.plusIntro}</p>
             <ul>
-              <li><strong>{c.mall}</strong><p>{c.mallText}</p></li>
+              <li><strong>{c.mall}</strong></li>
               <li className="wc-store-equivalence"><strong>{c.gear}</strong>{" "}<span>T35</span></li>
               <li className="wc-store-equivalence"><strong>{c.weapons}</strong>{" "}<span>Legendary V10</span></li>
               <li className="wc-store-equivalence"><strong>{c.keys}</strong>{" "}<span>T1–T35</span></li>

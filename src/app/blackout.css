@@ -129,8 +129,8 @@
 .wc-community-frame{position:relative;isolation:isolate}
 .wc-community-copy,.wc-community-panel{position:relative;z-index:1}
 .wc-community-ambience{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.wc-community-ambience:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 10% 100%,#cf5e202e,transparent 62%),radial-gradient(ellipse at 65% 0%,#5865f21a,transparent 60%);animation:wc-community-glow 8s ease-in-out infinite;animation-play-state:paused}
-.wc-community-ambience i{position:absolute;bottom:-10px;left:8%;width:2px;height:3px;border-radius:50%;background:#e3ab63;box-shadow:0 0 7px #d66d32;opacity:0;animation:wc-community-ember 12s linear infinite;animation-play-state:paused}
+.wc-community-ambience:before{content:"";position:absolute;inset:-8%;background:radial-gradient(ellipse at 10% 100%,#cf5e204a,transparent 62%),radial-gradient(ellipse at 65% 0%,#5865f22b,transparent 60%);animation:wc-community-glow 6s ease-in-out infinite;animation-play-state:paused}
+.wc-community-ambience i{position:absolute;bottom:-10px;left:8%;width:3px;height:4px;border-radius:50%;background:#f5c482;box-shadow:0 0 10px #e47c3a;opacity:0;animation:wc-community-ember 9s linear infinite;animation-play-state:paused}
 .wc-community-ambience i:nth-child(2){left:18%;animation-delay:-5s;animation-duration:15s}
 .wc-community-ambience i:nth-child(3){left:30%;animation-delay:-8s;animation-duration:17s}
 .wc-community-ambience i:nth-child(4){left:43%;animation-delay:-2s;animation-duration:14s}
@@ -141,7 +141,16 @@
 .wc-community .wc-discord-button{position:relative;overflow:hidden;isolation:isolate}
 .wc-community .wc-discord-button:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,#ffffff24 50%,transparent 70%);transform:translateX(-130%);animation:wc-community-sheen 9s ease-in-out infinite;animation-play-state:paused}
 .wc-community[data-active=true] .wc-community-ambience:before,.wc-community[data-active=true] .wc-community-ambience i,.wc-community[data-active=true] .wc-discord-button:before{animation-play-state:running}
-@keyframes wc-community-glow{0%,100%{opacity:.35}50%{opacity:1}}
-@keyframes wc-community-ember{0%{opacity:0;transform:translate3d(0,0,0)}15%,65%{opacity:.55}100%{opacity:0;transform:translate3d(36px,-520px,0)}}
+@keyframes wc-community-glow{0%,100%{opacity:.5;transform:translate3d(-2%,2%,0)}50%{opacity:1;transform:translate3d(2%,-2%,0)}}
+@keyframes wc-community-ember{0%{opacity:0;transform:translate3d(0,0,0)}15%,65%{opacity:.8}100%{opacity:0;transform:translate3d(60px,-620px,0)}}
 @keyframes wc-community-sheen{0%,65%{transform:translateX(-130%)}90%,100%{transform:translateX(130%)}}
 @media(prefers-reduced-motion:reduce){.wc-community-ambience:before,.wc-community-ambience i,.wc-community .wc-discord-button:before{animation:none}.wc-community-ambience i{display:none}.wc-community-ambience:before{opacity:.4}}
+.wc-community-border{position:absolute;inset:2px;width:calc(100% - 4px);height:calc(100% - 4px);overflow:visible;pointer-events:none;z-index:2;fill:none;filter:drop-shadow(0 0 5px #f59045)}
+.wc-community-border rect{stroke:#ffd18b;stroke-width:2;stroke-dasharray:12 88;stroke-linecap:round;animation:wc-community-trace 7s linear infinite;animation-play-state:paused}
+.wc-community[data-active=true] .wc-community-border rect{animation-play-state:running}
+@keyframes wc-community-trace{to{stroke-dashoffset:-100}}
+.wc-support .wc-text-link{margin-top:28px}
+.class-spells-classes li span{font-size:6px}
+.lore-stats small{display:block;font-size:9px;color:#adb3bd;letter-spacing:.3px;margin-top:8px}
+.lore-feature#clases li:first-child{color:#e8cf9f;font-weight:600}
+@media(prefers-reduced-motion:reduce){.wc-community-border rect{animation:none;stroke-dasharray:none;opacity:.4}}

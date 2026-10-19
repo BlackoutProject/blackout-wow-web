@@ -34,6 +34,7 @@ export function DiscordCommunity() {
   return (
     <section ref={root} className="wc-section wc-community" id="comunidad" aria-labelledby="community-title" data-active={active}>
       <div className="wc-wrap wc-community-frame">
+        <svg className="wc-community-border" aria-hidden="true"><rect width="100%" height="100%" rx="17" pathLength="100" /></svg>
         <div className="wc-community-ambience" aria-hidden="true"><i/><i/><i/><i/><i/><i/><i/><i/></div>
         <div className="wc-community-copy">
           <p className="wc-kicker">{c.eyebrow}</p>
@@ -53,7 +54,6 @@ export function DiscordCommunity() {
             referrerPolicy="no-referrer"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
           />
-          <a href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.open}<span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

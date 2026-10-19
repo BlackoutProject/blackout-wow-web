@@ -1,16 +1,60 @@
 "use client";
-import {useInterfaceCopy} from "@/lib/use-interface-copy";
-import Link from 'next/link';
-import {ClassSpells} from './ClassSpells';
-import {RaceCustomization} from './RaceCustomization';
-import {warcraftCopy} from '@/lib/warcraft-copy';
-import {useTranslation} from 'react-i18next';
-import {SiteShell} from './SiteShell';
-import {DISCORD_INVITE_URL} from '@/lib/site-config';
-const content={
- es:{eyebrow:'EL REINO · WOTLK 3.3.5a',title:'El mundo que conoces.',accent:'Un poder sin límites.',intro:'Un reino personalizado de nivel 255. Avanza del Tier 1 al Tier 35, descubre nuevas clases y haz tuya una experiencia renovada de Wrath of the Lich King.',join:'CREAR CUENTA',download:'CÓMO JUGAR',labels:['NIVEL MÁXIMO','RAIDS EN TOTAL','WORLD BOSSES','CLASES CUSTOM'],experience:'Todo un reino por descubrir.',sub:'Cada camino tiene su propia leyenda.',features:[{title:'Conquista. PvE custom',tag:'01 · PVE',items:['35 raids en total, con 19 raids totalmente custom.','Más de 30 mapas custom.','Más de 45 World Bosses.','Progresión desde Tier 1 hasta Tier 35.','Armas legendarias V1–V10.','Custom Quests, llaves de contenido y sistemas de tokens.','Nuevas zonas y mapas adaptados al nivel 255.']},{title:'Domina. El campo de batalla',tag:'02 · PVP',items:['Arenas 1v1, 2v2, 3v3 y 5v5.','Battlegrounds, eventos PvP y zonas de duelo.','PvP Leaderboards y rankings.','Mapas de Battlegrounds nuevos y actualizados.','Balance de clases para nivel 255 y PvP entre facciones.']},{title:'Trasciende. Tu personaje',tag:'03 · CUSTOM',items:['3 clases custom: Evoker, Demon Hunter y Monk.','Nuevas builds, Dual Wield y Titan’s Grip.','Sistema de pasivas Paragon.','Más de 100.000 transfiguraciones.','500+ monturas, mascotas y morphs.','Razas de WotLK con amplia personalización y diseños custom.','16 apariencias raciales mediante morphs en la selección de personaje.','Sets, visuales, alas y auras.']},{title:'Descubre. Sistemas propios',tag:'04 · SISTEMAS',items:['Sistemas AIO integrados.','Tienda custom.','Sistema de pasivas Paragon.','Pase de Batalla (Battle Pass).','Sistema de transmog.','Personalización de colores de las formas y morphs de druida.','Teletransportador, nuevo Mall y sistemas de progresión.','Misiones, vendedores y tokens personalizados.','Profesiones instantáneas, buffs y comandos útiles.','Interfaz, login y pantallas de carga propios.']}],fair:'Tu esfuerzo tiene valor.',fairText:'Progresa jugando. El equipo Donor puede igualar el mejor equipo disponible mediante progresión, pero nunca superarlo.',community:'La aventura se vive mejor juntos.',communityText:'Anuncios, soporte del staff, eventos, sorteos y una comunidad internacional para PvE, PvP y hermandades.',discord:'ENTRAR AL DISCORD',rules:'CONSULTAR LAS NORMAS'},
- en:{eyebrow:'THE REALM · WOTLK 3.3.5a',title:'The world you know.',accent:'Power without limits.',intro:'A custom level 255 realm. Progress from Tier 1 to Tier 35, discover new classes and make a renewed Wrath of the Lich King experience your own.',join:'CREATE ACCOUNT',download:'HOW TO PLAY',labels:['MAX LEVEL','TOTAL RAIDS','WORLD BOSSES','CUSTOM CLASSES'],experience:'A whole realm to discover.',sub:'Every path has its own legend.',features:[{title:'Conquer. Custom PvE',tag:'01 · PVE',items:['35 raids in total, including 19 fully custom raids.','Over 30 custom maps.','Over 45 World Bosses.','Progression from Tier 1 to Tier 35.','Legendary weapons V1–V10.','Custom Quests, content keys and token systems.','New zones and maps adapted to level 255.']},{title:'Dominate. The battlefield',tag:'02 · PVP',items:['1v1, 2v2, 3v3 and 5v5 arenas.','Battlegrounds, PvP events and duel zones.','PvP leaderboards and rankings.','New and updated Battleground maps.','Level 255 class balance and cross-faction PvP.']},{title:'Transcend. Your character',tag:'03 · CUSTOM',items:['3 custom classes: Evoker, Demon Hunter and Monk.','New builds, Dual Wield and Titan’s Grip.','Paragon passive system.','Over 100,000 transmogs.','500+ mounts, pets and morphs.','WotLK races with extensive customization and custom designs.','16 racial appearances through morphs in character selection.','Custom sets, wings, auras and visuals.']},{title:'Discover. Unique systems',tag:'04 · SYSTEMS',items:['Integrated AIO systems.','Custom shop.','Paragon passive ability system.','Battle Pass.','Transmog system.','Color customization for Druid forms and morphs.','Teleporter, new Mall and progression systems.','Custom quests, vendors and tokens.','Instant professions, custom buffs and useful commands.','Custom interface, login and loading screens.']}],fair:'Your effort matters.',fairText:'Progress by playing. Donor gear can match the best gear available through progression, but never exceed it.',community:'Adventure is better together.',communityText:'Announcements, staff support, events, giveaways and an international PvE, PvP and guild community.',discord:'JOIN DISCORD',rules:'READ THE RULES'},
- pt:{eyebrow:'O REINO · WOTLK 3.3.5a',title:'O mundo que você conhece.',accent:'Poder sem limites.',intro:'Um reino personalizado de nível 255. Avance do Tier 1 ao Tier 35, descubra novas classes e viva sua própria experiência em Wrath of the Lich King.',join:'CRIAR CONTA',download:'COMO JOGAR',labels:['NÍVEL MÁXIMO','RAIDS NO TOTAL','WORLD BOSSES','CLASSES CUSTOM'],experience:'Um reino inteiro para descobrir.',sub:'Cada caminho tem sua própria lenda.',features:[{title:'Conquiste. PvE custom',tag:'01 · PVE',items:['35 raids no total, sendo 19 raids totalmente custom.','Mais de 30 mapas custom.','Mais de 45 World Bosses.','Progressão do Tier 1 ao Tier 35.','Armas lendárias V1–V10.','Custom Quests, chaves de conteúdo e sistemas de tokens.','Novas zonas e mapas adaptados ao nível 255.']},{title:'Domine. O campo de batalha',tag:'02 · PVP',items:['Arenas 1v1, 2v2, 3v3 e 5v5.','Battlegrounds, eventos PvP e zonas de duelo.','PvP Leaderboards e rankings.','Mapas de Battlegrounds novos e atualizados.','Balanceamento para nível 255 e PvP entre facções.']},{title:'Transcenda. Seu personagem',tag:'03 · CUSTOM',items:['3 classes custom: Evoker, Demon Hunter e Monk.','Novas builds, Dual Wield e Titan’s Grip.','Sistema de passivas Paragon.','Mais de 100.000 transmogs.','500+ montarias, pets e morphs.','Raças de WotLK com ampla personalização e designs custom.','16 aparências raciais por morphs na seleção de personagem.','Sets, visuais, asas e auras.']},{title:'Descubra. Sistemas únicos',tag:'04 · SISTEMAS',items:['Sistemas AIO integrados.','Loja custom.','Sistema de passivas Paragon.','Battle Pass.','Sistema de transmog.','Personalização das cores das formas e morphs de druida.','Teletransportador, novo Mall e sistemas de progressão.','Missões, vendedores e tokens personalizados.','Profissões instantâneas, buffs e comandos úteis.','Interface, login e telas de carregamento próprios.']}],fair:'Seu esforço tem valor.',fairText:'Progrida jogando. O equipamento Donor pode igualar o melhor equipamento disponível na progressão, mas nunca superá-lo.',community:'A aventura é melhor juntos.',communityText:'Anúncios, suporte da equipe, eventos, sorteios e uma comunidade internacional para PvE, PvP e guildas.',discord:'ENTRAR NO DISCORD',rules:'CONSULTAR AS REGRAS'}
-};
-export default function ServerContent(){
- const ui=useInterfaceCopy();const {i18n}=useTranslation();const c=content[i18n.language as keyof typeof content]??content.es;const upcoming=warcraftCopy[i18n.language as keyof typeof warcraftCopy]??warcraftCopy.es;return <SiteShell><section className="lore-hero"><span className="lore-kicker">{c.eyebrow} · {upcoming.soon}</span><h1>{c.title}<br/><em>{c.accent}</em></h1><p>{c.intro}</p><p className="wc-realm-profile">{upcoming.realmProfile}</p><div className="lore-actions"><Link className="lore-button" href="/registro">{c.join}<span>↗</span></Link><Link href="/como-conectarme">{c.download} →</Link></div></section><section className="lore-container"><div className="lore-stats">{['255','35','45+','3'].map((value,i)=><div key={value}><strong>{value}</strong><span>{c.labels[i]}</span></div>)}</div><div className="lore-heading"><span className="lore-kicker">BLACKOUT WOW</span><h2>{c.experience}</h2><p>{c.sub}</p></div><div className="lore-features">{c.features.map((f,i)=><article className="lore-feature" id={["pve","pvp","clases","sistemas"][i]} key={f.tag}><span className="lore-kicker">{f.tag}</span><h3>{f.title}</h3><ul>{f.items.map(item=><li key={item}>{item}</li>)}</ul><span className="lore-watermark">{['I','II','III','IV'][i]}</span></article>)}</div><RaceCustomization/><ClassSpells/><div className="lore-coming"><span aria-hidden="true">✧</span><p>{upcoming.announcement} <a href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">Discord ↗</a></p></div><div className="lore-fair"><span>✧</span><div><h2>{c.fair}</h2><p>{c.fairText}</p></div><Link href="/terminos-y-condiciones">{c.rules} ↗</Link></div><div className="lore-community"><span className="lore-kicker">{ui("COMUNIDAD · COMMUNITY")}</span><h2>{c.community}</h2><p>{c.communityText}</p><a className="lore-button" href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.discord}<span>↗</span></a></div></section></SiteShell>;}
+
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { ClassSpells } from "./ClassSpells";
+import { RaceCustomization } from "./RaceCustomization";
+import { SiteShell } from "./SiteShell";
+import { serverCopy } from "@/lib/server-copy";
+import { warcraftCopy } from "@/lib/warcraft-copy";
+import { DISCORD_INVITE_URL } from "@/lib/site-config";
+
+export default function ServerContent() {
+  const { i18n } = useTranslation();
+  const language = i18n.language as keyof typeof serverCopy;
+  const c = serverCopy[language] ?? serverCopy.es;
+  const profile = warcraftCopy[language] ?? warcraftCopy.es;
+  return (
+    <SiteShell>
+      <section className="lore-hero">
+        <span className="lore-kicker">{c.eyebrow}</span>
+        <h1>{c.title}<br /><em>{c.accent}</em></h1>
+        <p>{c.intro}</p>
+        <p className="wc-realm-profile">{profile.realmProfile}</p>
+        <div className="lore-actions">
+          <Link className="lore-button" href="/registro">{c.join}<span aria-hidden="true">↗</span></Link>
+          <Link href="/como-conectarme">{c.download} →</Link>
+        </div>
+      </section>
+      <section className="lore-container">
+        <div className="lore-stats">
+          {["255", "35", "19", "30+"].map((value, index) => (
+            <div key={value}><strong>{value}</strong><span>{c.labels[index]}</span>{index === 2 && <small>{c.customRaidsNote}</small>}</div>
+          ))}
+        </div>
+        <div className="lore-heading"><h2>{c.experience}</h2></div>
+        <div className="lore-features">
+          {c.features.map((feature, index) => (
+            <article className="lore-feature" id={["pve", "pvp", "clases", "sistemas"][index]} key={feature.tag}>
+              <span className="lore-kicker">{feature.tag}</span>
+              <h3>{feature.title}</h3>
+              <ul>{feature.items.map(item => <li key={item}>{item}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+        <ClassSpells />
+        <RaceCustomization />
+        <div className="lore-fair">
+          <span aria-hidden="true">✧</span>
+          <div><h2>{c.fair}</h2><p>{c.fairText}</p></div>
+          <Link href="/terminos-y-condiciones">{c.rules} ↗</Link>
+        </div>
+        <div className="lore-community">
+          <span className="lore-kicker">{c.communityTag}</span>
+          <h2>{c.community}</h2><p>{c.communityText}</p>
+          <a className="lore-button" href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.discord}<span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </SiteShell>
+  );
+}

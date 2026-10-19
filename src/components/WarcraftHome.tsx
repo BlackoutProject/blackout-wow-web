@@ -33,7 +33,7 @@ export default function WarcraftHome() {
   const { i18n } = useTranslation();
   const c = warcraftCopy[i18n.language as keyof typeof warcraftCopy] ?? warcraftCopy.es;
   const [selectedClass, setSelectedClass] = useState(1);
-  const classNames = ["Evoker", "Demon Hunter", "Monk"];
+  const classNames = c.classNames;
   return <SiteShell>
     <section className="wc-hero" aria-labelledby="hero-title">
       <AmbientVideo className="wc-hero-video" src="/warcraft/blackout-orc.mp4" poster="/warcraft/blackout-orc-poster.webp"/>
@@ -68,10 +68,10 @@ export default function WarcraftHome() {
           {selectedClass === 1 ? <AmbientVideo src="/warcraft/illidan.mp4" poster="/warcraft/illidan-poster.webp"/> : <AnimatedClassArtwork key={selectedClass} kind={selectedClass === 0 ? "evoker" : "monk"}/>}
           <span className="wc-character-caption">{selectedClass === 1 ? "ILLIDAN STORMRAGE" : classNames[selectedClass]} <i>{c.classTypes[selectedClass]}</i></span>
         </div>
-        <div className="wc-class-copy"><p className="wc-kicker">{c.classesTag} · {c.soon}</p><h2 id="classes-title">{c.classesTitle}<br/><em>{c.classesAccent}</em></h2><p className="wc-section-intro">{c.classesText}</p>
+        <div className="wc-class-copy"><p className="wc-kicker">{c.classesTag}</p><h2 id="classes-title">{c.classesTitle}<br/><em>{c.classesAccent}</em></h2><p className="wc-section-intro">{c.classesText}</p>
           <p className="wc-class-choice">{c.chooseClass}</p>
           <div className="wc-class-list" role="tablist" aria-label={c.classesTag}>{classNames.map((name, i) => <button key={name} id={`class-tab-${i}`} type="button" role="tab" aria-selected={selectedClass === i} aria-controls="class-preview" tabIndex={selectedClass === i ? 0 : -1} className={"wc-class-item wc-class-" + i} onClick={() => setSelectedClass(i)} onKeyDown={event => { const next = event.key === "ArrowRight" ? (i + 1) % 3 : event.key === "ArrowLeft" ? (i + 2) % 3 : event.key === "Home" ? 0 : event.key === "End" ? 2 : null; if (next !== null) { event.preventDefault(); setSelectedClass(next); (event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next])?.focus(); } }}><span aria-hidden="true">{["◇", "✦", "◉"][i]}</span><strong>{name}<small>{c.classTypes[i]}</small></strong></button>)}</div>
-          <div className="wc-spell-note"><span aria-hidden="true">10</span><div><h3>{c.spells}</h3><p>{c.spellsText}</p></div></div>
+          <div className="wc-spell-note"><span aria-hidden="true">✧</span><div><h3>{c.spells}</h3><p>{c.spellsText}</p></div></div>
           <Link className="wc-text-link" href="/servidor#hechizos-custom">{c.spellsLink} <b>→</b></Link>
         </div>
       </div>

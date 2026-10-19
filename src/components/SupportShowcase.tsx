@@ -23,7 +23,6 @@ export function SupportShowcase() {
           <div className="wc-actions">
             <Link className="wc-button" href={accessToken ? "/cuenta#donor" : "/login?next=%2Fcuenta%23donor"}>{accessToken ? c.account : c.login}<span aria-hidden="true">›</span></Link>
           </div>
-          <p className="wc-support-note">{c.note}</p>
           <a className="wc-text-link" href={DISCORD_INVITE_URL} target="_blank" rel="noopener noreferrer">{c.discord}<b aria-hidden="true">↗</b></a>
         </div>
       </div>

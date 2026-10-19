@@ -8,21 +8,21 @@ const copy = {
   es: {
     eyebrow: "10 HECHIZOS CUSTOM POR CLASE",
     title: "Tu clase. Un nuevo arsenal.",
-    description: "Seleccionamos solo las habilidades que encajan con cada clase, funcionan correctamente y mantienen el equilibrio del juego.",
+    description: "Para las diez clases de WotLK: habilidades seleccionadas por afinidad, funcionamiento y equilibrio.",
     origin: "HABILIDADES DE DISTINTAS EXPANSIONES",
     more: "y más",
   },
   en: {
     eyebrow: "10 CUSTOM SPELLS PER CLASS",
     title: "Your class. A new arsenal.",
-    description: "We select only abilities that fit each class, work properly and preserve the balance of the game.",
+    description: "For the ten WotLK classes: abilities selected for their fit, functionality and balance.",
     origin: "ABILITIES FROM DIFFERENT EXPANSIONS",
     more: "and more",
   },
   pt: {
     eyebrow: "10 FEITIÇOS CUSTOM POR CLASSE",
     title: "Sua classe. Um novo arsenal.",
-    description: "Selecionamos apenas habilidades que combinam com cada classe, funcionam corretamente e mantêm o equilíbrio do jogo.",
+    description: "Para as dez classes de WotLK: habilidades selecionadas por afinidade, funcionamento e equilíbrio.",
     origin: "HABILIDADES DE DIFERENTES EXPANSÕES",
     more: "e mais",
   },
@@ -39,8 +39,8 @@ export function ClassSpells() {
         <p>{c.description}</p>
       </div>
       <ul className="class-spells-classes" aria-label={i18n.language === "es" ? "Clases" : "Classes"}>
-        {classes.map((name, index) => (
-          <li key={name}><span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>{name}</li>
+        {classes.map(name => (
+          <li key={name}><span aria-hidden="true">◆</span>{name}</li>
         ))}
       </ul>
       <div className="class-spells-origins">

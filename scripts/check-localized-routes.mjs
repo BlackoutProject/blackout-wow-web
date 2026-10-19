@@ -9,6 +9,7 @@ const copy = context.exports.metadataTranslations;
 const pages = new Map();
 const languages = ['es','en','pt'];
 const labels = {es:['Crear cuenta','Entrar','Cambiar idioma'],en:['Create account','Log in','Change language'],pt:['Criar conta','Entrar','Alterar idioma']};
+const customClasses = {es:['Evocador','Cazador de demonios','Monje'],en:['Evoker','Demon Hunter','Monk'],pt:['Conjurante','Caçador de Demônios','Monge']};
 const escapeHtml = value => value.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll("'",'&#x27;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 for (const lang of languages) {
   const paths = Object.keys(copy);
@@ -17,6 +18,16 @@ for (const lang of languages) {
       const response = await fetch(base+path,{headers:{cookie:'lang='+lang},signal:AbortSignal.timeout(60000)});
       assert.equal(response.status,200,lang+' '+path);
       const html=await response.text(); pages.set(lang+path,html);
+      if(path==='/' || path==='/servidor') {
+        for(const name of customClasses[lang]) assert.ok(html.includes(name),'Missing localized class '+name+' in '+lang+path);
+      }
+      if(path==='/servidor') {
+        const overview=html.split('class="lore-stats">')[1]?.split('class="lore-heading"')[0] || '';
+        assert.deepEqual([...overview.matchAll(/<strong>([^<]+)<\/strong>/g)].map(match=>match[1]),['255','35','19','30+'],'Keep total raids, custom raids and maps distinct: '+lang);
+        assert.ok(!/lore-watermark|lore-customization-number|0[1-4] ·/.test(html),'Decorative section numbering: '+lang);
+        for(const name of ['Paladin','Warrior','DK','Mage','Rogue','Priest','Shaman','Druid','Hunter','Warlock']) assert.ok(html.includes(name),'Missing class '+name+' in '+lang);
+        assert.ok(html.includes({es:'10 HECHIZOS CUSTOM POR CLASE',en:'10 CUSTOM SPELLS PER CLASS',pt:'10 FEITIÇOS CUSTOM POR CLASSE'}[lang]),'Custom spell count: '+lang);
+      }
       if(path==='/registro') assert.ok(new RegExp('<h[12][^>]*>'+labels[lang][0]+'</h[12]>').test(html), 'Registration heading language: '+lang);
       assert.ok(html.includes('<html lang="'+lang+'"'), 'Incorrect language: '+lang+path);
       assert.ok(/<title>[^<]+<\/title>/.test(html), 'Missing title: '+lang+path);

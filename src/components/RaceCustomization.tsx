@@ -40,8 +40,8 @@ export function RaceCustomization() {
     <section className="lore-customization" id="razas-y-morphs" aria-labelledby="customization-title">
       <header><span className="lore-kicker">{c.eyebrow}</span><h2 id="customization-title">{c.title}</h2></header>
       <div className="lore-customization-grid">
-        <article><span className="lore-customization-number" aria-hidden="true">01</span><h3>{c.racesTitle}</h3><p>{c.racesText}</p></article>
-        <article><span className="lore-customization-number" aria-hidden="true">02</span><h3>{c.morphsTitle}</h3><p>{c.morphsText}</p><ul>{appearances.map(name => <li key={name}>{name}</li>)}<li className="lore-customization-more">{c.more}</li></ul></article>
+        <article><h3>{c.racesTitle}</h3><p>{c.racesText}</p></article>
+        <article><h3>{c.morphsTitle}</h3><p>{c.morphsText}</p><ul>{appearances.map(name => <li key={name}>{name}</li>)}<li className="lore-customization-more">{c.more}</li></ul></article>
       </div>
     </section>
   );
