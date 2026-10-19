@@ -1,22 +1,22 @@
 export const metadataTranslations = {
   "/": {
     "en": {
-      "title": "Blackout-WoW | WoW 3.3.5a Custom 255 · High Rate",
-      "description": "Custom level 255 WoW 3.3.5a server with high rates and high stats. 35 raids, including 19 fully custom raids, over 30 custom maps, PvE and PvP."
+      "title": "Blackout-WoW | WoW 3.3.5a Custom 255 · Increased XP",
+      "description": "Custom level 255 WoW 3.3.5a server with increased XP for leveling and high stats. 35 raids, including 19 fully custom raids, over 30 custom maps, PvE and PvP."
     },
     "pt": {
-      "title": "Blackout-WoW | WoW 3.3.5a Custom 255 · High Rate",
-      "description": "Servidor WoW 3.3.5a custom nível 255, com taxas e atributos elevados. 35 raids, sendo 19 totalmente custom, mais de 30 mapas custom, PvE e PvP."
+      "title": "Blackout-WoW | WoW 3.3.5a Custom 255 · Experiência aumentada",
+      "description": "Servidor WoW 3.3.5a custom nível 255, com experiência aumentada para subir de nível e atributos altos. 35 raids, sendo 19 totalmente custom, mais de 30 mapas custom, PvE e PvP."
     }
   },
   "/servidor": {
     "en": {
       "title": "Custom WoW WotLK 3.3.5a server",
-      "description": "Blackout-WoW 255: high rates and high stats. 35 raids, including 19 fully custom raids, over 30 custom maps, T1–T35 and three custom classes."
+      "description": "Blackout-WoW 255: increased XP for leveling and high stats. 35 raids, including 19 fully custom raids, over 30 custom maps, T1–T35 and three custom classes."
     },
     "pt": {
       "title": "Servidor WoW WotLK 3.3.5a custom",
-      "description": "Blackout-WoW 255: taxas e atributos elevados. 35 raids, sendo 19 totalmente custom, mais de 30 mapas custom, T1–T35 e três classes custom."
+      "description": "Blackout-WoW 255: experiência aumentada para subir de nível e atributos altos. 35 raids, sendo 19 totalmente custom, mais de 30 mapas custom, T1–T35 e três classes custom."
     }
   },
   "/como-conectarme": {

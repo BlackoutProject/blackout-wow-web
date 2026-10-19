@@ -42,7 +42,9 @@
     "unifiedClassPresentation": "All three class tabs use unchanged official transparent PNG illustrations with automatic layered CSS motion. Removed the Illidan proper-name caption; every caption uses the selected localized class name. Demon Hunter verified at 375 and 1440 px, running transform changes, no horizontal overflow or console errors.",
     "spellCopyReview": "Removed the arsenal slogan and mechanical description in ES/EN/PT. Localized all ten WotLK class names. Explicit two-line heading checked at 320, 375, 701, 1181 and 1440 px, including responsive single-column layout.",
     "connectionOptions": "Option headings now read Opción 1/2, Option 1/2 and Opção 1/2 in ES/EN/PT.",
-    "footerSocialLinks": "Discord, YouTube and TikTok displayed together with matching icons. User-supplied channel/profile destinations verified in rendered anchors; open in new tabs with noopener noreferrer. Desktop and 320 px mobile layout checked without overflow."
+    "footerSocialLinks": "Discord, YouTube and TikTok displayed together with matching icons. User-supplied channel/profile destinations verified in rendered anchors; open in new tabs with noopener noreferrer. Desktop and 320 px mobile layout checked without overflow.",
+    "experienceAndStats": "Home, Server and metadata clarify increased leveling experience and high stats in ES/EN/PT. Browser verified: Experiencia aumentada / Increased XP / Experiência aumentada. Removed untranslated High Rate from Spanish and Portuguese page text.",
+    "vipT35Clarification": "VIP rings and trinkets explicitly match T35 in ES/EN/PT. Bags remain an included benefit for every account character, separate from instance progression up to T5. Signed-in and guest presentation verified with the synthetic session check."
   },
   "externalLinks": {
     "englishClient": "200; Blackout-WoW_EN-US_Base_Client_NoPatch_NoExe.zip.zip",

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "Blackout-WoW";
-export const SITE_TITLE = "Blackout-WoW | WoW 3.3.5a Custom 255 · High Rate";
+export const SITE_TITLE = "Blackout-WoW | WoW 3.3.5a Custom 255 · Experiencia aumentada";
 export const SITE_DESCRIPTION =
-  "Servidor WoW 3.3.5a custom nivel 255, High Rate y estadísticas elevadas. 35 raids, 19 totalmente custom, más de 30 mapas custom y PvE + PvP sin Pay to Win.";
+  "Servidor WoW 3.3.5a custom nivel 255, con experiencia aumentada para subir de nivel y estadísticas altas. 35 raids, 19 totalmente custom, más de 30 mapas custom y PvE + PvP sin Pay to Win.";
 export const SITE_LOCALE = "es_CL";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
